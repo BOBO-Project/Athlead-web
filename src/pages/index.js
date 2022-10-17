@@ -8,8 +8,9 @@ import { Navbar, Footer } from "../components";
 //Pages
 import homepage from "./homepage";
 import product from "./product";
+import aboutus from "./aboutus";
 
-const appPages = [{ ...homepage }, { ...product }];
+const appPages = [{ ...homepage }, { ...product }, { ...aboutus }];
 
 const RenderPages = () => {
   return (
