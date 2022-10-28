@@ -1,9 +1,9 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import useTranslate from "../hooks/useTranslate";
+import "./index.scss";
 
 //Components
-import { Navbar } from "../components";
+import { Navbar, Footer } from "../components";
 
 //Pages
 import homepage from "./homepage";
@@ -12,15 +12,18 @@ import product from "./product";
 const appPages = [{ ...homepage }, { ...product }];
 
 const RenderPages = () => {
-  const { changeLanguage, language } = useTranslate();
   return (
-    <div style={{ width: "100vw" }}>
+    <div>
       <Navbar />
-      <Routes>
-        {appPages.map((page, i) => (
-          <Route {...page} key={i} />
-        ))}
-      </Routes>
+
+      <div id="all-pages-wrapper">
+        <Routes>
+          {appPages.map((page, i) => (
+            <Route {...page} key={i} />
+          ))}
+        </Routes>
+      </div>
+      <Footer />
     </div>
   );
 };

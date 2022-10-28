@@ -1,0 +1,11 @@
+#all-pages-wrapper {
+  margin-top: 100px;
+  min-height: calc(100vh - 100px);
+}
+
+@media (max-width: 768px) {
+  #all-pages-wrapper {
+    margin-top: 72px;
+    min-height: calc(100vh - 76px);
+  }
+}

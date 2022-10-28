@@ -78,7 +78,7 @@ const NMobile = ({ Tabs, changeLanguage, language }) => {
   )
 }
 
-export const Navbar = () => {
+const Navbar = () => {
   const { changeLanguage, language, translate } = useTranslate(english, indo);
 
   const Tabs = useMemo(() => ([
@@ -107,3 +107,5 @@ export const Navbar = () => {
   const isResponsive = useMemo(() => (window.innerWidth <= 768), [window.innerWidth])
   return !isResponsive ? (<NDekstop Tabs={Tabs} changeLanguage={changeLanguage} language={language} />) : (<NMobile Tabs={Tabs} changeLanguage={changeLanguage} language={language} />)
 }
+
+export default Navbar
