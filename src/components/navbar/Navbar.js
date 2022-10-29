@@ -104,7 +104,7 @@ const Navbar = () => {
     },
   ]), [language])
 
-  const isResponsive = useMemo(() => (window.innerWidth <= 768), [window.innerWidth])
+  const isResponsive = window.innerWidth <= 768
   return !isResponsive ? (<NDekstop Tabs={Tabs} changeLanguage={changeLanguage} language={language} />) : (<NMobile Tabs={Tabs} changeLanguage={changeLanguage} language={language} />)
 }
 
