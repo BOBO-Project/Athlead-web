@@ -1,7 +1,7 @@
 import React from "react";
 import useTranslate from "../../hooks/useTranslate";
-import banner from '../../assets/images/career-banner.png'
-import title from "../../assets/images/title-career.png";
+import banner from '../../assets/img/career-banner.png'
+import title from "../../assets/img/title-career.png";
 
 import english from "./locales/en-US.json";
 import indo from "./locales/id.json";
