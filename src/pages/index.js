@@ -4,8 +4,9 @@ import useTranslate from "../hooks/useTranslate";
 
 import homepage from "./homepage";
 import product from "./product";
+import career from "./career";
 
-const appPages = [{ ...homepage }, { ...product }];
+const appPages = [{ ...homepage }, { ...product }, { ...career}];
 
 const RenderPages = () => {
   const { changeLanguage, language } = useTranslate();
