@@ -1,27 +1,33 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import useTranslate from "../hooks/useTranslate";
+import "./index.scss";
 
+//Components
+import { Navbar, Footer } from "../components";
+
+//Pages
 import homepage from "./homepage";
 import product from "./product";
 import career from "./career";
 
-const appPages = [{ ...homepage }, { ...product }, { ...career}];
+import aboutus from "./aboutus";
+
+const appPages = [{ ...homepage }, { ...product }, { ...aboutus }, {...career}];
 
 const RenderPages = () => {
-  const { changeLanguage, language } = useTranslate();
   return (
-    <>
-      <div style={{ marginBottom: "20px" }}>
-        <div>TEST LANGUAGE - {language}</div>
-        <button onClick={changeLanguage}>change</button>
+    <div>
+      <Navbar />
+
+      <div id="all-pages-wrapper">
+        <Routes>
+          {appPages.map((page, i) => (
+            <Route {...page} key={i} />
+          ))}
+        </Routes>
       </div>
-      <Routes>
-        {appPages.map((page, i) => (
-          <Route {...page} key={i} />
-        ))}
-      </Routes>
-    </>
+      <Footer />
+    </div>
   );
 };
 
