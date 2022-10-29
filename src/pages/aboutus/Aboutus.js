@@ -1,13 +1,6 @@
 import React from "react";
+import "./style-aboutus.scss";
 import useTranslate from "../../hooks/useTranslate";
-import {
-  Paper,
-  Container,
-  Grid,
-  AppBar,
-  Toolbar,
-  Typography,
-} from "@mui/material";
 
 import english from "./locales/en-US.json";
 import indo from "./locales/id.json";
@@ -16,103 +9,26 @@ const Aboutus = () => {
   const { translate } = useTranslate(english, indo);
 
   return (
-    <div>
-      <Paper
+    <div id="aboutus">
+      <div
+        className="banner"
         style={{
-          width: "100vw",
           backgroundImage: `url(${require("../../assets/aboutus-banner.png")})`,
-          height: "25vw",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
         }}
       >
-        {/* <AppBar elevation={0} style={{ background: "none" }}>
-          <Toolbar
-            style={{
-              width: "80%",
-              margin: "5% auto",
-              display: "inline-block",
-            }}
-          >
-            <a
-              href="/"
-              style={{
-                flexGrow: "1",
-                textDecoration: "none",
-                color: "#FFFF",
-              }}
-            >
-              Home
-            </a>
-            <a href="/about-us">About Us</a>
-          </Toolbar>
-        </AppBar> */}
-        <Container maxWidth="md" style={{ textAlign: "center" }}>
-          <Grid>
-            <Typography
-              variant="h1"
-              style={{
-                fontSize: "64px",
-                fontStyle: "normal",
-                fontWeight: "800",
-                lineHeight: "110%",
-                color: "#FEFEFE",
-              }}
-            >
-              {translate("title")}
-            </Typography>
-            <Typography
-              variant="h3"
-              style={{
-                fontSize: "36px",
-                fontStyle: "normal",
-                fontWeight: "400",
-                lineHeight: "110%",
-                color: "#A9A9A9",
-              }}
-            >
-              {translate("description")}
-            </Typography>
-          </Grid>
-        </Container>
-      </Paper>
-      <Container
-        style={{
-          marginTop: "40px",
-          display: "flex",
-          maxWidth: "100%",
-          paddingLeft: "140px",
-          paddingRight: "130px",
-          // flexWrap: "wrap",
-          // flexDirection: "column",
-        }}
-      >
-        <div style={{ marginRight: "95px" }}>
-          <Typography
-            variant="p"
-            style={{
-              fontStyle: "normal",
-              fontWeight: "400",
-              fontSize: "20px",
-              lineHeight: "140%",
-            }}
-          >
-            <Typography
-              variant="p"
-              style={{
-                color: "#282828",
-                fontWeight: "800",
-                fontSize: "36px",
-                lineHeight: "110%",
-                fontStyle: "normal",
-              }}
-            >
+        <div className="container-banner">
+          <div>
+            <h1 className="title-container">{translate("title")}</h1>
+            <h3 className="title-description">{translate("description")}</h3>
+          </div>
+        </div>
+      </div>
+      <div className="container-content">
+        <div className="container-box">
+          <p className="container-content-opening">
+            <p className="container-content-wording">
               {translate("openingword")}
-            </Typography>{" "}
+            </p>{" "}
             <br />
             <br />
             ATHLEAD INDONESIA is a digital platform specializing in
@@ -133,90 +49,60 @@ const Aboutus = () => {
             sharing moments, and enhancing well-being. <br />
             <br /> Wouldn’t be great to have a one-stop solution for all your
             recreational sports needs?
-          </Typography>
+          </p>
         </div>
-        <div>
-          <img
-            src={require("../../assets/circle-dot.png")}
-            style={{
-              position: "absolute",
-              width: "78px",
-              height: "93px",
-              left: "67%",
-            }}
-          />
-          <Grid container style={{ position: "relative" }}>
-            <Grid item>
+        <div
+          className="image-box"
+          style={{
+            backgroundImage: `url(${require("../../assets/circle-1.png")})`,
+          }}
+        >
+          <div className="image-box-1">
+            <div>
               <img
-                src={require("../../assets/circle-1.png")}
-                style={{ width: "443px", height: "443px", marginTop: "155px" }}
+                className="image-box-1-dot"
+                alt="circle-dot"
+                src={require("../../assets/circle-dot.png")}
               />
-            </Grid>
-            <Grid item>
+            </div>
+            <div>
               <img
+                className="about-us-image-1"
                 src={require("../../assets/about-us-image-1.png")}
-                style={{
-                  position: "absolute",
-                  width: "200px",
-                  height: "300px",
-                  borderRadius: "10px",
-                  right: "50%",
-                  top: "130px",
-                }}
+                alt="athlead-about-us"
               />
-            </Grid>
-            <Grid item>
+            </div>
+            <div>
               <img
-                src={require("../../assets/about-us-image-2.png")}
-                style={{
-                  position: "absolute",
-                  width: "200px",
-                  height: "300px",
-                  borderRadius: "10px",
-                  right: "1%",
-                  top: "42px",
-                }}
-              />
-            </Grid>
-            <Grid item>
-              <img
-                src={require("../../assets/about-us-image-3.png")}
-                style={{
-                  position: "absolute",
-                  width: "200px",
-                  height: "200px",
-                  borderRadius: "10px",
-                  right: "1%",
-                  top: "60%",
-                }}
-              />
-            </Grid>
-            <Grid item>
-              <img
+                className="about-us-image-2"
                 src={require("../../assets/about-us-image-4.png")}
-                style={{
-                  position: "absolute",
-                  width: "200px",
-                  height: "200px",
-                  borderRadius: "10px",
-                  right: "50%",
-                  top: "77%",
-                }}
+                alt="athlead-about-us"
               />
-            </Grid>
-          </Grid>
-          <img
-            src={require("../../assets/circle-dot-2.png")}
-            style={{
-              position: "absolute",
-              width: "97px",
-              height: "93px",
-              left: "85%",
-              top: "175%",
-            }}
-          />
+            </div>
+          </div>
+          <div className="image-box-2">
+            <div>
+              <img
+                className="about-us-image-3"
+                src={require("../../assets/about-us-image-2.png")}
+              />
+            </div>
+            <div>
+              <img
+                className="about-us-image-4"
+                src={require("../../assets/about-us-image-3.png")}
+              />
+            </div>
+            <div>
+              <img
+                className="image-box-2-dot"
+                alt="circle-dot"
+                src={require("../../assets/circle-dot-2.png")}
+              />
+            </div>
+          </div>
         </div>
-      </Container>
+      </div>
     </div>
   );
 };
