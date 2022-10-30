@@ -1,0 +1,155 @@
+#career {
+  .banner {
+    width: 100vw;
+    height: 25vw;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .container-banner {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    .title-container {
+      font-size: 64px;
+      font-style: normal;
+      font-weight: 800;
+      line-height: 110%;
+      color: #fefefe;
+    }
+    .title-description {
+      font-size: 36px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 110%;
+      color: #a9a9a9;
+    }
+  }
+  .form-join {
+    padding: 0 80px;
+    margin-bottom: 128px;
+    margin-top: 50px;
+    .fj-wrapper {
+      background: #fefefe;
+      border: 1px solid #e03a55;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      height: 570px;
+    }
+    .left,
+    .right {
+      width: 100%;
+    }
+
+    .left {
+      .form {
+        padding: 48px 60px;
+        .form-title {
+          font-family: "Proxima Nova";
+          font-style: normal;
+          font-weight: 800;
+          font-size: 36px;
+          color: #282828;
+          margin-bottom: 16px;
+        }
+        .form-subtitle {
+          font-family: "Proxima Nova";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 18px;
+          color: #282828;
+          margin-bottom: 32px;
+        }
+        .form-fields {
+          display: flex;
+          align-items: center;
+          .field-wrapper {
+            width: 100%;
+            margin-right: 32px;
+            margin-bottom: 16px;
+            &:last-child {
+              margin-bottom: 32px;
+              margin-right: 0;
+            }
+            .input-label {
+              font-family: "Proxima Nova";
+              font-style: normal;
+              font-weight: 400;
+              font-size: 16px;
+              letter-spacing: 0.2px;
+              color: #282828;
+              margin-bottom: 8px;
+            }
+            .input-wrapper {
+              padding: 20px;
+              background: #eaeaea;
+              border: 1px solid #a9a9a9;
+              border-radius: 5px;
+              input {
+                width: 100%;
+                background: inherit;
+                border: none;
+                &::placeholder {
+                  font-family: "Proxima Nova";
+                  font-style: normal;
+                  font-weight: 400;
+                  font-size: 16px;
+                  letter-spacing: 0.2px;
+                  color: #282828;
+                }
+              }
+            }
+          }
+        }
+
+        .join-com-soon {
+          padding: 18px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background: #a9a9a9;
+          border: 1px solid #fefefe;
+          border-radius: 5px;
+          button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            border: none;
+            background: inherit;
+            .plane-icn {
+              width: 24px;
+              height: 24px;
+              margin-right: 8px;
+            }
+            span {
+              font-family: "Proxima Nova";
+              font-style: normal;
+              font-weight: 800;
+              font-size: 16px;
+              display: flex;
+              align-items: center;
+              text-align: center;
+              letter-spacing: 0.2px;
+              color: #fefefe;
+            }
+          }
+        }
+      }
+    }
+    .right {
+      height: 100%;
+      .join-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border: 1px solid #eaeaea;
+        border-radius: 20px;
+      }
+    }
+  }
+}

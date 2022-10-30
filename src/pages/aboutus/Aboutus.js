@@ -29,26 +29,18 @@ const Aboutus = () => {
             <p className="container-content-wording">
               {translate("openingword")}
             </p>{" "}
+            {/* <br /> */}
+            {translate("paragraph1")}
+            {/* <br /> recreational sports. <br /> */}
             <br />
             <br />
-            ATHLEAD INDONESIA is a digital platform specializing in
-            <br /> recreational sports. <br />
+            {translate("paragraph2")} <br />
             <br />
-            Our Mission is to provide an integrated multi-services sports
-            solution in the form of a website and mobile app for sports venue
-            booking, coaching services, photographer services, and many more.{" "}
+            {translate("paragraph3")}
             <br />
             <br />
-            We know the work-life balance isn’t always easy to deal with, and
-            our service takes the hassle away from finding your sports needs.
-            <br />
-            <br />
-            ATHLEAD will try to help you with all the information and access to
-            some recreational sports venues/facilities and any other services.
-            Recreational sport is a concrete role in bringing people together,
-            sharing moments, and enhancing well-being. <br />
-            <br /> Wouldn’t be great to have a one-stop solution for all your
-            recreational sports needs?
+            {translate("paragraph4")} <br />
+            <br /> {translate("paragraph5")}
           </p>
         </div>
         <div
