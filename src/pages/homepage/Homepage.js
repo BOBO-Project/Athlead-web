@@ -1,4 +1,4 @@
-import React from "react";
+import { useMemo } from "react";
 import "./style-homepage.scss";
 
 import useTranslate from "hooks/useTranslate";
@@ -26,6 +26,7 @@ import BlogImg from "assets/img/blog-img.png";
 import CeliaAtmojo from "assets/img/celia-atmojo.png";
 import Gunawan from "assets/img/gunawan.png";
 import RunTrack from "assets/img/run-track.png";
+import Volley from "assets/img/volley.png";
 
 //Components
 import ProductCard from "./ProductCard";
@@ -35,6 +36,7 @@ import TestimonyCard from "./TestimonyCard";
 
 const Homepage = () => {
   const { translate } = useTranslate(english, indo);
+  const isResponsive = window.innerWidth <= 768;
 
   return (
     <div id="homepage">
@@ -53,17 +55,23 @@ const Homepage = () => {
           <p className="get-notif-t">Get notified when we launched</p>
           <div className="notif-input-wrapper">
             <div className="input-wrapper">
-              <input placeholder="Input your phone number / email address here" />
+              <input placeholder={!isResponsive ? "Input your phone number / email address here" : "Phone number / Email"} />
             </div>
+            {isResponsive ? (
+              <div className="notif-input">
+                <input type="checkbox" />
+                <p>By clicking “Notify Me”, you agree to the <span>Terms & Condition</span></p>
+              </div>
+            ) : null}
             <button>
               <PaperPlane />
               <span>Notify Me</span>
             </button>
           </div>
-          <div className="notif-input">
+          {!isResponsive ? <div className="notif-input">
             <input type="checkbox" />
             <p>By clicking “Notify Me”, you agree to the <span>Terms & Condition</span></p>
-          </div>
+          </div> : null}
 
           <div className="explore-more">
             <span>EXPLORE MORE</span>
@@ -108,28 +116,55 @@ const Homepage = () => {
         <p className="op-header">OUR PRODUCT -</p>
         <p className="op-sub-header">ATHLEAD integrates and houses all sports activities - from the most famous to the less known ones - <br />
           into one platform which includes supplementary activities for recreational sports needs</p>
-        <div className="product-card-wrapper">
-          <ProductCard
-            src={Venue}
-            title="Venue"
-            text="Book a venue and play your game"
-          />
-          <ProductCard
-            src={Photo}
-            title="Photographer"
-            text="Capture and share your moment doing all sports activity"
-          />
-          <ProductCard
-            src={Whistle}
-            title="Coach"
-            text="Maximize your talent from our best talent"
-          />
-          <ProductCard
-            src={Laptop}
-            title="Academy"
-            text="Become excellent by joining the academy"
-          />
-        </div>
+        {!isResponsive ? (
+          <div className="product-card-wrapper">
+            <ProductCard
+              src={Venue}
+              title="Venue"
+              text="Book a venue and play your game"
+            />
+            <ProductCard
+              src={Photo}
+              title="Photographer"
+              text="Capture and share your moment doing all sports activity"
+            />
+            <ProductCard
+              src={Whistle}
+              title="Coach"
+              text="Maximize your talent from our best talent"
+            />
+            <ProductCard
+              src={Laptop}
+              title="Academy"
+              text="Become excellent by joining the academy"
+            />
+          </div>
+        ) : (
+          <div className="pcw-scroll">
+            <div className="product-card-wrapper">
+              <ProductCard
+                src={Venue}
+                title="Venue"
+                text="Book a venue and play your game"
+              />
+              <ProductCard
+                src={Photo}
+                title="Photographer"
+                text="Capture and share your moment doing all sports activity"
+              />
+              <ProductCard
+                src={Whistle}
+                title="Coach"
+                text="Maximize your talent from our best talent"
+              />
+              <ProductCard
+                src={Laptop}
+                title="Academy"
+                text="Become excellent by joining the academy"
+              />
+            </div>
+          </div>
+        )}
       </div>
 
       {/* Athlead Partner */}
@@ -171,96 +206,179 @@ const Homepage = () => {
 
       {/* BLOG */}
       <div className="blog-wrapper">
-        <p className="blog-title">BLOG -</p>
-        <div className="blog-sh-wrapper">
-          <p className="bsh-t1">Checkout our latest articles about sports from Indonesia and Worldwide.</p>
-          <p className="bsh-t2">See Details<ArrowRight /></p>
-        </div>
-        <div className="blog-card-wrapper">
-          <BlogCard
-            src={BlogImg}
-            title="This is a super super long text title of an articles"
-            text="This is a lorem ipsum text which I recomended for a description of an article"
-          />
-          <BlogCard
-            src={BlogImg}
-            title="This is single text title"
-            text="This is a lorem ipsum text which I recomended for a description of an article"
-          />
-          <BlogCard
-            src={BlogImg}
-            title="This is double line text of an article title"
-            text="This is a lorem ipsum text which I recomended for a description of an article"
-          />
-          <BlogCard
-            src={BlogImg}
-            title="This is single text title"
-            text="This is a lorem ipsum text which I recomended for a description of an article"
-          />
-        </div>
+        {!isResponsive ? (
+          <>
+            <p className="blog-title">BLOG -</p>
+            <div className="blog-sh-wrapper">
+              <p className="bsh-t1">Checkout our latest articles about sports from Indonesia and Worldwide.</p>
+              <p className="bsh-t2">See Details<ArrowRight /></p>
+            </div>
+          </>
+        ) : (
+          <>
+            <div className="blog-sh-wrapper">
+              <p className="blog-title">BLOG -</p>
+              <p className="bsh-t2">See Details<ArrowRight /></p>
+            </div>
+            <p className="bsh-t1">Checkout our latest articles about sports from Indonesia and Worldwide.</p>
+          </>
+        )}
+        {!isResponsive ? (
+          <div className="blog-card-wrapper">
+            <BlogCard
+              src={BlogImg}
+              title="This is a super super long text title of an articles"
+              text="This is a lorem ipsum text which I recomended for a description of an article"
+            />
+            <BlogCard
+              src={BlogImg}
+              title="This is single text title"
+              text="This is a lorem ipsum text which I recomended for a description of an article"
+            />
+            <BlogCard
+              src={BlogImg}
+              title="This is double line text of an article title"
+              text="This is a lorem ipsum text which I recomended for a description of an article"
+            />
+            <BlogCard
+              src={BlogImg}
+              title="This is single text title"
+              text="This is a lorem ipsum text which I recomended for a description of an article"
+            />
+          </div>
+        ) : (
+          <div className="blog-cw-scroll">
+            <div className="blog-card-wrapper">
+              <BlogCard
+                src={BlogImg}
+                title="This is a super super long text title of an articles"
+                text="This is a lorem ipsum text which I recomended for a description of an article"
+              />
+              <BlogCard
+                src={BlogImg}
+                title="This is single text title"
+                text="This is a lorem ipsum text which I recomended for a description of an article"
+              />
+              <BlogCard
+                src={BlogImg}
+                title="This is double line text of an article title"
+                text="This is a lorem ipsum text which I recomended for a description of an article"
+              />
+              <BlogCard
+                src={BlogImg}
+                title="This is single text title"
+                text="This is a lorem ipsum text which I recomended for a description of an article"
+              />
+            </div>
+          </div>
+        )}
       </div>
 
       {/* TESTIMONY */}
       <div className="testimony-wrapper">
         <p className="testi-title">LET’S HEAR WHAT THEY SAID -</p>
         <p className="testi-subtitle">Checkout what they said about ATHLEAD performance.</p>
-        <div className="testi-card-wrapper">
-          <TestimonyCard
-            src={CeliaAtmojo}
-            name="GUNAWAN SETYA LAKSANA"
-            info="Runner Up Volley Ball at Asian Games"
-            title="Keren Banget! Cuman klik klik langsung bisa booking lapangan."
-            text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining "
-          />
-          <TestimonyCard
-            src={Gunawan}
-            name="CECILIA ATMOJO"
-            info="Head of West Java Mini Soccer Association"
-            title="Booking lapangan mini soccer sambil rebahan!"
-            text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining "
-          />
-        </div>
+        {!isResponsive ? (
+          <div className="testi-card-wrapper">
+            <TestimonyCard
+              src={CeliaAtmojo}
+              name="GUNAWAN SETYA LAKSANA"
+              info="Runner Up Volley Ball at Asian Games"
+              title="Keren Banget! Cuman klik klik langsung bisa booking lapangan."
+              text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining "
+            />
+            <TestimonyCard
+              src={Gunawan}
+              name="CECILIA ATMOJO"
+              info="Head of West Java Mini Soccer Association"
+              title="Booking lapangan mini soccer sambil rebahan!"
+              text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining "
+            />
+          </div>
+        ) : (
+          <div className="testi-card-scroll">
+            <div className="testi-card-wrapper">
+              <TestimonyCard
+                src={CeliaAtmojo}
+                name="GUNAWAN SETYA LAKSANA"
+                info="Runner Up Volley Ball at Asian Games"
+                title="Keren Banget! Cuman klik klik langsung bisa booking lapangan."
+                text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining "
+              />
+              <TestimonyCard
+                src={Gunawan}
+                name="CECILIA ATMOJO"
+                info="Head of West Java Mini Soccer Association"
+                title="Booking lapangan mini soccer sambil rebahan!"
+                text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining "
+              />
+            </div>
+          </div>
+        )}
+
       </div>
 
       {/* FORM JOIN */}
-      <div className="form-join">
-        <div className="fj-wrapper">
-          <div className="left">
-            <div className="form">
-              <p className="form-title">JOIN OUR SUPERTEAM!</p>
-              <p className="form-subtitle">Ready for new and challanging stuff? Passionate of things
+      {!isResponsive ? (
+        <div className="form-join">
+          <div className="fj-wrapper">
+            <div className="left">
+              <div className="form">
+                <p className="form-title">JOIN OUR SUPERTEAM!</p>
+                <p className="form-subtitle">Ready for new and challanging stuff? Passionate of things
+                  about sports? We’re welcoming you to become our Superteam!</p>
+                <div className="form-fields">
+                  <div className="field-wrapper">
+                    <p className="input-label">Full Name</p>
+                    <div className="input-wrapper">
+                      <input placeholder="Biko Maryono" />
+                    </div>
+                  </div>
+                  <div className="field-wrapper">
+                    <p className="input-label">Job Position</p>
+                    <div className="input-wrapper">
+                      <input placeholder="Biko Maryono" />
+                    </div>
+                  </div>
+                </div>
+
+                <div className="form-fields">
+                  <div className="field-wrapper">
+                    <p className="input-label">Email</p>
+                    <div className="input-wrapper">
+                      <input placeholder="Content Writers" />
+                    </div>
+                  </div>
+                  <div className="field-wrapper">
+                    <p className="input-label">Phone Number</p>
+                    <div className="input-wrapper">
+                      <input placeholder="Content Writers" />
+                    </div>
+                  </div>
+                </div>
+
+                <div className="join-com-soon">
+                  <button>
+                    <PaperPlane className="plane-icn" />
+                    <span>COMING SOON</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div className="right">
+              <img className="join-image" src={RunTrack} alt="..." />
+            </div>
+          </div>
+        </div>
+      ) : (
+        <div className="form-join">
+          <img className="form-join-rsponsive" src={Volley} alt="..." />
+          <div className="join-outer">
+            <div className="join-inner">
+              <p className="jim-1">JOIN OUR SUPERTEAM! </p>
+              <p className="jim-2">Ready for new and challanging stuff? Passionate of things
                 about sports? We’re welcoming you to become our Superteam!</p>
-              <div className="form-fields">
-                <div className="field-wrapper">
-                  <p className="input-label">Full Name</p>
-                  <div className="input-wrapper">
-                    <input placeholder="Biko Maryono" />
-                  </div>
-                </div>
-                <div className="field-wrapper">
-                  <p className="input-label">Job Position</p>
-                  <div className="input-wrapper">
-                    <input placeholder="Biko Maryono" />
-                  </div>
-                </div>
-              </div>
-
-              <div className="form-fields">
-                <div className="field-wrapper">
-                  <p className="input-label">Email</p>
-                  <div className="input-wrapper">
-                    <input placeholder="Content Writers" />
-                  </div>
-                </div>
-                <div className="field-wrapper">
-                  <p className="input-label">Phone Number</p>
-                  <div className="input-wrapper">
-                    <input placeholder="Content Writers" />
-                  </div>
-                </div>
-              </div>
-
-              <div className="join-com-soon">
+              <div className="fj-btn-wrapper">
                 <button>
                   <PaperPlane className="plane-icn" />
                   <span>COMING SOON</span>
@@ -268,11 +386,8 @@ const Homepage = () => {
               </div>
             </div>
           </div>
-          <div className="right">
-            <img className="join-image" src={RunTrack} alt="..." />
-          </div>
         </div>
-      </div>
+      )}
     </div>
   );
 };
