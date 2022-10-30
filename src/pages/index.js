@@ -9,10 +9,10 @@ import { Navbar, Footer } from "../components";
 import homepage from "./homepage";
 import product from "./product";
 import career from "./career";
-
 import aboutus from "./aboutus";
+import partnerwithus from "./partnerwithus";
 
-const appPages = [{ ...homepage }, { ...product }, { ...aboutus }, {...career}];
+const appPages = [{ ...homepage }, { ...product }, { ...aboutus }, {...career}, {...partnerwithus}];
 
 const RenderPages = () => {
   return (

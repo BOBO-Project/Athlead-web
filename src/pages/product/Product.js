@@ -92,7 +92,7 @@ const Product = () => {
     },
   ];
   return (
-    <>
+    <div id="productPage">
       <div
         style={{
           position: "relative",
@@ -316,7 +316,7 @@ const Product = () => {
           </ProductCard>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
