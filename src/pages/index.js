@@ -10,10 +10,14 @@ import homepage from "./homepage";
 import product from "./product";
 import career from "./career";
 import aboutus from "./aboutus";
-import partnerwithus from "./partnerwithus";
-import formPartner from "../components/formPartner"
+import career from "./career";
 
-const appPages = [{ ...homepage }, { ...product }, { ...aboutus }, {...career}, {...partnerwithus}];
+const appPages = [
+  { ...homepage },
+  { ...product },
+  { ...aboutus },
+  { ...career },
+];
 
 const RenderPages = () => {
   return (
