@@ -9,8 +9,14 @@ import { Navbar, Footer } from "../components";
 import homepage from "./homepage";
 import product from "./product";
 import aboutus from "./aboutus";
+import career from "./career";
 
-const appPages = [{ ...homepage }, { ...product }, { ...aboutus }];
+const appPages = [
+  { ...homepage },
+  { ...product },
+  { ...aboutus },
+  { ...career },
+];
 
 const RenderPages = () => {
   return (
