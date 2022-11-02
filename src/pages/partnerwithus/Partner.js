@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./style-partnerpage.scss";
 
 /// Icon
@@ -16,7 +16,7 @@ import Laptop from "assets/img/laptop.png";
 import banner from "assets/img/pws-banner.png";
 import title from "assets/img/pws-title.png";
 import { Container } from "@mui/system";
-import { Typography } from "@mui/material";
+import { Typography, Button, Modal, Box } from "@mui/material";
 
 ///
 import useTranslate from "../../hooks/useTranslate";
@@ -24,9 +24,37 @@ import english from "./locales/en-US.json";
 import indo from "./locales/id.json";
 import ProductCard from "./ProductCard";
 import PartnerCard from "./PartnerCard";
+import Form from "components/formPartner/Form";
 
 const Partner = () => {
   const { translate } = useTranslate(english, indo);
+  const [isModal, setModal] = useState(false);
+  const [title, setTitle] = useState("");
+
+  const handleOnClick = (e) => {
+    setTitle(e);
+    setModal(true);
+    console.log(title);
+  };
+
+  const handleClose = () => {
+    setModal(false);
+  };
+
+  const style = {
+    position: "absolute",
+    top: "50%",
+    left: "50%",
+    transform: "translate(-50%, -50%)",
+    width: "500px",
+    bgcolor: "background.paper",
+    border: "2px solid #000",
+    boxShadow: 24,
+    p: 4,
+    overflow: "scroll",
+    height: '800px',
+  };
+
   return (
     <div id="partnerPage">
       <div
@@ -53,6 +81,14 @@ const Partner = () => {
           }}
         />
       </div>
+      <Modal open={isModal} onClose={handleClose}>
+        <div>
+          <Box sx={style}>
+            <Form title={title} type={title} />
+            {/* <h1>{title}</h1> */}
+          </Box>
+        </div>
+      </Modal>
       <Container
         style={{
           marginTop: "40px",
@@ -110,6 +146,28 @@ const Partner = () => {
             book sports venues or facilities by using the ATHLEAD INDONESIA
             website service.
           </Typography>
+          <div
+            style={{
+              marginTop: "20%",
+              textAlign: "center",
+            }}
+          >
+            <Button
+              variant="contained"
+              style={{
+                backgroundColor: "white",
+                color: "#7D0E23",
+                width: "250px",
+                height: "56px",
+              }}
+              endIcon={<ArrowRight />}
+              onClick={() => {
+                handleOnClick("Venue");
+              }}
+            >
+              <span>Join as a Venue</span>
+            </Button>
+          </div>
         </ProductCard>
         <ProductCard src={Photo} title="Photographer">
           <Typography
@@ -131,6 +189,28 @@ const Partner = () => {
             players and activists try a new sport or increase their ability in a
             sport by using the services of a professional coach.
           </Typography>
+          <div
+            style={{
+              marginTop: "20%",
+              textAlign: "center",
+            }}
+          >
+            <Button
+              variant="contained"
+              style={{
+                backgroundColor: "white",
+                color: "#7D0E23",
+                width: "280px",
+                height: "56px",
+              }}
+              endIcon={<ArrowRight />}
+              onClick={() => {
+                handleOnClick("Photographer");
+              }}
+            >
+              <span>Join as a Photographer</span>
+            </Button>
+          </div>
         </ProductCard>
         <ProductCard src={Whistle} title="Coach">
           <Typography
@@ -151,6 +231,28 @@ const Partner = () => {
             players try a new sport or increase their ability in a sport by
             using the services of a professional coach.
           </Typography>
+          <div
+            style={{
+              marginTop: "34.5%",
+              textAlign: "center",
+            }}
+          >
+            <Button
+              variant="contained"
+              style={{
+                backgroundColor: "white",
+                color: "#7D0E23",
+                width: "250px",
+                height: "56px",
+              }}
+              endIcon={<ArrowRight />}
+              onClick={() => {
+                handleOnClick("Coach");
+              }}
+            >
+              <span>Join as a Coach</span>
+            </Button>
+          </div>
         </ProductCard>
         <ProductCard src={Laptop} title="Academy">
           <Typography
@@ -170,6 +272,28 @@ const Partner = () => {
             With these services, ATHLEAD INDONESIA will help recreational sports
             players seek and join sports academies.
           </Typography>
+          <div
+            style={{
+              marginTop: "41.5%",
+              textAlign: "center",
+            }}
+          >
+            <Button
+              variant="contained"
+              style={{
+                backgroundColor: "white",
+                color: "#7D0E23",
+                width: "250px",
+                height: "56px",
+              }}
+              endIcon={<ArrowRight />}
+              onClick={() => {
+                handleOnClick("Academy");
+              }}
+            >
+              <span>Join as an Academy</span>
+            </Button>
+          </div>
         </ProductCard>
       </div>
       <div className="partner-wrapper">
@@ -213,14 +337,20 @@ const Partner = () => {
           <div className="partner-label-wrapper">
             <div className="plwiw">
               <div className="pl-txt">
-                <p className="plt-1" style={{
-                    marginBottom:'10px'
-                }}>
+                <p
+                  className="plt-1"
+                  style={{
+                    marginBottom: "10px",
+                  }}
+                >
                   INTERESTED TO INCREASE YOUR SPORTS BUSINESS?
                 </p>
-                <p className="plt-2" style={{
-                    margin:'0 0 0 0'
-                }}>
+                <p
+                  className="plt-2"
+                  style={{
+                    margin: "0 0 0 0",
+                  }}
+                >
                   BECOME <span>OUR PARTNER</span> NOW!
                 </p>
               </div>
