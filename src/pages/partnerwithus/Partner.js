@@ -6,6 +6,7 @@ import { ReactComponent as AddressBook } from "assets/svg/address-book.svg";
 import { ReactComponent as ShoppingBag } from "assets/svg/shopping-bag.svg";
 import { ReactComponent as Signal } from "assets/svg/signal.svg";
 import { ReactComponent as ArrowRight } from "assets/svg/arrow-right.svg";
+
 ////Assets Product Card
 import Venue from "assets/img/venue.png";
 import Photo from "assets/img/photo.png";
@@ -16,7 +17,14 @@ import Laptop from "assets/img/laptop.png";
 import banner from "assets/img/pws-banner.png";
 import title from "assets/img/pws-title.png";
 import { Container } from "@mui/system";
-import { Typography, Button, Modal, Box } from "@mui/material";
+import {
+  Typography,
+  Button,
+  Modal,
+  Box,
+  IconButton,
+  Avatar,
+} from "@mui/material";
 
 ///
 import useTranslate from "../../hooks/useTranslate";
@@ -25,6 +33,10 @@ import indo from "./locales/id.json";
 import ProductCard from "./ProductCard";
 import PartnerCard from "./PartnerCard";
 import Form from "components/formPartner/Form";
+import { Close } from "@mui/icons-material";
+
+
+
 
 const Partner = () => {
   const { translate } = useTranslate(english, indo);
@@ -34,12 +46,13 @@ const Partner = () => {
   const handleOnClick = (e) => {
     setTitle(e);
     setModal(true);
-    console.log(title);
+    // console.log(title);
   };
 
   const handleClose = () => {
     setModal(false);
   };
+
 
   const style = {
     position: "absolute",
@@ -52,7 +65,7 @@ const Partner = () => {
     boxShadow: 24,
     p: 4,
     overflow: "scroll",
-    height: '800px',
+    height: "800px",
   };
 
   return (
@@ -81,11 +94,33 @@ const Partner = () => {
           }}
         />
       </div>
-      <Modal open={isModal} onClose={handleClose}>
+      <Modal open={isModal}>
         <div>
           <Box sx={style}>
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "space-between",
+              }}
+            >
+              <h1>{title} Registration</h1>
+              <IconButton className="close-button"
+                sx={{
+                  backgroundColor: "black",
+                  height: "40px",
+                  width: "40px",
+                  color: "white",
+                  ml: 1,
+                  "&.MuiButtonBase-root:hover": {
+                    bgcolor: "grey"
+                  }
+                }}
+                onClick={handleClose}
+              >
+                <Close />
+              </IconButton>
+            </div>
             <Form title={title} type={title} />
-            {/* <h1>{title}</h1> */}
           </Box>
         </div>
       </Modal>
@@ -126,7 +161,7 @@ const Partner = () => {
           marginTop: "100px",
         }}
       >
-        <ProductCard src={Venue} title="Venue">
+        <ProductCard src={Venue} title="Vendor">
           <Typography
             variant="p"
             style={{
@@ -162,7 +197,7 @@ const Partner = () => {
               }}
               endIcon={<ArrowRight />}
               onClick={() => {
-                handleOnClick("Venue");
+                handleOnClick("Vendor");
               }}
             >
               <span>Join as a Venue</span>
