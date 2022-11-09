@@ -106,7 +106,7 @@ const Form = (props) => {
         </>
       ) : null}
       {/* //Vendor Form */}
-      {title === "Vendor" ? (
+      {title === "Venue" ? (
         <>
           <div
             style={{

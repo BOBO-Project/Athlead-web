@@ -1,0 +1,131 @@
+@import url("http://fonts.cdnfonts.com/css/proxima-nova-2");
+
+#privacyPolicy {
+  font-family: "Proxima Nova";
+
+  .content-text-privacyPolicy {
+    font-size: 20px;
+    gap: 5px;
+    color: #7e7e7e;
+  }
+
+  .container-text-description {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    .container-description{
+      width: 400px;
+    }
+    .title-description-content{
+      font-size: 2.25rem;
+      font-weight: 800;
+      margin-bottom: 4%;
+    }
+  }
+
+  .content-accordion {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 18px 24px;
+    gap: 20px;
+    background-color: #c95454;
+    max-width: 100%;
+    height: auto;
+    align-items: center;
+  }
+
+
+  .content-accordion-text {
+    width: 656px;
+    background-color: #EAEAEA;
+
+    .accordion-summary{
+      height: 84px;
+    }
+  }
+
+  .content-accordion-detail {
+    background-color: white;
+    height: 100%;
+  }
+
+   .container-banner {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    .title-container {
+      font-size: 4rem;
+      font-style: normal;
+      font-weight: 800;
+      line-height: 110%;
+      color: #fefefe;
+    }
+    .title-description {
+      font-size: 2.25rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 110%;
+      color: #a9a9a9;
+    }
+  }
+
+  .banner {
+    width: 100vw;
+    height: 25vw;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .image-dot{
+    width: 450px;
+    height: 450px;
+  }
+
+}
+
+
+@media (max-width: 768px) {
+    #privacyPolicy{
+      .image-dot{
+        width: 300px;
+        height: 300px;
+      }
+
+      .container-text-description {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        .container-description{
+          width: 300px;
+        }
+        .title-description-content{
+          font-size: 1.3rem;
+        }
+      }
+
+      .title-container{
+        font-size: 2rem !important;
+      }
+      .title-description{
+        font-size: 1rem !important;
+      }
+      .content-text-privacyPolicy{
+        font-size: 1rem;
+      }
+
+      .content-accordion-text{
+        .accordion-summary{
+          height: 60px;
+        }
+      }
+    }
+}

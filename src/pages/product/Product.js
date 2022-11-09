@@ -95,16 +95,23 @@ const Product = () => {
     <div id="productPage">
       <div
         style={{
-          position: "relative",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          width: "100%",
-          height: "430px",
-          objectFit: "none",
+          // position: "relative",
+          // backgroundSize: "cover",
+          // backgroundPosition: "center",
+          // width: "100%",
+          // height: "430px",
+          // objectFit: "none",
           backgroundImage: `url('${banner}')`,
         }}
+        className="banner"
       >
-        <img
+         <div className="container-banner">
+          <div className="container-content">
+            <h1 className="title-container">{translate("title")}</h1>
+            <h3 className="title-description">{translate("description")}</h3>
+          </div>
+        </div>
+        {/* <img
           src={title}
           style={{
             width: "500px",
@@ -115,7 +122,7 @@ const Product = () => {
             margin: "auto",
             // height:'70px'
           }}
-        />
+        /> */}
       </div>
       <Container
         style={{
