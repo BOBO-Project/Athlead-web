@@ -3,7 +3,7 @@ import React from 'react'
 import { ReactComponent as ArrowRight } from "assets/svg/arrow-right.svg";
 
 
-function ProductCard({ src, title, text }) {
+function ProductCard({ src, title, text, translate }) {
   return (
     <div className='product-card'>
       <div className='pc-icn-wrapper'>
@@ -17,10 +17,10 @@ function ProductCard({ src, title, text }) {
 
         <div>
           <button className='pc-partner'>
-            <span>Partner With Us</span>
+            <span>{translate("n23")}</span>
             <ArrowRight />
           </button>
-          <a className='learn-more'><span>Learn More</span> <ArrowRight /></a>
+          <a className='learn-more'><span>{translate("n24")}</span> <ArrowRight /></a>
         </div>
       </div>
     </div>
