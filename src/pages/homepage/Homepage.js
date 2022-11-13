@@ -1,4 +1,5 @@
-import { useMemo } from "react";
+import { useState } from "react";
+import Modal from '@mui/material/Modal';
 import "./style-homepage.scss";
 
 import useTranslate from "hooks/useTranslate";
@@ -27,6 +28,7 @@ import CeliaAtmojo from "assets/img/celia-atmojo.png";
 import Gunawan from "assets/img/gunawan.png";
 import RunTrack from "assets/img/run-track.png";
 import Volley from "assets/img/volley.png";
+import CloseIcon from "assets/img/close-icon.png";
 
 //Components
 import ProductCard from "./ProductCard";
@@ -36,47 +38,63 @@ import TestimonyCard from "./TestimonyCard";
 
 const Homepage = () => {
   const { translate } = useTranslate(english, indo);
-  const isResponsive = window.innerWidth <= 768;
-
+  const [openTnc, setOpenTnc] = useState(false)
+  const isResponsive = window.innerWidth <= 1021;
   return (
     <div id="homepage">
       {/* HEADERS */}
       <div className="header">
         <div className="left">
           <p className="h-1"><span>ATHLEAD</span> <span>INDONESIA</span></p>
-          <p className="h-2">{translate("h2")}</p>
+          <p className="h-2">{translate("1")}</p>
 
           <div className="coming-soon-wrapper">
             <div className="coming-soon">
-              <span>COMING SOON!</span>
+              <span>{translate("2")}</span>
             </div>
           </div>
 
-          <p className="get-notif-t">Get notified when we launched</p>
+          <p className="get-notif-t">{translate("3")}</p>
           <div className="notif-input-wrapper">
             <div className="input-wrapper">
-              <input placeholder={!isResponsive ? "Input your phone number / email address here" : "Phone number / Email"} />
+              <input placeholder={!isResponsive ? translate("n4") : translate("mn4")} />
             </div>
             {isResponsive ? (
               <div className="notif-input">
                 <input type="checkbox" />
-                <p>By clicking “Notify Me”, you agree to the <span>Terms & Condition</span></p>
+                <p>{translate('4')}<span>{translate("5")}</span></p>
               </div>
             ) : null}
             <button>
               <PaperPlane />
-              <span>Notify Me</span>
+              <span>{translate("6")}</span>
             </button>
           </div>
           {!isResponsive ? <div className="notif-input">
             <input type="checkbox" />
-            <p>By clicking “Notify Me”, you agree to the <span>Terms & Condition</span></p>
+            <p>{translate('4')}<span onClick={() => setOpenTnc(true)}>{translate("5")}</span></p>
           </div> : null}
 
           <div className="explore-more">
-            <span>EXPLORE MORE</span>
+            <span>{translate("7")}</span>
             <ArrowDown />
           </div>
+
+          <Modal
+            open={openTnc}
+            onClose={null}
+            id="tnc-modal"
+          >
+            <div className="tnc-modal-wrapper">
+              <div className="tnc-modal-header">
+                <p>{translate("8")}</p>
+                <img onClick={() => setOpenTnc(false)} className="close-modal-icon" src={CloseIcon} alt="..." />
+              </div>
+              <div className="tnc-modal-body">
+                <p>{translate("9")}</p>
+              </div>
+            </div>
+          </Modal>
         </div>
 
         <div className="right">
@@ -87,25 +105,24 @@ const Homepage = () => {
       {/* LABEL 1 */}
       <div className="label-1">
         <div className="l1-content">
-          <div className="left"><p>3 STEPS INTO <span>ATHLEAD</span></p></div>
+          <div className="left"><p>{translate("10")}<span>ATHLEAD</span></p></div>
           <div className="right">
             <div className="rcontent">
               <SearchAlt />
-              <p className="title">FIND YOUR NEEDS</p>
-              <p className="cntn">Athlead best choices <br />
-                of multiple sports are here</p>
+              <p className="title">{translate("11")}</p>
+              <p className="cntn">{translate("12")}<br />
+                {translate("13")}</p>
             </div>
             <div className="rcontent">
               <Scale />
-              <p className="title">BOOK</p>
-              <p className="cntn">Confirm your <br />
-                prefered sports</p>
+              <p className="title">{translate("14")}</p>
+              <p className="cntn">{translate("15")} <br />{translate("16")}</p>
             </div>
             <div className="rcontent">
               <ShieldCheck />
-              <p className="title">PLAY</p>
-              <p className="cntn">Seamless transaction <br />
-                until your play day</p>
+              <p className="title">{translate("17")}</p>
+              <p className="cntn">{translate("18")}<br />
+                {translate("19")}</p>
             </div>
           </div>
         </div>
@@ -113,30 +130,30 @@ const Homepage = () => {
 
       {/* Our Product */}
       <div className="our-product">
-        <p className="op-header">OUR PRODUCT -</p>
-        <p className="op-sub-header">ATHLEAD integrates and houses all sports activities - from the most famous to the less known ones - <br />
-          into one platform which includes supplementary activities for recreational sports needs</p>
+        <p className="op-header">{translate("20")}</p>
+        <p className="op-sub-header">{translate("21")}<br />
+          {translate("22")}</p>
         {!isResponsive ? (
           <div className="product-card-wrapper">
             <ProductCard
               src={Venue}
-              title="Venue"
-              text="Book a venue and play your game"
+              title={translate("23")}
+              text={translate("24")}
             />
             <ProductCard
               src={Photo}
-              title="Photographer"
-              text="Capture and share your moment doing all sports activity"
+              title={translate("25")}
+              text={translate("26")}
             />
             <ProductCard
               src={Whistle}
-              title="Coach"
-              text="Maximize your talent from our best talent"
+              title={translate("27")}
+              text={translate("28")}
             />
             <ProductCard
               src={Laptop}
-              title="Academy"
-              text="Become excellent by joining the academy"
+              title={translate("29")}
+              text={translate("30")}
             />
           </div>
         ) : (
@@ -144,23 +161,23 @@ const Homepage = () => {
             <div className="product-card-wrapper">
               <ProductCard
                 src={Venue}
-                title="Venue"
-                text="Book a venue and play your game"
+                title={translate("23")}
+                text={translate("24")}
               />
               <ProductCard
                 src={Photo}
-                title="Photographer"
-                text="Capture and share your moment doing all sports activity"
+                title={translate("25")}
+                text={translate("26")}
               />
               <ProductCard
                 src={Whistle}
-                title="Coach"
-                text="Maximize your talent from our best talent"
+                title={translate("27")}
+                text={translate("28")}
               />
               <ProductCard
                 src={Laptop}
-                title="Academy"
-                text="Become excellent by joining the academy"
+                title={translate("29")}
+                text={translate("30")}
               />
             </div>
           </div>
@@ -169,34 +186,48 @@ const Homepage = () => {
 
       {/* Athlead Partner */}
       <div className="partner-wrapper">
-        <p className="partner-title">WHY BECOME ATHLEAD PARTNER?</p>
-        <p className="partner-subtitle">Whether you are a sports venue, coach, sports academy, or photographer, becoming ATHLEAD <br /> INDONESIA Partner can benefit your service in a number of ways</p>
+        <p className="partner-title">{translate("31")}</p>
+        <p className="partner-subtitle">{translate("32")}<br />{translate("33")}</p>
         <div className="partner-card-wrapper">
           <PartnerCard
             Icon={AddressBook}
-            title="Online Booking"
-            content={["Calendar Sync", "Seamless Booking Process", "Staff/Workers Effeciency", "Boost Conversion"]}
+            title={translate("34")}
+            desc={translate("35")}
+            points={[translate("36"), translate("37"), translate("38")]}
+            content={[translate("39"), translate("40"), translate("41"), translate("42")]}
           />
           <PartnerCard
             Icon={ShoppingBag}
-            title="Marketing"
-            content={["Search Optimization", "Social Media Ads", "Professional Company Pages"]}
+            title={translate("43")}
+            desc={translate("44")}
+            points={[
+              translate("45"),
+              translate("46"),
+              translate("47")
+            ]}
+            content={[translate("48"), translate("49"), translate("50")]}
           />
           <PartnerCard
             Icon={Signal}
-            title="Increased Utilisation"
-            content={["Search Optimization", "Promote/Campaign", "Ease of access"]}
+            desc={translate("51")}
+            points={[
+              translate("52"),
+              translate("53"),
+              translate("54")
+            ]}
+            title={translate("55")}
+            content={[translate("56"), translate("57"), translate("58")]}
           />
         </div>
         <div className="partner-label">
           <div className="partner-label-wrapper">
             <div className="plwiw">
               <div className="pl-txt">
-                <p className="plt-1">INTERESTED TO INCREASE YOUR SPORTS BUSINESS?</p>
-                <p className="plt-2">BECOME <span>OUR PARTNER</span> NOW!</p>
+                <p className="plt-1">{translate("59")}</p>
+                <p className="plt-2">{translate("60")}<span>{translate("61")}</span> {translate("62")}</p>
               </div>
               <button className="pltb-wrapper">
-                <span>See Details</span>
+                <span>{translate("63")}</span>
                 <ArrowRight />
               </button>
             </div>
@@ -208,42 +239,42 @@ const Homepage = () => {
       <div className="blog-wrapper">
         {!isResponsive ? (
           <>
-            <p className="blog-title">BLOG -</p>
+            <p className="blog-title">{translate("64")}</p>
             <div className="blog-sh-wrapper">
-              <p className="bsh-t1">Checkout our latest articles about sports from Indonesia and Worldwide.</p>
-              <p className="bsh-t2">See Details<ArrowRight /></p>
+              <p className="bsh-t1">{translate("65")}</p>
+              <p className="bsh-t2">{translate("63")}<ArrowRight /></p>
             </div>
           </>
         ) : (
           <>
             <div className="blog-sh-wrapper">
-              <p className="blog-title">BLOG -</p>
-              <p className="bsh-t2">See Details<ArrowRight /></p>
+              <p className="blog-title">{translate("64")}</p>
+              <p className="bsh-t2">{translate("63")}<ArrowRight /></p>
             </div>
-            <p className="bsh-t1">Checkout our latest articles about sports from Indonesia and Worldwide.</p>
+            <p className="bsh-t1">{translate("65")}</p>
           </>
         )}
         {!isResponsive ? (
           <div className="blog-card-wrapper">
             <BlogCard
               src={BlogImg}
-              title="This is a super super long text title of an articles"
-              text="This is a lorem ipsum text which I recomended for a description of an article"
+              title={translate("66")}
+              text={translate("67")}
             />
             <BlogCard
               src={BlogImg}
-              title="This is single text title"
-              text="This is a lorem ipsum text which I recomended for a description of an article"
+              title={translate("68")}
+              text={translate("69")}
             />
             <BlogCard
               src={BlogImg}
-              title="This is double line text of an article title"
-              text="This is a lorem ipsum text which I recomended for a description of an article"
+              title={translate("70")}
+              text={translate("71")}
             />
             <BlogCard
               src={BlogImg}
-              title="This is single text title"
-              text="This is a lorem ipsum text which I recomended for a description of an article"
+              title={translate("72")}
+              text={translate("73")}
             />
           </div>
         ) : (
@@ -251,23 +282,23 @@ const Homepage = () => {
             <div className="blog-card-wrapper">
               <BlogCard
                 src={BlogImg}
-                title="This is a super super long text title of an articles"
-                text="This is a lorem ipsum text which I recomended for a description of an article"
+                title={translate("66")}
+                text={translate("67")}
               />
               <BlogCard
                 src={BlogImg}
-                title="This is single text title"
-                text="This is a lorem ipsum text which I recomended for a description of an article"
+                title={translate("68")}
+                text={translate("69")}
               />
               <BlogCard
                 src={BlogImg}
-                title="This is double line text of an article title"
-                text="This is a lorem ipsum text which I recomended for a description of an article"
+                title={translate("70")}
+                text={translate("71")}
               />
               <BlogCard
                 src={BlogImg}
-                title="This is single text title"
-                text="This is a lorem ipsum text which I recomended for a description of an article"
+                title={translate("72")}
+                text={translate("73")}
               />
             </div>
           </div>
@@ -276,23 +307,23 @@ const Homepage = () => {
 
       {/* TESTIMONY */}
       <div className="testimony-wrapper">
-        <p className="testi-title">LET’S HEAR WHAT THEY SAID -</p>
-        <p className="testi-subtitle">Checkout what they said about ATHLEAD performance.</p>
+        <p className="testi-title">{translate("74")}</p>
+        <p className="testi-subtitle">{translate("75")}</p>
         {!isResponsive ? (
           <div className="testi-card-wrapper">
             <TestimonyCard
               src={CeliaAtmojo}
               name="GUNAWAN SETYA LAKSANA"
-              info="Runner Up Volley Ball at Asian Games"
-              title="Keren Banget! Cuman klik klik langsung bisa booking lapangan."
-              text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining "
+              info={translate("76")}
+              title={translate("77")}
+              text={translate("78")}
             />
             <TestimonyCard
               src={Gunawan}
               name="CECILIA ATMOJO"
-              info="Head of West Java Mini Soccer Association"
-              title="Booking lapangan mini soccer sambil rebahan!"
-              text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining "
+              info={translate("79")}
+              title={translate("80")}
+              text={translate("81")}
             />
           </div>
         ) : (
@@ -301,16 +332,16 @@ const Homepage = () => {
               <TestimonyCard
                 src={CeliaAtmojo}
                 name="GUNAWAN SETYA LAKSANA"
-                info="Runner Up Volley Ball at Asian Games"
-                title="Keren Banget! Cuman klik klik langsung bisa booking lapangan."
-                text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining "
+                info={translate("76")}
+                title={translate("77")}
+                text={translate("78")}
               />
               <TestimonyCard
                 src={Gunawan}
                 name="CECILIA ATMOJO"
-                info="Head of West Java Mini Soccer Association"
-                title="Booking lapangan mini soccer sambil rebahan!"
-                text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining "
+                info={translate("79")}
+                title={translate("80")}
+                text={translate("81")}
               />
             </div>
           </div>
@@ -324,18 +355,17 @@ const Homepage = () => {
           <div className="fj-wrapper">
             <div className="left">
               <div className="form">
-                <p className="form-title">JOIN OUR SUPERTEAM!</p>
-                <p className="form-subtitle">Ready for new and challanging stuff? Passionate of things
-                  about sports? We’re welcoming you to become our Superteam!</p>
+                <p className="form-title">{translate("82")}</p>
+                <p className="form-subtitle">{translate("83")}</p>
                 <div className="form-fields">
                   <div className="field-wrapper">
-                    <p className="input-label">Full Name</p>
+                    <p className="input-label">{translate("84")}</p>
                     <div className="input-wrapper">
                       <input placeholder="Biko Maryono" />
                     </div>
                   </div>
                   <div className="field-wrapper">
-                    <p className="input-label">Job Position</p>
+                    <p className="input-label">{translate("85")}</p>
                     <div className="input-wrapper">
                       <input placeholder="Biko Maryono" />
                     </div>
@@ -344,13 +374,13 @@ const Homepage = () => {
 
                 <div className="form-fields">
                   <div className="field-wrapper">
-                    <p className="input-label">Email</p>
+                    <p className="input-label">{translate("86")}</p>
                     <div className="input-wrapper">
                       <input placeholder="Content Writers" />
                     </div>
                   </div>
                   <div className="field-wrapper">
-                    <p className="input-label">Phone Number</p>
+                    <p className="input-label">{translate("87")}</p>
                     <div className="input-wrapper">
                       <input placeholder="Content Writers" />
                     </div>
@@ -360,7 +390,7 @@ const Homepage = () => {
                 <div className="join-com-soon">
                   <button>
                     <PaperPlane className="plane-icn" />
-                    <span>COMING SOON</span>
+                    <span></span>
                   </button>
                 </div>
               </div>
@@ -375,13 +405,12 @@ const Homepage = () => {
           <img className="form-join-rsponsive" src={Volley} alt="..." />
           <div className="join-outer">
             <div className="join-inner">
-              <p className="jim-1">JOIN OUR SUPERTEAM! </p>
-              <p className="jim-2">Ready for new and challanging stuff? Passionate of things
-                about sports? We’re welcoming you to become our Superteam!</p>
+              <p className="jim-1">{translate("82")}</p>
+              <p className="jim-2">{translate("83")}</p>
               <div className="fj-btn-wrapper">
                 <button>
                   <PaperPlane className="plane-icn" />
-                  <span>COMING SOON</span>
+                  <span>{translate("88")}</span>
                 </button>
               </div>
             </div>
