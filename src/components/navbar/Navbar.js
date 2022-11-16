@@ -80,6 +80,7 @@ const NMobile = ({ Tabs, changeLanguage, language }) => {
 
 const Navbar = () => {
   const { changeLanguage, language, translate } = useTranslate(english, indo);
+  const isResponsive = window.innerWidth <= 1021
 
   const Tabs = useMemo(() => ([
     {
@@ -102,9 +103,8 @@ const Navbar = () => {
       path: "/career",
       display: translate("career")
     },
-  ]), [language])
+  ]), [language, isResponsive])
 
-  const isResponsive = window.innerWidth <= 768
   return !isResponsive ? (<NDekstop Tabs={Tabs} changeLanguage={changeLanguage} language={language} />) : (<NMobile Tabs={Tabs} changeLanguage={changeLanguage} language={language} />)
 }
 
