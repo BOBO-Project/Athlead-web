@@ -23,6 +23,8 @@ import {
   Box,
   IconButton,
   Avatar,
+  createTheme,
+  ThemeProvider,
 } from "@mui/material";
 
 ///
@@ -38,30 +40,55 @@ const Partner = () => {
   const { translate } = useTranslate(english, indo);
   const [isModal, setModal] = useState(false);
   const [title, setTitle] = useState("");
-  const isReponsive = window.innerWidth <= 800;
+  const isResponsive = window.innerWidth <= 800;
+  // const [style, setStyle] = useState({
+  //   position: "absolute",
+  //   top: "50%",
+  //   left: "50%",
+  //   transform: "translate(-50%, -50%)",
+  //   width: "500px",
+  //   bgcolor: "white",
+  //   border: "2px solid #000",
+  //   boxShadow: 24,
+  //   p: 4,
+  //   overflow: "scroll",
+  //   height: "800px",
+  // });
+
+  // const theme = createTheme();
+  // theme.typography.h1 = {
+  //   fontSize: "2rem",
+  //   "@media (max-width:800px)": {
+  //     fontSize: "1.5rem",
+  //   },
+  // };
+
+  // theme.components.MuiIconButton ={
+    
+  // }
 
   const handleOnClick = (e) => {
     setTitle(e);
     setModal(true);
-    // console.log(title);
+    // if (isResponsive) {
+    //   setStyle({
+    //     position: "absolute",
+    //     top: "50%",
+    //     left: "50%",
+    //     transform: "translate(-50%, -50%)",
+    //     width: "300px",
+    //     bgcolor: "white",
+    //     border: "2px solid #000",
+    //     boxShadow: 24,
+    //     p: 4,
+    //     overflow: "scroll",
+    //     height: "500px",
+    //   });
+    // }
   };
 
   const handleClose = () => {
     setModal(false);
-  };
-
-  const style = {
-    position: "absolute",
-    top: "50%",
-    left: "50%",
-    transform: "translate(-50%, -50%)",
-    width: "500px",
-    bgcolor: "background.paper",
-    border: "2px solid #000",
-    boxShadow: 24,
-    p: 4,
-    overflow: "scroll",
-    height: "800px",
   };
 
   return (
@@ -83,37 +110,69 @@ const Partner = () => {
           </div>
         </div>
       </div>
-      <Modal open={isModal}>
-        <div>
-          <Box sx={style}>
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "space-between",
-              }}
-            >
-              <h1>{title} Registration</h1>
-              <IconButton
-                className="close-button"
-                sx={{
-                  backgroundColor: "black",
-                  height: "40px",
-                  width: "40px",
-                  color: "white",
-                  ml: 1,
-                  "&.MuiButtonBase-root:hover": {
-                    bgcolor: "grey",
-                  },
+      <div className="container-modal">
+        <Modal open={isModal}>
+          <div className="container-box">
+            <Box sx={{
+               position: "absolute",
+               top: "50%",
+               left: "50%",
+               transform: "translate(-50%, -50%)",
+               width: "500px",
+               bgcolor: "white",
+               border: "2px solid #000",
+               boxShadow: 24,
+               p: 4,
+               overflow: "scroll",
+               height: "800px",
+               "@media (max-width:800px)": {
+                height: "500px",
+                width: "300px",
+              },
+            }} className="box-modal">
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "space-between",
                 }}
-                onClick={handleClose}
               >
-                <Close />
-              </IconButton>
-            </div>
-            <Form title={title} type={title} />
-          </Box>
-        </div>
-      </Modal>
+                {/* <ThemeProvider theme={theme}> */}
+                  <Typography variant="h1" sx={{
+                    fontWeight:'800',
+                    fontSize: "2rem",
+                    "@media (max-width:800px)": {
+                      fontSize: "1.5rem",
+                    },
+                  }}>{title} Registration</Typography>
+                {/* </ThemeProvider> */}
+                {/* <ThemeProvider theme={theme}> */}
+                  <IconButton
+                    className="close-button"
+                    sx={{
+                      backgroundColor: "black",
+                      height: "40px",
+                      width: "40px",
+                      "@media (max-width:800px)": {
+                        height: "30px",
+                        width: "30px",
+                      },
+                      color: "white",
+                      ml: 1,
+                      "&.MuiButtonBase-root:hover": {
+                        bgcolor: "grey",
+                      },
+                    }}
+                    onClick={handleClose}
+                  >
+                    <Close />
+                  </IconButton>
+                {/* </ThemeProvider> */}
+              </div>
+              <Form title={title} type={title} />
+            </Box>
+          </div>
+        </Modal>
+      </div>
       <div className="container-openingWord">
         <div className="container-openingWord">
           <Typography variant="h1" className="openingWord">
@@ -121,13 +180,8 @@ const Partner = () => {
           </Typography>
         </div>
       </div>
-      {!isReponsive ? (
-        <div
-          className="product-card-wrapper"
-          style={{
-            marginTop: "100px",
-          }}
-        >
+      {!isResponsive ? (
+        <div className="product-card-wrapper">
           <ProductCard src={Venue} title="Venue">
             <div className="text-product">
               <Typography
@@ -289,12 +343,7 @@ const Partner = () => {
         </div>
       ) : (
         <div className="pcw-scroll">
-          <div
-            className="product-card-wrapper"
-            style={{
-              marginTop: "100px",
-            }}
-          >
+          <div className="product-card-wrapper">
             <ProductCard src={Venue} title="Vendor">
               <div className="text-product">
                 <Typography

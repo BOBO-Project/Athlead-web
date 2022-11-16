@@ -315,6 +315,7 @@
     margin-top: 40px;
     display: flex;
     width: 100%;
+    margin-bottom: 5%;
     // padding-left: 160px;
     // padding-right: 130px;
     .openingWord {
@@ -326,6 +327,31 @@
       font-style: normal;
       color: #7d0e23;
     }
+  }
+
+  .modal-form {
+    width: 200px;
+    height: 500px;
+  }
+
+  .container-modal Modal{
+    .container-box {
+      .box-modal {
+        .title-registration {
+          font-size: 28px;
+        }
+      }
+    }
+  }
+
+  .test{
+    display: flex !important;
+    justify-content: space-between !important;
+  }
+
+  .close-button{
+    width: 40px;
+    height: 40px;
   }
 }
 
@@ -388,8 +414,12 @@
     .container-openingWord {
       .openingWord {
         margin-left: 15%;
-        font-size: 26px;
+        font-size: 22px;
       }
+    }
+
+    .title-registration {
+      font-size: 22px !important;
     }
 
     .container-partner {
@@ -398,6 +428,7 @@
       margin-left: 50%;
     }
     .partner-wrapper {
+      margin-top: 0%;
       width: 90vw;
       max-width: 300px;
       padding: 0;
@@ -412,7 +443,6 @@
       .partner-card-wrapper {
         flex-direction: column;
         align-items: center;
-        margin: 0;
         .partner-card {
           margin: 0;
           margin-bottom: 67px;

@@ -106,7 +106,7 @@ const Form = (props) => {
         </>
       ) : null}
       {/* //Vendor Form */}
-      {title === "Venue" ? (
+      {title === "Vendor" ? (
         <>
           <div
             style={{
@@ -297,15 +297,13 @@ const Form = (props) => {
         textAlign:'center'
       }}>
         <Button variant="contained" endIcon={<ArrowRight/>} sx={{
-          width:'360px',
+          width:'100%',
           height:'56px',
           bgcolor:'#7D0E23',
           color:'white',
-          ml: 1,
           "&.MuiButtonBase-root:hover": {
             bgcolor: "grey"
           },
-          // padding:'10px, 16px, 10px, 16px'
         }}>Submit Data</Button>
       </div>
     </div>

@@ -14,10 +14,10 @@
     justify-content: space-between;
     margin-top: 5%;
     margin-bottom: 5%;
-    .container-description{
+    .container-description {
       width: 400px;
     }
-    .title-description-content{
+    .title-description-content {
       font-size: 2.25rem;
       font-weight: 800;
       margin-bottom: 4%;
@@ -28,22 +28,19 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    flex-wrap: wrap;
     align-items: center;
     padding: 18px 24px;
-    gap: 20px;
+    // gap: 20px;
     background-color: #c95454;
     max-width: 100%;
     height: auto;
-    align-items: center;
   }
 
-
   .content-accordion-text {
-    width: 656px;
-    background-color: #EAEAEA;
+    width: 100%;
+    background-color: #eaeaea;
 
-    .accordion-summary{
+    .accordion-summary {
       height: 84px;
     }
   }
@@ -53,7 +50,7 @@
     height: 100%;
   }
 
-   .container-banner {
+  .container-banner {
     text-align: center;
     margin: 0;
     padding: 0;
@@ -84,48 +81,49 @@
     align-items: center;
   }
 
-  .image-dot{
+  .image-dot {
     width: 450px;
     height: 450px;
   }
-
 }
 
-
 @media (max-width: 768px) {
-    #privacyPolicy{
-      .image-dot{
+  #privacyPolicy {
+    .image-dot {
+      width: 300px;
+      height: 300px;
+    }
+
+    .container-text-description {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      .container-description {
         width: 300px;
-        height: 300px;
       }
+      .title-description-content {
+        font-size: 1.3rem;
+      }
+    }
 
-      .container-text-description {
-        align-items: center;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        .container-description{
-          width: 300px;
-        }
-        .title-description-content{
-          font-size: 1.3rem;
-        }
-      }
+    .title-container {
+      font-size: 2rem !important;
+    }
+    .title-description {
+      font-size: 1rem !important;
+    }
+    .content-text-privacyPolicy {
+      font-size: 1rem;
+    }
+    
 
-      .title-container{
-        font-size: 2rem !important;
-      }
-      .title-description{
-        font-size: 1rem !important;
-      }
-      .content-text-privacyPolicy{
-        font-size: 1rem;
-      }
-
-      .content-accordion-text{
-        .accordion-summary{
-          height: 60px;
+    .content-accordion-text {
+      .accordion-summary {
+        Typography:root {
+          font-size: 14px;
         }
       }
     }
+  }
 }
