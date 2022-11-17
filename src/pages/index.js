@@ -14,6 +14,7 @@ import partnerwithus from "./partnerwithus";
 import privacypolicy from "./privacypolicy";
 import blog from "./blog";
 
+import faq from "./faq";
 
 const appPages = [
   { ...homepage },
@@ -22,7 +23,8 @@ const appPages = [
   { ...career },
   { ...partnerwithus },
   { ...privacypolicy },
-  {...blog}
+  {...blog},
+  { ...faq },
 ];
 
 const RenderPages = () => {
