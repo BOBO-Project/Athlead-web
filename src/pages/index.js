@@ -10,13 +10,16 @@ import homepage from "./homepage";
 import product from "./product";
 import career from "./career";
 import aboutus from "./aboutus";
-import career from "./career";
+import partnerwithus from "./partnerwithus";
+import faq from "./faq";
 
 const appPages = [
   { ...homepage },
   { ...product },
   { ...aboutus },
   { ...career },
+  { ...partnerwithus },
+  { ...faq },
 ];
 
 const RenderPages = () => {
