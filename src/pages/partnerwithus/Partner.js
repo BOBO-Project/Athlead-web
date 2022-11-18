@@ -41,50 +41,9 @@ const Partner = () => {
   const [isModal, setModal] = useState(false);
   const [title, setTitle] = useState("");
   const isResponsive = window.innerWidth <= 800;
-  // const [style, setStyle] = useState({
-  //   position: "absolute",
-  //   top: "50%",
-  //   left: "50%",
-  //   transform: "translate(-50%, -50%)",
-  //   width: "500px",
-  //   bgcolor: "white",
-  //   border: "2px solid #000",
-  //   boxShadow: 24,
-  //   p: 4,
-  //   overflow: "scroll",
-  //   height: "800px",
-  // });
-
-  // const theme = createTheme();
-  // theme.typography.h1 = {
-  //   fontSize: "2rem",
-  //   "@media (max-width:800px)": {
-  //     fontSize: "1.5rem",
-  //   },
-  // };
-
-  // theme.components.MuiIconButton ={
-    
-  // }
-
   const handleOnClick = (e) => {
     setTitle(e);
     setModal(true);
-    // if (isResponsive) {
-    //   setStyle({
-    //     position: "absolute",
-    //     top: "50%",
-    //     left: "50%",
-    //     transform: "translate(-50%, -50%)",
-    //     width: "300px",
-    //     bgcolor: "white",
-    //     border: "2px solid #000",
-    //     boxShadow: 24,
-    //     p: 4,
-    //     overflow: "scroll",
-    //     height: "500px",
-    //   });
-    // }
   };
 
   const handleClose = () => {
@@ -113,23 +72,26 @@ const Partner = () => {
       <div className="container-modal">
         <Modal open={isModal}>
           <div className="container-box">
-            <Box sx={{
-               position: "absolute",
-               top: "50%",
-               left: "50%",
-               transform: "translate(-50%, -50%)",
-               width: "500px",
-               bgcolor: "white",
-               border: "2px solid #000",
-               boxShadow: 24,
-               p: 4,
-               overflow: "scroll",
-               height: "800px",
-               "@media (max-width:800px)": {
-                height: "500px",
-                width: "300px",
-              },
-            }} className="box-modal">
+            <Box
+              sx={{
+                position: "absolute",
+                top: "50%",
+                left: "50%",
+                transform: "translate(-50%, -50%)",
+                width: "500px",
+                bgcolor: "white",
+                border: "2px solid #000",
+                boxShadow: 24,
+                p: 4,
+                overflow: "scroll",
+                height: "800px",
+                "@media (max-width:800px)": {
+                  height: "500px",
+                  width: "300px",
+                },
+              }}
+              className="box-modal"
+            >
               <div
                 style={{
                   display: "flex",
@@ -137,35 +99,40 @@ const Partner = () => {
                 }}
               >
                 {/* <ThemeProvider theme={theme}> */}
-                  <Typography variant="h1" sx={{
-                    fontWeight:'800',
+                <Typography
+                  variant="h1"
+                  sx={{
+                    fontWeight: "800",
                     fontSize: "2rem",
                     "@media (max-width:800px)": {
                       fontSize: "1.5rem",
                     },
-                  }}>{title} Registration</Typography>
+                  }}
+                >
+                  {title} Registration
+                </Typography>
                 {/* </ThemeProvider> */}
                 {/* <ThemeProvider theme={theme}> */}
-                  <IconButton
-                    className="close-button"
-                    sx={{
-                      backgroundColor: "black",
-                      height: "40px",
-                      width: "40px",
-                      "@media (max-width:800px)": {
-                        height: "30px",
-                        width: "30px",
-                      },
-                      color: "white",
-                      ml: 1,
-                      "&.MuiButtonBase-root:hover": {
-                        bgcolor: "grey",
-                      },
-                    }}
-                    onClick={handleClose}
-                  >
-                    <Close />
-                  </IconButton>
+                <IconButton
+                  className="close-button"
+                  sx={{
+                    backgroundColor: "black",
+                    height: "40px",
+                    width: "40px",
+                    "@media (max-width:800px)": {
+                      height: "30px",
+                      width: "30px",
+                    },
+                    color: "white",
+                    ml: 1,
+                    "&.MuiButtonBase-root:hover": {
+                      bgcolor: "grey",
+                    },
+                  }}
+                  onClick={handleClose}
+                >
+                  <Close />
+                </IconButton>
                 {/* </ThemeProvider> */}
               </div>
               <Form title={title} type={title} />
@@ -509,65 +476,52 @@ const Partner = () => {
       )}
       <div className="container-partner">
         <div className="partner-wrapper">
-          <p className="partner-title">WHY BECOME ATHLEAD PARTNER?</p>
+          <p className="partner-title">{translate("31")}</p>
           <p className="partner-subtitle">
-            Whether you are a sports venue, coach, sports academy, or
-            photographer, becoming ATHLEAD <br /> INDONESIA Partner can benefit
-            your service in a number of ways
+            {translate("32")}
+            <br />
+            {translate("33")}
           </p>
           <div className="partner-card-wrapper">
             <PartnerCard
               Icon={AddressBook}
-              title="Online Booking"
+              title={translate("34")}
+              desc={translate("35")}
+              points={[translate("36"), translate("37"), translate("38")]}
               content={[
-                "Calendar Sync",
-                "Seamless Booking Process",
-                "Staff/Workers Effeciency",
-                "Boost Conversion",
+                translate("39"),
+                translate("40"),
+                translate("41"),
+                translate("42"),
               ]}
             />
             <PartnerCard
               Icon={ShoppingBag}
-              title="Marketing"
-              content={[
-                "Search Optimization",
-                "Social Media Ads",
-                "Professional Company Pages",
-              ]}
+              title={translate("43")}
+              desc={translate("44")}
+              points={[translate("45"), translate("46"), translate("47")]}
+              content={[translate("48"), translate("49"), translate("50")]}
             />
             <PartnerCard
               Icon={Signal}
-              title="Increased Utilisation"
-              content={[
-                "Search Optimization",
-                "Promote/Campaign",
-                "Ease of access",
-              ]}
+              desc={translate("51")}
+              points={[translate("52"), translate("53"), translate("54")]}
+              title={translate("55")}
+              content={[translate("56"), translate("57"), translate("58")]}
             />
           </div>
           <div className="partner-label">
             <div className="partner-label-wrapper">
               <div className="plwiw">
                 <div className="pl-txt">
-                  <p
-                    className="plt-1"
-                    style={{
-                      marginBottom: "10px",
-                    }}
-                  >
-                    INTERESTED TO INCREASE YOUR SPORTS BUSINESS?
-                  </p>
-                  <p
-                    className="plt-2"
-                    style={{
-                      margin: "0 0 0 0",
-                    }}
-                  >
-                    BECOME <span className="button-text">OUR PARTNER</span> NOW!
+                  <p className="plt-1">{translate("59")}</p>
+                  <p className="plt-2">
+                    {translate("60")}
+                    <span>{translate("61")}</span> {translate("62")}
                   </p>
                 </div>
                 <button className="pltb-wrapper">
-                  <span className="button-text">See Details</span>
+                  <span>{translate("63")}</span>
                   <ArrowRight />
                 </button>
               </div>
