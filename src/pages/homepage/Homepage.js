@@ -139,21 +139,25 @@ const Homepage = () => {
               src={Venue}
               title={translate("23")}
               text={translate("24")}
+              translate={translate}
             />
             <ProductCard
               src={Photo}
               title={translate("25")}
               text={translate("26")}
+              translate={translate}
             />
             <ProductCard
               src={Whistle}
               title={translate("27")}
               text={translate("28")}
+              translate={translate}
             />
             <ProductCard
               src={Laptop}
               title={translate("29")}
               text={translate("30")}
+              translate={translate}
             />
           </div>
         ) : (
@@ -163,21 +167,25 @@ const Homepage = () => {
                 src={Venue}
                 title={translate("23")}
                 text={translate("24")}
+                translate={translate}
               />
               <ProductCard
                 src={Photo}
                 title={translate("25")}
                 text={translate("26")}
+                translate={translate}
               />
               <ProductCard
                 src={Whistle}
                 title={translate("27")}
                 text={translate("28")}
+                translate={translate}
               />
               <ProductCard
                 src={Laptop}
                 title={translate("29")}
                 text={translate("30")}
+                translate={translate}
               />
             </div>
           </div>
