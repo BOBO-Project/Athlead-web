@@ -33,11 +33,33 @@ function Footer() {
 
         <div className="second">
           <p className="title">{translate("about-title")}</p>
-          <p className="sub-title">{translate("about-content-home")}</p>
-          <p className="sub-title">{translate("about-content-about")}</p>
-          <p className="sub-title">{translate("about-content-career")}</p>
-          <p className="sub-title">{translate("about-content-blog")}</p>
-          <p className="sub-title">{translate("about-content-partner")}</p>
+          <Link to="/" style={{ textDecoration: "none", marginBottom: "16px" }}>
+            <p className="sub-title">{translate("about-content-home")}</p>
+          </Link>
+          <Link
+            to="/about-us"
+            style={{ textDecoration: "none", marginBottom: "16px" }}
+          >
+            <p className="sub-title">{translate("about-content-about")}</p>
+          </Link>
+          <Link
+            to="/career"
+            style={{ textDecoration: "none", marginBottom: "16px" }}
+          >
+            <p className="sub-title">{translate("about-content-career")}</p>
+          </Link>
+          <Link
+            to="/blog"
+            style={{ textDecoration: "none", marginBottom: "16px" }}
+          >
+            <p className="sub-title">{translate("about-content-blog")}</p>
+          </Link>
+          <Link
+            to="/partner"
+            style={{ textDecoration: "none", marginBottom: "16px" }}
+          >
+            <p className="sub-title">{translate("about-content-partner")}</p>
+          </Link>
         </div>
         <div className="third">
           <p className="title">{translate("product-title")}</p>
@@ -51,12 +73,20 @@ function Footer() {
         <div className="forth">
           <p className="title">{translate("other-title")}</p>
           <p className="sub-title">{translate("other-content-faq")}</p>
-          <Link to='/privacypolicy' style={{ textDecoration: 'none', marginBottom:'16px' }}>
+          <Link
+            to="/privacypolicy"
+            style={{ textDecoration: "none", marginBottom: "16px" }}
+          >
             <p className="sub-title">{translate("other-content-policy")}</p>
           </Link>
-          <p className="sub-title" style={{
-            marginTop:'16px'
-          }}>{translate("other-content-chat")}</p>
+          <p
+            className="sub-title"
+            style={{
+              marginTop: "16px",
+            }}
+          >
+            {translate("other-content-chat")}
+          </p>
         </div>
         <div className="fifth">
           <p className="title">{translate("contact-title")}</p>

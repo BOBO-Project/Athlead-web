@@ -7,6 +7,7 @@ import { Typography } from "@mui/material";
 import "./style-blog.scss";
 import comingsoonPic from "assets/img/coming-soon.png";
 import picMobile from "assets/img/comingsoon-mobile.png";
+import BreadcrumbsComp from "components/breadcrumbs-comp/breadcrumbs";
 
 export default function Blog() {
   const { translate } = useTranslate(english, indo);
@@ -20,6 +21,9 @@ export default function Blog() {
         }}
         className="banner"
       >
+        {/* <div>
+          <BreadcrumbsComp page="Blog" />
+        </div> */}
         <div className="container-banner">
           <div className="container-content">
             <Typography variant="h1" className="title-container">

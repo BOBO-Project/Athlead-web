@@ -20,9 +20,8 @@ import logoBasketball from "assets/img/product-logo/83-1.png";
 import logoVolley from "assets/img/product-logo/83.png";
 import logoHorse from "assets/img/product-logo/85.png";
 
-import productImage from "assets/img/product-cards.png"
-import productImageMobile from "assets/img/product-card-mobile.png"
-
+import productImage from "assets/img/product-cards.png";
+import productImageMobile from "assets/img/product-card-mobile.png";
 
 ////Assets Product Card
 import Venue from "assets/img/venue.png";
@@ -35,6 +34,7 @@ import indo from "./locales/id.json";
 import { Box, Grid, Paper, Typography } from "@mui/material";
 import { Container } from "@mui/system";
 import ProductCard from "./ProductCard";
+import BreadcrumbsComp from "components/breadcrumbs-comp/breadcrumbs";
 
 const Product = () => {
   const { translate } = useTranslate(english, indo);
@@ -104,6 +104,9 @@ const Product = () => {
         }}
         className="banner"
       >
+        {/* <div>
+          <BreadcrumbsComp page="Product" />
+        </div> */}
         <div className="container-banner">
           <div className="container-content">
             <Typography variant="h1" className="title-container">
@@ -134,8 +137,9 @@ const Product = () => {
       <div>
         {!isResponsive ? (
           <div className="container-product-icon">
-            <img src={productImage} className="product-image"/>
+            <img src={productImage} className="product-image" />
           </div>
+        ) : (
           // <Paper elevation={2} className="container-product-icon">
           //   <div className="product-box">
           //     <Grid
@@ -186,9 +190,8 @@ const Product = () => {
           //     })}
           //   </Grid>
           // </Paper>
-        ) : (
           <div className="container-product-icon">
-            <img src={productImageMobile} className="product-image"/>
+            <img src={productImageMobile} className="product-image" />
           </div>
           // <Paper elevation={2} className="container-product-icon">
           //   <div className="product-box">

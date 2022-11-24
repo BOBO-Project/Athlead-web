@@ -25,6 +25,7 @@ import {
   Avatar,
   createTheme,
   ThemeProvider,
+  Breadcrumbs,
 } from "@mui/material";
 
 ///
@@ -35,6 +36,8 @@ import ProductCard from "./ProductCard";
 import PartnerCard from "./PartnerCard";
 import Form from "components/formPartner/Form";
 import { Close } from "@mui/icons-material";
+import { Link } from "react-router-dom";
+import BreadcrumbsComp from "components/breadcrumbs-comp/breadcrumbs";
 
 const Partner = () => {
   const { translate } = useTranslate(english, indo);
@@ -58,6 +61,9 @@ const Partner = () => {
         }}
         className="banner"
       >
+        {/* <div className="breadcrumbs">
+          <BreadcrumbsComp page="Partner With Us" />
+        </div> */}
         <div className="container-banner">
           <div className="container-content">
             <Typography variant="h1" className="title-container">

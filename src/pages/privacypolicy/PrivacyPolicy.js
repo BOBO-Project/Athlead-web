@@ -16,12 +16,12 @@ import {
   Typography,
 } from "@mui/material";
 import { ExpandMore } from "@mui/icons-material";
+import BreadcrumbsComp from "components/breadcrumbs-comp/breadcrumbs";
 
 const PrivacyPolicy = () => {
   const { translate } = useTranslate(english, indo);
   const isResponsive = window.innerWidth <= 768;
-  const [grid, setGrid] = useState(isResponsive? 12:6);
-
+  const [grid, setGrid] = useState(isResponsive ? 12 : 6);
 
   return (
     <div id="privacyPolicy">
@@ -32,6 +32,9 @@ const PrivacyPolicy = () => {
         className="banner"
       >
         <div className="container-banner">
+          <div>
+            <BreadcrumbsComp page="Privacy Policy" />
+          </div>
           <div className="container-content">
             <Typography variant="h1" className="title-container">
               {translate("title")}
