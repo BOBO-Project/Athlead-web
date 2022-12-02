@@ -1,4 +1,8 @@
 @import url("http://fonts.cdnfonts.com/css/proxima-nova-2");
+@font-face {
+  font-family: 'pmr';
+  src: url('../../assets/fonts/Proxima\ Nova\ Alt\ Regular.otf');
+}
 #homepage {
   //Reset
   box-sizing: border-box;
@@ -6,7 +10,7 @@
   a,
   span {
     color: #282828;
-    font-family: "Proxima Nova", sans-serif;
+    font-family: "pmr", sans-serif;
     margin: 0;
   }
   a {
@@ -60,7 +64,7 @@
           left: 8px;
           top: 8px;
           span {
-            font-family: "Proxima Nova";
+            font-family: "pmr";
             font-style: normal;
             font-weight: 900;
             font-size: 22px;
@@ -70,7 +74,7 @@
       }
 
       .get-notif-t {
-        font-family: "Proxima Nova";
+        font-family: "pmr";
         font-style: normal;
         font-weight: 700;
         font-size: 20px;
@@ -115,7 +119,7 @@
             margin-right: 8px;
           }
           span {
-            font-family: "Proxima Nova";
+            font-family: "pmr";
             font-style: normal;
             font-weight: 800;
             font-size: 16px;
@@ -137,7 +141,7 @@
           margin-right: 8px;
         }
         p {
-          font-family: "Proxima Nova";
+          font-family: "pmr";
           font-style: normal;
           font-weight: 400;
           font-size: 12px;
@@ -154,7 +158,7 @@
         align-items: center;
         cursor: pointer;
         span {
-          font-family: "Proxima Nova";
+          font-family: "pmr";
           font-style: normal;
           font-weight: 800;
           font-size: 16px;
@@ -196,7 +200,7 @@
         white-space: nowrap;
         margin-right: 80px;
         p {
-          font-family: "Proxima Nova";
+          font-family: "pmr";
           font-style: normal;
           font-weight: 800;
           font-size: 36px;
@@ -220,7 +224,7 @@
             margin-bottom: 8px;
           }
           .title {
-            font-family: "Proxima Nova";
+            font-family: "pmr";
             font-style: normal;
             font-weight: 800;
             font-size: 16px;
@@ -230,7 +234,7 @@
             margin-bottom: 8px;
           }
           .cntn {
-            font-family: "Proxima Nova";
+            font-family: "pmr";
             font-style: normal;
             font-weight: 400;
             font-size: 14px;
@@ -246,7 +250,7 @@
   .our-product {
     padding: 0 140px;
     .op-header {
-      font-family: "Proxima Nova";
+      font-family: "pmr";
       font-style: normal;
       font-weight: 800;
       font-size: 36px;
@@ -254,7 +258,7 @@
       margin-bottom: 16px;
     }
     .op-sub-header {
-      font-family: "Proxima Nova";
+      font-family: "pmr";
       font-style: normal;
       font-weight: 400;
       font-size: 18px;
@@ -304,7 +308,7 @@
           justify-content: space-between;
           height: calc(100% - 50px);
           .pc-title {
-            font-family: "Proxima Nova";
+            font-family: "pmr";
             font-style: normal;
             font-weight: 800;
             font-size: 28px;
@@ -312,7 +316,7 @@
             margin-bottom: 8px;
           }
           .pc-text {
-            font-family: "Proxima Nova";
+            font-family: "pmr";
             font-style: normal;
             font-weight: 400;
             font-size: 20px;
@@ -326,7 +330,7 @@
             padding: 18px 26px;
             margin-bottom: 18px;
             span {
-              font-family: "Proxima Nova";
+              font-family: "pmr";
               font-style: normal;
               font-weight: 800;
               font-size: 16px;
@@ -347,7 +351,7 @@
             align-items: center;
             justify-content: center;
             span {
-              font-family: "Proxima Nova";
+              font-family: "pmr";
               font-style: normal;
               font-weight: 800;
               font-size: 16px;
@@ -361,7 +365,7 @@
             svg {
               width: 24px;
               height: 24px;
-              fill: #7d0e23;
+              fill: #fff;
             }
           }
         }
@@ -375,7 +379,7 @@
     margin-bottom: 116px;
     position: relative;
     .partner-title {
-      font-family: "Proxima Nova";
+      font-family: "pmr";
       font-style: normal;
       font-weight: 800;
       font-size: 36px;
@@ -383,7 +387,7 @@
       margin-bottom: 16px;
     }
     .partner-subtitle {
-      font-family: "Proxima Nova";
+      font-family: "pmr";
       font-style: normal;
       font-weight: 400;
       font-size: 18px;
@@ -425,7 +429,7 @@
           .pcc-desc {
             padding: 0 24px;
             .pcc-title {
-              font-family: "Proxima Nova";
+              font-family: "pmr";
               font-style: normal;
               font-weight: 800;
               font-size: 16px;
@@ -438,7 +442,7 @@
               flex-wrap: wrap;
               white-space: nowrap;
               span {
-                font-family: "Proxima Nova";
+                font-family: "pmr";
                 font-style: normal;
                 font-weight: 500;
                 font-size: 12px;
@@ -460,7 +464,7 @@
               background: white;
               padding: 24px;
               .pcl1-desc {
-                font-family: "Proxima Nova";
+                font-family: "pmr";
                 font-style: normal;
                 font-weight: 400;
                 font-size: 16px;
@@ -478,7 +482,7 @@
                     margin-right: 12px;
                     display: block;
                   }
-                  font-family: "Proxima Nova";
+                  font-family: "pmr";
                   font-style: normal;
                   font-weight: 400;
                   font-size: 16px;
@@ -499,7 +503,7 @@
             border-top-left-radius: 5px;
             border-top-right-radius: 5px;
             span {
-              font-family: "Proxima Nova";
+              font-family: "pmr";
               font-style: normal;
               font-weight: 800;
               font-size: 16px;
@@ -553,7 +557,7 @@
           align-items: center;
           .pl-txt {
             .plt-1 {
-              font-family: "Nunito Sans";
+              font-family: "pmr";
               font-style: normal;
               font-weight: 800;
               font-size: 20px;
@@ -561,7 +565,7 @@
               margin-bottom: 10px;
             }
             .plt-2 {
-              font-family: "Proxima Nova";
+              font-family: "pmr";
               font-style: normal;
               font-weight: 800;
               font-size: 36px;
@@ -581,7 +585,7 @@
             border: none;
             cursor: pointer;
             span {
-              font-family: "Proxima Nova";
+              font-family: "pmr";
               font-style: normal;
               font-weight: 800;
               font-size: 16px;
@@ -607,7 +611,7 @@
     padding: 0 140px;
     margin-bottom: 100px;
     .blog-title {
-      font-family: "Proxima Nova";
+      font-family: "pmr";
       font-style: normal;
       font-weight: 800;
       font-size: 36px;
@@ -620,14 +624,14 @@
       justify-content: space-between;
       margin-bottom: 24px;
       .bsh-t1 {
-        font-family: "Proxima Nova";
+        font-family: "pmr";
         font-style: normal;
         font-weight: 400;
         font-size: 18px;
         color: #282828;
       }
       .bsh-t2 {
-        font-family: "Proxima Nova";
+        font-family: "pmr";
         font-style: normal;
         font-weight: 800;
         font-size: 20px;
@@ -664,7 +668,7 @@
         .bc-ctn {
           padding: 24px;
           .bcc-title {
-            font-family: "Proxima Nova";
+            font-family: "pmr";
             font-style: normal;
             font-weight: 800;
             font-size: 16px;
@@ -673,7 +677,7 @@
             margin-bottom: 12px;
           }
           .bcc-text {
-            font-family: "Proxima Nova";
+            font-family: "pmr";
             font-style: normal;
             font-weight: 400;
             font-size: 16px;
@@ -695,7 +699,7 @@
     padding: 0 140px;
     margin-bottom: 100px;
     .testi-title {
-      font-family: "Proxima Nova";
+      font-family: "pmr";
       font-style: normal;
       font-weight: 800;
       font-size: 36px;
@@ -703,7 +707,7 @@
       margin-bottom: 15px;
     }
     .testi-subtitle {
-      font-family: "Proxima Nova";
+      font-family: "pmr";
       font-style: normal;
       font-weight: 400;
       font-size: 18px;
@@ -744,7 +748,7 @@
             .person-info-detail {
               margin-left: 90px;
               .pid-name {
-                font-family: "Proxima Nova";
+                font-family: "pmr";
                 font-style: normal;
                 font-weight: 700;
                 font-size: 16px;
@@ -753,7 +757,7 @@
                 margin-bottom: 12px;
               }
               .pid-inf {
-                font-family: "Proxima Nova";
+                font-family: "pmr";
                 font-style: normal;
                 font-weight: 400;
                 font-size: 16px;
@@ -765,7 +769,7 @@
           .testi-text {
             margin-top: 24px;
             .tt-title {
-              font-family: "Proxima Nova";
+              font-family: "pmr";
               font-style: normal;
               font-weight: 700;
               font-size: 16px;
@@ -774,7 +778,7 @@
               margin-bottom: 12px;
             }
             .tt-text {
-              font-family: "Proxima Nova";
+              font-family: "pmr";
               font-style: normal;
               font-weight: 400;
               font-size: 16px;
@@ -808,7 +812,7 @@
       .form {
         padding: 48px 60px;
         .form-title {
-          font-family: "Proxima Nova";
+          font-family: "pmr";
           font-style: normal;
           font-weight: 800;
           font-size: 36px;
@@ -816,7 +820,7 @@
           margin-bottom: 16px;
         }
         .form-subtitle {
-          font-family: "Proxima Nova";
+          font-family: "pmr";
           font-style: normal;
           font-weight: 400;
           font-size: 18px;
@@ -835,7 +839,7 @@
               margin-right: 0;
             }
             .input-label {
-              font-family: "Proxima Nova";
+              font-family: "pmr";
               font-style: normal;
               font-weight: 400;
               font-size: 16px;
@@ -853,7 +857,7 @@
                 background: inherit;
                 border: none;
                 &::placeholder {
-                  font-family: "Proxima Nova";
+                  font-family: "pmr";
                   font-style: normal;
                   font-weight: 400;
                   font-size: 16px;
@@ -886,7 +890,7 @@
               margin-right: 8px;
             }
             span {
-              font-family: "Proxima Nova";
+              font-family: "pmr";
               font-style: normal;
               font-weight: 800;
               font-size: 16px;
@@ -978,7 +982,7 @@
               margin-right: 8px;
             }
             p {
-              font-family: "Proxima Nova";
+              font-family: "pmr";
               font-style: normal;
               font-weight: 400;
               font-size: 12px;
@@ -1090,8 +1094,7 @@
     }
 
     .partner-wrapper {
-      width: 90vw;
-      max-width: 300px;
+      width: calc(100vw - 60px);
       padding: 0;
       margin-bottom: 55px;
       .partner-title {
@@ -1105,10 +1108,12 @@
         flex-direction: column;
         align-items: center;
         margin: 0;
+        width: calc(100vw - 50px);
         .partner-card {
           margin: 0;
           margin-bottom: 67px;
           height: 210px;
+          width: calc(100vw - 50px);
           .pcc-card {
             width: 77px;
             height: 77px;
@@ -1146,8 +1151,9 @@
         border: 1px solid #c95454;
         filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.1));
         border-radius: 20px;
-        width: calc(100% - 45px);
+        width: calc(100vw - 45px - 30px);
         height: 211px;
+        margin-top: 850px;
         .partner-label-wrapper {
           border: 1px solid #eaeaea;
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
@@ -1161,7 +1167,7 @@
             .pl-txt {
               margin-bottom: 18px;
               .plt-1 {
-                font-family: "Proxima Nova";
+                font-family: "pmr";
                 font-style: normal;
                 font-weight: 400;
                 font-size: 14px;
@@ -1204,7 +1210,7 @@
       .bsh-t1 {
         width: 100%;
         margin-bottom: 8px;
-        font-family: "Proxima Nova";
+        font-family: "pmr";
         font-style: normal;
         font-weight: 400;
         font-size: 12px;
@@ -1328,7 +1334,7 @@
           max-width: calc(300px - 24px - 24px);
           padding: 24px;
           .jim-1 {
-            font-family: "Proxima Nova";
+            font-family: "pmr";
             font-style: normal;
             font-weight: 800;
             font-size: 22px;
@@ -1336,7 +1342,7 @@
             margin-bottom: 11px;
           }
           .jim-2 {
-            font-family: "Proxima Nova";
+            font-family: "pmr";
             font-style: normal;
             font-weight: 400;
             font-size: 14px;
@@ -1364,7 +1370,7 @@
                 margin-right: 8px;
               }
               span {
-                font-family: "Proxima Nova";
+                font-family: "pmr";
                 font-style: normal;
                 font-weight: 800;
                 font-size: 16px;
@@ -1406,7 +1412,7 @@
       box-sizing: border-box;
       border-bottom: 2px solid #D9D9D9;
       p {
-        font-family: "Proxima Nova";
+        font-family: "pmr";
         font-style: normal;
         font-weight: 800;
         font-size: 14px;
@@ -1423,7 +1429,7 @@
     .tnc-modal-body {
       padding: 16px 32px 36px 32px;
       p {
-        font-family: "Proxima Nova";
+        font-family: "pmr";
         font-style: normal;
         font-weight: 400;
         font-size: 16px;
