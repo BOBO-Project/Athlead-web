@@ -1,9 +1,14 @@
 import React from 'react'
 
 import { ReactComponent as ArrowRight } from "assets/svg/arrow-right.svg";
+import useTranslate from "hooks/useTranslate";
+import english from "./locales/en-US.json";
+import indo from "./locales/id.json";
 
 
-function ProductCard({ src, title, text, translate }) {
+function ProductCard({ src, title, text}) {
+  const { translate } = useTranslate(english, indo);
+
   return (
     <div className='product-card'>
       <div className='pc-icn-wrapper'>

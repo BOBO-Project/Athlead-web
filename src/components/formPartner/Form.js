@@ -1,17 +1,67 @@
-import React from "react";
+import React, { useState } from "react";
 import banner from "assets/img/pws-banner.png";
 import title from "assets/img/pws-title.png";
 import { Button, TextField, Typography } from "@mui/material";
 import { ReactComponent as ArrowRight } from "assets/svg/fi-ss-arrow-right.svg";
-
+import { useDispatch } from "react-redux";
+import axios from "axios";
 
 const Form = (props) => {
   const title = props.title;
-  // const form= {
+  // const dispatch = useDispatch();
+  const [state, setState] = useState({
+    category: "",
+    academyName: "",
+    venueName: "",
+    sportsDetail: "",
+    sportsSpecification: "",
+    name: "",
+    phone: "",
+    email: "",
+    website: "",
+    status: 0,
+  });
 
-  // }
+  const handleOnSubmit = async (e) => {
+    // const payload = {
+    //   category: title.toLowerCase(),
+    //   academyName: state.academyName,
+    //   venueName: state.venueName,
+    //   sportsDetail: state.sportsDetail,
+    //   sportsSpecification: state.sportsSpecification,
+    //   name: state.name,
+    //   phone: state.phone,
+    //   email: state.email,
+    //   website: state.website,
+    //   status: state.status,
+    // };
+    try {
+      const payload = {
+        category: title,
+        academyName: state.academyName,
+        venueName: state.venueName,
+        sportsDetail: state.sportsDetail,
+        sportsSpecification: state.sportsSpecification,
+        name: state.name,
+        phone: state.phone,
+        email: state.email,
+        website: state.website,
+        status: state.status,
+      };
+      const { data } = await axios.post(
+        "http://localhost:3001/partners",
+        payload
+      );
+      console.log(data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
-  const handleOnSubmit = () => {};
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setState({ ...state, [name]: value });
+  };
 
   return (
     <div id="formPartner-modal">
@@ -30,36 +80,58 @@ const Form = (props) => {
               sx={{
                 color: "#C95454",
                 fontWeight: "800",
+                marginBottom: "20px",
               }}
             >
               Information Details
             </Typography>
-            <h5>Join as a</h5>
+            <Typography
+              variant="h5"
+              sx={{ fontSize: "14px", marginBottom: "10px" }}
+            >
+              Join as a
+            </Typography>
             <TextField
               disabled
               id="outlined-disabled"
-              defaultValue={title}
+              value={title}
               style={{
                 backgroundColor: "#EAEAEA",
               }}
             />
-            <h5>Academy Name</h5>
+            <Typography
+              variant="h5"
+              sx={{ fontSize: "14px", marginBottom: "10px", marginTop: "30px" }}
+            >
+              Academy Name
+            </Typography>
             <TextField
               id="outlined-disabled"
               // defaultValue="Academy Persija Jakarta"
-              style={{
-                backgroundColor: "#EAEAEA",
-              }}
+              value={state.academyName}
               placeholder="ex. Academy Manchester United"
+              name="academyName"
+              required
+              error={!state.academyName}
+              helperText={!state.academyName ? "Please Filled In" : ""}
+              onChange={handleChange}
             />
-            <h5>Sports Detail</h5>
+            <Typography
+              variant="h5"
+              sx={{ fontSize: "14px", marginBottom: "10px", marginTop: "30px" }}
+            >
+              Sports Detail
+            </Typography>
             <TextField
               id="outlined-disabled"
               // defaultValue="Soccer"
               placeholder="ex. Soccer"
-              style={{
-                backgroundColor: "#EAEAEA",
-              }}
+              value={state.sportsDetail}
+              name="sportsDetail"
+              required
+              error={!state.sportsDetail}
+              helperText={!state.sportsDetail ? "Please Filled In" : ""}
+              onChange={handleChange}
             />
           </div>
         </>
@@ -83,24 +155,35 @@ const Form = (props) => {
             >
               Information Details
             </Typography>
-            <h5>Join as a</h5>
+            <Typography
+              variant="h5"
+              sx={{ fontSize: "14px", marginBottom: "10px" }}
+            >
+              Join as a
+            </Typography>
             <TextField
               disabled
               id="outlined-disabled"
-              defaultValue={title}
-              // placeholder="ex. Sir Alex Ferguson"
+              value={title}
               style={{
                 backgroundColor: "#EAEAEA",
               }}
             />
-            <h5>Sport Specification</h5>
+            <Typography
+              variant="h5"
+              sx={{ fontSize: "14px", marginBottom: "10px", marginTop: "30px" }}
+            >
+              Sport Specification
+            </Typography>
             <TextField
               id="outlined-disabled"
-              // defaultValue={title}
               placeholder="ex. Soccer"
-              style={{
-                backgroundColor: "#EAEAEA",
-              }}
+              value={state.sportsSpecification}
+              name="sportsSpecification"
+              required
+              error={!state.sportsSpecification}
+              helperText={!state.sportsSpecification ? "Please Filled In" : ""}
+              onChange={handleChange}
             />
           </div>
         </>
@@ -124,32 +207,52 @@ const Form = (props) => {
             >
               Information Details
             </Typography>
-            <h5>Join as a</h5>
+            <Typography
+              variant="h5"
+              sx={{ fontSize: "14px", marginBottom: "10px" }}
+            >
+              Join as a
+            </Typography>
             <TextField
               disabled
               id="outlined-disabled"
-              defaultValue={title}
               style={{
                 backgroundColor: "#EAEAEA",
               }}
+              value={title}
             />
-            <h5>Venue Name</h5>
+            <Typography
+              variant="h5"
+              sx={{ fontSize: "14px", marginBottom: "10px", marginTop: "30px" }}
+            >
+              Venue Name
+            </Typography>
             <TextField
               id="outlined-disabled"
-              // defaultValue={title}
               placeholder="ex. Man United Field"
-              style={{
-                backgroundColor: "#EAEAEA",
-              }}
+              value={state.venueName}
+              required
+              error={!state.venueName}
+              helperText={!state.venueName ? "Please Filled In" : ""}
+              onChange={handleChange}
+              name="venueName"
             />
-            <h5>Sports Detail</h5>
+            <Typography
+              variant="h5"
+              sx={{ fontSize: "14px", marginBottom: "10px", marginTop: "30px" }}
+            >
+              Sports Detail
+            </Typography>
             <TextField
               id="outlined-disabled"
               // defaultValue={title}
               placeholder="ex. Soccer"
-              style={{
-                backgroundColor: "#EAEAEA",
-              }}
+              value={state.sportsDetail}
+              required
+              error={!state.sportsDetail}
+              helperText={!state.sportsDetail ? "Please Filled In" : ""}
+              onChange={handleChange}
+              name="sportsDetail"
             />
           </div>
         </>
@@ -173,65 +276,16 @@ const Form = (props) => {
             >
               Information Details
             </Typography>
-            <h5>Join as a</h5>
+            <Typography
+              variant="h5"
+              sx={{ fontSize: "14px", marginBottom: "10px" }}
+            >
+              Join as a
+            </Typography>
             <TextField
               disabled
               id="outlined-disabled"
-              // label="Join as a"
-              defaultValue={title}
-              // variant="filled"
-              style={{
-                backgroundColor: "#EAEAEA",
-              }}
-            />
-          </div>
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "space-between",
-            }}
-          >
-            <Typography
-              sx={{
-                color: "#C95454",
-                fontWeight: "800",
-              }}
-            >
-              Personal Data
-            </Typography>
-            <h5>Name</h5>
-            <TextField
-              id="outlined-disabled"
-              // defaultValue={title}
-              placeholder="ex. Sir Alex Ferguson"
-              style={{
-                backgroundColor: "#EAEAEA",
-              }}
-            />
-            <h5>Phone Number</h5>
-            <TextField
-              id="outlined-disabled"
-              // defaultValue={title}
-              placeholder="ex. +1 (206) 321 2712"
-              style={{
-                backgroundColor: "#EAEAEA",
-              }}
-            />
-            <h5>Email</h5>
-            <TextField
-              id="outlined-disabled"
-              // defaultValue={title}
-              placeholder="ex. saf@mail.com"
-              style={{
-                backgroundColor: "#EAEAEA",
-              }}
-            />
-            <h5>URL/Website/Portfolio</h5>
-            <TextField
-              id="outlined-disabled"
-              // defaultValue={title}
-              placeholder="ex. saf.com"
+              value={title}
               style={{
                 backgroundColor: "#EAEAEA",
               }}
@@ -254,59 +308,93 @@ const Form = (props) => {
         >
           Personal Data
         </Typography>
-        <h5>Owner Name</h5>
+        <Typography
+          variant="h5"
+          sx={{ fontSize: "14px", marginBottom: "10px", marginTop: "30px" }}
+        >
+          Owner Name
+        </Typography>
         <TextField
           id="outlined-disabled"
-          // defaultValue="Biko Maryono"
+          value={state.name}
+          onChange={handleChange}
+          name="name"
           placeholder="ex. Bambang Pamungkas"
-          style={{
-            backgroundColor: "#EAEAEA",
-          }}
+          required
+          error={!state.name}
+          helperText={!state.name ? "Please Filled In" : ""}
         />
-        <h5>Phone Number</h5>
+        <Typography
+          variant="h5"
+          sx={{ fontSize: "14px", marginBottom: "10px", marginTop: "30px" }}
+        >
+          Phone Number
+        </Typography>
         <TextField
           id="outlined-disabled"
           // defaultValue="081190087723"
           placeholder="+1 (206) 321 2712"
-          style={{
-            backgroundColor: "#EAEAEA",
-          }}
+          value={state.phone}
+          error={!state.phone}
+          helperText={!state.phone ? "Please Filled In" : ""}
+          onChange={handleChange}
+          name="phone"
         />
-        <h5>Email</h5>
+        <Typography
+          variant="h5"
+          sx={{ fontSize: "14px", marginBottom: "10px", marginTop: "30px" }}
+        >
+          Email
+        </Typography>
         <TextField
           id="outlined-disabled"
-          // defaultValue="manutd@gmail.com"
           placeholder="ex. manutd@gmail.com"
-          style={{
-            backgroundColor: "#EAEAEA",
-          }}
+          value={state.email}
+          error={!state.email}
+          helperText={!state.email ? "Please Filled In" : ""}
+          type="email"
+          onChange={handleChange}
+          name="email"
         />
-        <h5>URL/Website/Portfolio</h5>
+        <Typography
+          variant="h5"
+          sx={{ fontSize: "14px", marginBottom: "10px", marginTop: "30px" }}
+        >
+          URL/Website/Portfolio
+        </Typography>
         <TextField
           id="outlined-disabled"
-          // defaultValue="manutd.com"
           placeholder="ex. manutd.com"
-          style={{
-            backgroundColor: "#EAEAEA",
-          }}
+          value={state.website}
+          error={!state.website}
+          helperText={!state.website ? "Please Filled In" : ""}
+          onChange={handleChange}
+          name="website"
         />
       </div>
-      <div style={{
-        alignItem:'center',
-        marginTop:'53px',
-        textAlign:'center'
-      }}>
-        <Button variant="contained" endIcon={<ArrowRight/>} sx={{
-          width:'360px',
-          height:'56px',
-          bgcolor:'#7D0E23',
-          color:'white',
-          ml: 1,
-          "&.MuiButtonBase-root:hover": {
-            bgcolor: "grey"
-          },
-          // padding:'10px, 16px, 10px, 16px'
-        }}>Submit Data</Button>
+      <div
+        style={{
+          alignItem: "center",
+          marginTop: "53px",
+          textAlign: "center",
+        }}
+      >
+        <Button
+          variant="contained"
+          endIcon={<ArrowRight />}
+          sx={{
+            width: "100%",
+            height: "56px",
+            bgcolor: "#7D0E23",
+            color: "white",
+            "&.MuiButtonBase-root:hover": {
+              bgcolor: "grey",
+            },
+          }}
+          onClick={handleOnSubmit}
+        >
+          Submit Data
+        </Button>
       </div>
     </div>
   );

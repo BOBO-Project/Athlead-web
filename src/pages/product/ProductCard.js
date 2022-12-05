@@ -13,11 +13,6 @@ function ProductCard({ src, title, text, children }) {
           <p className="pc-text">{text}</p>
           {children}
         </div>
-        {/* <button className='pc-partner'>
-            <span>Partner With Us</span>
-            <ArrowRight />
-          </button>
-          <a className='learn-more'><span>Learn More</span> <ArrowRight /></a> */}
       </div>
     </div>
   );

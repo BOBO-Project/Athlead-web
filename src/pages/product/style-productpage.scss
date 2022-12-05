@@ -1,4 +1,4 @@
-#productPage{
+#productPage {
   .product-card-wrapper {
     display: flex;
     align-items: center;
@@ -18,7 +18,7 @@
       &:last-child {
         margin-right: 0;
       }
-  
+
       .pc-icn-wrapper {
         width: 108px;
         height: 108px;
@@ -49,6 +49,7 @@
           font-size: 28px;
           color: #000000;
           margin-bottom: 8px;
+          margin-top: 10px;
         }
         .pc-text {
           font-family: "Proxima Nova";
@@ -85,4 +86,172 @@
     }
   }
 
+  .container-banner {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    .title-container {
+      font-size: 64px;
+      font-style: normal;
+      font-weight: 800;
+      line-height: 110%;
+      color: #fefefe;
+    }
+    .title-description {
+      font-size: 36px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 110%;
+      color: #a9a9a9;
+    }
+  }
+
+  .banner {
+    width: 100vw;
+    height: 25vw;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .product-box {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    // flex-direction: column;
+  }
+
+  .product-box1 {
+    display: flex;
+    justify-content: center;
+    gap: "100px";
+    // width: 100%;
+    // flex-direction: column;
+  }
+
+  .image-product {
+    width: 50px;
+    height: 50px;
+  }
+
+  .title-product {
+    text-align: center;
+    font-weight: 800;
+    color: #7e7e7e;
+    font-size: 20px;
+  }
+
+  .container-product-icon {
+    margin-top: 40px;
+    // width: 80%;
+    align-items: center;
+    margin-left: 10%;
+    // height: 100%;
+  }
+
+  .container-context {
+    margin-top: 40px;
+    display: flex;
+    margin-left: 9%;
+    margin-bottom: 150px;
+    // padding-left: 140px;
+    // padding-right: 130px;
+    .openingWord-text {
+      position: absolute;
+      color: #7d0e23;
+      font-weight: 800;
+      font-size: 36px;
+      line-height: 110%;
+      font-style: normal;
+    }
+    .openingWord-text-p {
+      position: absolute;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 110%;
+    }
+  }
+
+  .product-image {
+    width: 1536px;
+    height: 360px;
+  }
+}
+
+@media (max-width: 768px) {
+  #productPage {
+    .image-box {
+      gap: 50px;
+    }
+    .image-product {
+      width: 32px;
+      height: 32px;
+    }
+
+    .product-card-wrapper {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      .product-card {
+        width: 230px !important;
+        margin-bottom: 100px;
+      }
+    }
+
+    .product-box {
+      height: 100%;
+    }
+
+    .title-container {
+      font-size: 2rem !important;
+    }
+    .title-description {
+      font-size: 1rem !important;
+    }
+    .content-text-privacyPolicy {
+      font-size: 1rem;
+    }
+
+    .container-context {
+      margin-top: 40px;
+      display: flex;
+      margin-left: 8%;
+      margin-bottom: 100px !important;
+      max-width: 315px;
+      // padding-left: 140px;
+      // padding-right: 130px;
+      .openingWord-text {
+        font-size: 22px !important;
+      }
+      .openingWord-text-p {
+        // font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 140%;
+      }
+    }
+
+    .container-product-icon {
+      width: 100%;
+      height: 100%;
+    }
+
+    .product-image {
+      margin-top: 20px;
+      width: 100%;
+      height: 100%;
+    }
+
+    .pc-title {
+      font-size: 22px !important;
+    }
+
+    .container-product-icon {
+      margin-left: 0px !important;
+    }
+  }
 }

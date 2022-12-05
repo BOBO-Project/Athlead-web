@@ -11,15 +11,24 @@ import product from "./product";
 import career from "./career";
 import aboutus from "./aboutus";
 import partnerwithus from "./partnerwithus";
-import formPartner from "../components/formPartner"
+import privacypolicy from "./privacypolicy";
+import blog from "./blog";
 
-const appPages = [{ ...homepage }, { ...product }, { ...aboutus }, {...career}, {...partnerwithus}];
+
+const appPages = [
+  { ...homepage },
+  { ...product },
+  { ...aboutus },
+  { ...career },
+  { ...partnerwithus },
+  { ...privacypolicy },
+  {...blog}
+];
 
 const RenderPages = () => {
   return (
     <div>
       <Navbar />
-
       <div id="all-pages-wrapper">
         <Routes>
           {appPages.map((page, i) => (
