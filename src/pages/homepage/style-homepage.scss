@@ -365,7 +365,11 @@
             svg {
               width: 24px;
               height: 24px;
-              fill: #fff;
+              g{
+                path{
+                  fill: #fff;
+                }
+              }
             }
           }
         }
@@ -829,7 +833,6 @@
         }
         .form-fields {
           display: flex;
-          align-items: center;
           .field-wrapper {
             width: 100%;
             margin-right: 32px;
