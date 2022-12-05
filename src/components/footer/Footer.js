@@ -2,11 +2,11 @@ import React from "react";
 import "./style.scss";
 
 //Assets - svg
-import { ReactComponent as AthleadIcon } from "assets/svg/athlead-white.svg";
-import { ReactComponent as FB } from "assets/svg/facebook.svg";
-import { ReactComponent as IG } from "assets/svg/instagram.svg";
-import { ReactComponent as WA } from "assets/svg/whatsapp.svg";
-import { ReactComponent as Twitter } from "assets/svg/twitter.svg";
+import AthleadIcon from "assets/img/athlead-white.png"
+import { ReactComponent as FB } from "assets/svg/facebook.svg"
+import { ReactComponent as IG } from "assets/svg/instagram.svg"
+import { ReactComponent as WA } from "assets/svg/whatsapp.svg"
+import { ReactComponent as Twitter } from "assets/svg/twitter.svg"
 
 //Hooks
 import useTranslate from "hooks/useTranslate";
@@ -18,12 +18,12 @@ function Footer() {
   const { translate } = useTranslate(english, indo);
 
   return (
-    <div id="footer">
-      <div className="footer-wrapper">
-        <div className="first">
-          <AthleadIcon className="athld-icn" />
-          <p className="athld-t">{translate("description")}</p>
-          <div className="sosmed">
+    <div id='footer'>
+      <div className='footer-wrapper'>
+        <div className='first'>
+          <img src={AthleadIcon} alt="..." className='athld-icn' />
+          <p className='athld-t'>{translate("description")}</p>
+          <div className='sosmed'>
             <FB />
             <IG />
             <Twitter />
