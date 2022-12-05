@@ -12,10 +12,11 @@
   }
   background: #c95454;
   width: 100vw;
-  height: 100vw;
+  height: 100%;
   padding: 0;
   margin: 0;
   .container-faq {
+    padding-bottom: 60px;
     padding-top: 25px;
     .container-text-wrapper {
       color: #fefefe;
@@ -78,7 +79,6 @@
     }
     .label-1 {
       padding: 0 140px;
-      margin-bottom: 64px;
 
       .l1-content {
         justify-content: center;

@@ -29,9 +29,7 @@
     }
   }
   .form-join {
-    padding: 0 80px;
-    margin-bottom: 128px;
-    margin-top: 50px;
+    padding: 50px 80px 128px 80px;
     .fj-wrapper {
       background: #fefefe;
       border: 1px solid #e03a55;
@@ -172,13 +170,10 @@
     }
     .form-join {
       width: 100vw;
-      height: 100vw;
       position: relative;
-      // margin-bottom: 55px;
       padding: 0;
       .form-join-rsponsive {
         width: 100vw;
-        height: 100vw;
         object-fit: cover;
       }
 
