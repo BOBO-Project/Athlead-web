@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Modal from '@mui/material/Modal';
+import axios from "axios";
 import "./style-homepage.scss";
 
 import useTranslate from "hooks/useTranslate";
@@ -38,8 +39,21 @@ import TestimonyCard from "./TestimonyCard";
 
 const Homepage = () => {
   const { translate } = useTranslate(english, indo);
-  const [openTnc, setOpenTnc] = useState(false)
-  const isResponsive = window.innerWidth <= 1021;
+  const [openTnc, setOpenTnc] = useState(false);
+
+  const [email, setEmail] = useState("")
+
+  const [isResponsive] = useState(window.innerWidth <= 1021);
+
+  const handleSendEmail = async () => {
+    try {
+      await axios.post("http://localhost:3000/email", { email })
+    } catch (error) {
+      console.log(error)
+    } finally {
+      setEmail("")
+    }
+  }
   return (
     <div id="homepage">
       {/* HEADERS */}
@@ -57,7 +71,7 @@ const Homepage = () => {
           <p className="get-notif-t">{translate("3")}</p>
           <div className="notif-input-wrapper">
             <div className="input-wrapper">
-              <input placeholder={!isResponsive ? translate("n4") : translate("mn4")} />
+              <input type='email' onChange={(e) => setEmail(e.target.value)} value={email} placeholder={!isResponsive ? translate("n4") : translate("mn4")} />
             </div>
             {isResponsive ? (
               <div className="notif-input">
@@ -65,7 +79,7 @@ const Homepage = () => {
                 <p>{translate('4')}<span>{translate("5")}</span></p>
               </div>
             ) : null}
-            <button>
+            <button onClick={handleSendEmail}>
               <PaperPlane />
               <span>{translate("6")}</span>
             </button>
