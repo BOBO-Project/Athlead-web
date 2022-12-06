@@ -29,14 +29,16 @@
     }
   }
   .form-join {
-    padding: 50px 80px 128px 80px;
+    padding: 0 80px;
+    margin-top: 50px;
+    margin-bottom: 128px;
     .fj-wrapper {
       background: #fefefe;
       border: 1px solid #e03a55;
       border-radius: 20px;
       display: flex;
       align-items: center;
-      height: 570px;
+      height: 580px;
     }
     .left,
     .right {
@@ -47,7 +49,7 @@
       .form {
         padding: 48px 60px;
         .form-title {
-          font-family: "Proxima Nova";
+          font-family: "pmr";
           font-style: normal;
           font-weight: 800;
           font-size: 36px;
@@ -55,7 +57,7 @@
           margin-bottom: 16px;
         }
         .form-subtitle {
-          font-family: "Proxima Nova";
+          font-family: "pmr";
           font-style: normal;
           font-weight: 400;
           font-size: 18px;
@@ -64,7 +66,6 @@
         }
         .form-fields {
           display: flex;
-          align-items: center;
           .field-wrapper {
             width: 100%;
             margin-right: 32px;
@@ -74,7 +75,7 @@
               margin-right: 0;
             }
             .input-label {
-              font-family: "Proxima Nova";
+              font-family: "pmr";
               font-style: normal;
               font-weight: 400;
               font-size: 16px;
@@ -92,7 +93,7 @@
                 background: inherit;
                 border: none;
                 &::placeholder {
-                  font-family: "Proxima Nova";
+                  font-family: "pmr";
                   font-style: normal;
                   font-weight: 400;
                   font-size: 16px;
@@ -125,7 +126,7 @@
               margin-right: 8px;
             }
             span {
-              font-family: "Proxima Nova";
+              font-family: "pmr";
               font-style: normal;
               font-weight: 800;
               font-size: 16px;
