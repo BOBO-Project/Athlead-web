@@ -1,0 +1,210 @@
+@import url("https://fonts.cdnfonts.com/css/work-sans");
+@import url("https://fonts.cdnfonts.com/css/nunito-sans");
+#faq {
+  @mixin dflex {
+    display: flex;
+  }
+  @mixin jc-between {
+    justify-content: space-between;
+  }
+  @mixin al-center {
+    align-items: center;
+  }
+  background: #c95454;
+  width: 100vw;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  .container-faq {
+    padding-bottom: 60px;
+    padding-top: 25px;
+    .container-text-wrapper {
+      color: #fefefe;
+      .ctw-title {
+        text-align: center;
+        font-size: 64px;
+        font-weight: 800;
+        line-height: 110%;
+      }
+      .ctw-description {
+        text-align: center;
+        font-size: 30px;
+        font-weight: 400;
+        line-height: 110%;
+      }
+    }
+    .accordion-faq-wrapper {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 60px;
+      .accordion {
+        max-width: 600px;
+        .accordion-item {
+          margin: 20px 50px;
+          .accordion-title {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 24px;
+            gap: 10px;
+            cursor: pointer;
+            background: #eaeaea;
+            border-radius: 3px;
+            width: 500px;
+            height: 84px;
+            font-style: normal;
+            font-weight: 800;
+            font-size: 20px;
+            line-height: 140%;
+            color: #535353;
+          }
+          .accordion-content {
+            background: #fefefe;
+            padding: 1rem;
+            border-radius: 1px;
+            width: 516px;
+            height: 50%;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            font-family: "Work Sans";
+            letter-spacing: -0.05em;
+            color: #6c6c6c;
+          }
+        }
+      }
+    }
+    .label-1 {
+      padding: 0 140px;
+
+      .l1-content {
+        justify-content: center;
+        width: 100%;
+        background: #7d0e23;
+        border-radius: 5px;
+        padding: 2px 46px;
+        display: flex;
+        .left {
+          white-space: nowrap;
+          margin-right: 70px;
+          p {
+            font-family: "Proxima Nova";
+            font-style: normal;
+            font-weight: 800;
+            font-size: 20px;
+            color: #fefefe;
+          }
+          h3 {
+            font-style: normal;
+            font-weight: 800;
+            font-size: 36px;
+            color: #fefefe;
+          }
+        }
+        .center {
+          margin-right: 50px;
+          p {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 20px;
+            color: #ffffff;
+          }
+          .sosmed {
+            display: flex;
+            align-items: center;
+            svg {
+              margin-top: 15px;
+              margin-right: 16px;
+              width: 42px;
+              height: 42px;
+            }
+          }
+        }
+        .right {
+          .field-wrapper {
+            .input-label {
+              font-family: "Proxima Nova";
+              font-style: normal;
+              font-weight: 400;
+              font-size: 20px;
+              color: #ffffff;
+            }
+            .input-wrapper {
+              display: flex;
+              padding: 10px;
+              background: #fefefe;
+              border: 1px solid #a9a9a9;
+              border-radius: 10px;
+              width: 100%;
+              margin-top: 33px;
+              input {
+                width: 100%;
+                background: inherit;
+                border: none;
+                &::placeholder {
+                  font-family: "Proxima Nova";
+                  font-style: normal;
+                  font-weight: 400;
+                  font-size: 16px;
+                  letter-spacing: 0.2px;
+                  color: #282828;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  #faq {
+    .container-faq {
+      .label-1 {
+        padding: 0;
+        width: 90vw;
+        max-width: 325px;
+        margin-bottom: 55px;
+        justify-content: center;
+        .l1-content {
+          flex-direction: column;
+          padding: 32px;
+          margin-left: 50%;
+          width: 325px;
+          height: 388px;
+          .left {
+            margin: 0;
+            p {
+              font-size: 14px;
+            }
+            h3 {
+              font-size: 22px;
+              line-height: 120%;
+            }
+          }
+          .center {
+            p {
+              font-size: 16px;
+            }
+            .sosmed {
+              svg {
+                margin-right: 31px;
+              }
+            }
+          }
+          .right {
+            .field-wrapper {
+              .input-label {
+                font-size: 16px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

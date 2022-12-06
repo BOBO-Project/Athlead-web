@@ -1,0 +1,12 @@
+@import url("http://fonts.cdnfonts.com/css/proxima-nova-2");
+#all-pages-wrapper {
+  margin-top: 115px;
+  // min-height: calc(100vh - 115px);
+}
+
+@media (max-width: 768px) {
+  #all-pages-wrapper {
+    margin-top: 77px;
+    // min-height: calc(100vh - 77px);
+  }
+}

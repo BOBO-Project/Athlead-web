@@ -1,0 +1,54 @@
+{
+  "header": "FAQ",
+  "description": "We know you might have some questions, well here are the answers!",
+  "FAQ": [
+    {
+      "title": "Who are ATHLEAD INDONESIA?",
+      "content": "ATHLEAD INDONESIA provides integrated recreational sports needs in a form of a website and mobile app. ATHLEAD INDONESIA will present as an ease-to-use digital marketplace for online booking of sports venues, sports coaches, sports academies, sports photographers, etc."
+    },
+    {
+      "title": "What type of booking can be made on ATHLEAD INDONESIA?",
+      "content": "ATHLEAD INDONESIA processes integrated recreational sports needs bookings for our users, including venue bookings, coach booking, academy booking/registration, photographer booking, etc."
+    },
+    {
+      "title": "What is venue booking?",
+      "content": "ATHLEAD INDONESIA will provide you with all the access and information to book sports facilities and/or venues. ATHLEAD INDONESIA's system allows online bookings and payments to be made 24/7 without the hassle. We offer online booking calendars, venue facilities, photos, and many more so you can lead your own way."
+    },
+    {
+      "title": "What is coach booking?",
+      "content": "At ATHLEAD INDONESIA, you can try any kind of sport that you want, even if it’s your first. If you need a coach to help you improve, don’t worry, of course, we provide you with that privilege. We offer you some of the best coaches in any kind of sports."
+    },
+    {
+      "title": "What is photographer service booking?",
+      "content": "ATHLEAD INDONESIA will assist you with photographer service booking feature to capture and share your moment doing all kinds of sports activities. We will collaborate with professional photographers with a great sports photography portfolio."
+    },
+    {
+      "title": "What is academy registration?",
+      "content": "ATHLEAD INDONESIA will collaborate with some of the sports academies so you can register online or seek sports academies you want to join. We also provide all the information about academy fees, programs, portfolios, and many more."
+    },
+    {
+      "title": "What are the requirements to become ATHLEAD INDONESIA's partner?",
+      "content": "You can visit the “partners with us” page, and fill out ATHLEAD INDONESIA form so our team can review your appliance and contact you as soon as possible. Can sports clubs, schools/universities, and government sports facilities be listed on ATHLEAD INDONESIA? ATHLEAD INDONESIA booking systems have been designed to work with sports clubs, schools/universities, government and any other sports facilities to help open up bookings to local communities, fill spare capacity and increase revenue generated. A feature of our booking system means you can always make sure you approve a customer before their booking is confirmed."
+    },
+    {
+      "title": "What are the benefits of bringing bookings online?",
+      "content": "Customers are more likely to make a booking if they can view availability and make a booking online. ATHLEAD INDONESIA's system allows online bookings and payments to be made 24/7 without the hassle of answering phone calls or text messaging. A simple booking journey eliminates enquiries for unavailable times encourages new users, and makes it easy to rebook. As a result, ATHLEAD INDONESIA partners that offer online booking calendars see a significant increase in bookings at their services."
+    },
+    {
+      "title": "How will ATHLEAD INDONESIA's partners be promoted?",
+      "content": "ATHLEAD INDONESIA’s partners will be featured as a partner listing on ATHLEAD INDONESIA's platform/marketplace. Partners also benefit from regular digital marketing campaigns to sports players. Our digital marketing team is experts in maximising partner exposure to increase player participation and facility utilisation."
+    },
+    {
+      "title": "Are ATHLEAD INDONESIA's service GDPR compliant?",
+      "content": "ATHLEAD INDONESIA is fully compliant with GDPR and are advised by data security specialists, making us your perfect GDPR partner. All payments processed are PCI DSS compliant."
+    },
+    {
+      "title": "When are ATHLEAD INDONESIA services launched?",
+      "content": "Don’t hold your breath! Enter your email address below and we will let you know as soon as it is available."
+    },
+    {
+      "title": "Can sports clubs, schools/universities, and government sports facilities be listed on ATHLEAD INDONESIA?",
+      "content": "ATHLEAD INDONESIA booking systems have been designed to work with sports clubs, schools/universities, government and any other sports facilities to help open up bookings to local communities, fill spare capacity and increase revenue generated. A feature of our booking system means you can always make sure you approve a customer before their booking is confirmed."
+    }
+  ]
+}

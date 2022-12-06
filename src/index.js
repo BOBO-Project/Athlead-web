@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 import RenderPages from "./pages";
+import "./style.scss";
 
 import "./i18n";
 
