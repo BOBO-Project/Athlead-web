@@ -276,55 +276,19 @@ const Homepage = () => {
             <p className="bsh-t1">{translate("65")}</p>
           </>
         )}
-        {!isResponsive ? (
-          <div className="blog-card-wrapper">
-            <BlogCard
-              src={BlogImg}
-              title={translate("66")}
-              text={translate("67")}
-            />
-            <BlogCard
-              src={BlogImg}
-              title={translate("68")}
-              text={translate("69")}
-            />
-            <BlogCard
-              src={BlogImg}
-              title={translate("70")}
-              text={translate("71")}
-            />
-            <BlogCard
-              src={BlogImg}
-              title={translate("72")}
-              text={translate("73")}
-            />
-          </div>
-        ) : (
-          <div className="blog-cw-scroll">
-            <div className="blog-card-wrapper">
-              <BlogCard
-                src={BlogImg}
-                title={translate("66")}
-                text={translate("67")}
-              />
-              <BlogCard
-                src={BlogImg}
-                title={translate("68")}
-                text={translate("69")}
-              />
-              <BlogCard
-                src={BlogImg}
-                title={translate("70")}
-                text={translate("71")}
-              />
-              <BlogCard
-                src={BlogImg}
-                title={translate("72")}
-                text={translate("73")}
-              />
+        <div className="blog-partner-label">
+          <div className="partner-label-wrapper">
+            <div className="plwiw">
+              <div className="pl-txt">
+                <p className="plt-2">{translate("88")}</p>
+              </div>
+              <button className="pltb-wrapper">
+                <span>{translate("63")}</span>
+                <ArrowRight />
+              </button>
             </div>
           </div>
-        )}
+        </div>
       </div>
 
       {/* TESTIMONY */}
@@ -412,7 +376,7 @@ const Homepage = () => {
                 <div className="join-com-soon">
                   <button>
                     <PaperPlane className="plane-icn" />
-                    <span></span>
+                    <span>{translate("88")}</span>
                   </button>
                 </div>
               </div>
