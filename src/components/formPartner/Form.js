@@ -3,7 +3,6 @@ import banner from "assets/img/pws-banner.png";
 import title from "assets/img/pws-title.png";
 import { Button, TextField, Typography } from "@mui/material";
 import { ReactComponent as ArrowRight } from "assets/svg/fi-ss-arrow-right.svg";
-import { useDispatch } from "react-redux";
 import axios from "axios";
 
 const Form = (props) => {
