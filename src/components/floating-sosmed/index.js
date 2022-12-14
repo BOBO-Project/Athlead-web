@@ -9,17 +9,48 @@ import Facebook from "assets/img/facebook.png";
 import Whatsapp from "assets/img/whatsapp.png";
 import Twitter from "assets/img/twitter.png";
 import Instagram from "assets/img/instagram.png";
+import ColoredFacebook from "assets/img/colored-facebook.png";
+import ColoredWhatsapp from "assets/img/colored-whatsapp.png";
+import ColoredTwitter from "assets/img/colored-twitter.png";
+import ColoredInstagram from "assets/img/colored-instagram.png";
 
 function FloatingSosmed() {
   const [open, setOpen] = useState(false)
 
+  const [hovered, setHovered] = useState("")
+
+  const removeHovered = () => setHovered("")
+
   return (
     <div id='floating-sosmed' className={open ? "open" : ""}>
       <div className='floating-sosmed-icon-wrapper'>
-        <img className='floating-sosmed-icon fb' src={Facebook} alt="..." />
-        <img className='floating-sosmed-icon wa' src={Whatsapp} alt="..." />
-        <img className='floating-sosmed-icon twit' src={Twitter} alt="..." />
-        <img className='floating-sosmed-icon ig' src={Instagram} alt="..." />
+        <img
+          onMouseEnter={() => setHovered("fb")}
+          onMouseLeave={removeHovered}
+          className='floating-sosmed-icon fb'
+          src={hovered == "fb" ? ColoredFacebook : Facebook} alt="..."
+        />
+        <img
+          onMouseEnter={() => setHovered("wa")}
+          onMouseLeave={removeHovered}
+          className='floating-sosmed-icon wa'
+          src={hovered == "wa" ? ColoredWhatsapp : Whatsapp}
+          alt="..."
+          />
+        <img
+          onMouseEnter={() => setHovered("twit")}
+          onMouseLeave={removeHovered}
+          className='floating-sosmed-icon twit'
+          src={hovered == "twit" ? ColoredTwitter : Twitter}
+          alt="..."
+          />
+        <img
+          onMouseEnter={() => setHovered("ig")}
+          onMouseLeave={removeHovered}
+          className='floating-sosmed-icon ig'
+          src={hovered == "ig" ? ColoredInstagram : Instagram}
+          alt="..."
+        />
       </div>
 
       <div className='floating-sosmed-toggle-icon-wrapper'>
