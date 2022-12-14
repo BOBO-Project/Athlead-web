@@ -41,7 +41,7 @@ const NDekstop = ({ Tabs, changeLanguage, language }) => {
           <p>
             <span className={activeLang("id-ID")}>ID</span>
             <span>{` / `}</span>
-            <span className={activeLang("en-US")}>Eng</span>
+            <span className={activeLang("en-US")}>En</span>
           </p>
         </button>
       </div>
@@ -96,7 +96,7 @@ const NMobile = ({ Tabs, changeLanguage, language }) => {
           <p>
             <span className={activeLang("id-ID")}>ID</span>
             <span>{` / `}</span>
-            <span className={activeLang("en-US")}>Eng</span>
+            <span className={activeLang("en-US")}>En</span>
           </p>
         </button>
       </div>

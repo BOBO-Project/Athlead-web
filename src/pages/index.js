@@ -4,6 +4,7 @@ import "./index.scss";
 
 //Components
 import { Navbar, Footer } from "../components";
+import FloatingSosmed from "components/floating-sosmed"
 
 //Pages
 import homepage from "./homepage";
@@ -23,7 +24,7 @@ const appPages = [
   { ...career },
   { ...partnerwithus },
   { ...privacypolicy },
-  {...blog},
+  { ...blog },
   { ...faq },
 ];
 
@@ -39,6 +40,8 @@ const RenderPages = () => {
         </Routes>
       </div>
       <Footer />
+
+      <FloatingSosmed />
     </div>
   );
 };
