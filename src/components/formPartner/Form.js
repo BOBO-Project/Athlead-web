@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import banner from "assets/img/pws-banner.png";
 import title from "assets/img/pws-title.png";
 import { Button, TextField, Typography } from "@mui/material";
 import { ReactComponent as ArrowRight } from "assets/svg/fi-ss-arrow-right.svg";
 import axios from "axios";
+import { toast, ToastContainer } from "react-toastify";
 
 const Form = (props) => {
   const title = props.title;
@@ -51,9 +52,31 @@ const Form = (props) => {
         "http://localhost:3001/partners",
         payload
       );
-      console.log(data);
+
+      if (data) {
+        setState({
+          category: "",
+          academyName: "",
+          venueName: "",
+          sportsDetail: "",
+          sportsSpecification: "",
+          name: "",
+          phone: "",
+          email: "",
+          website: "",
+          status: 0,
+        });
+      }
+      toast.success("Success", {
+        position: toast.POSITION.TOP_CENTER,
+      });
+      props.closed();
     } catch (error) {
       console.log(error);
+      toast.error("Failed", {
+        position: toast.POSITION.TOP_CENTER,
+      });
+      
     }
   };
 
@@ -218,7 +241,7 @@ const Form = (props) => {
               style={{
                 backgroundColor: "#EAEAEA",
               }}
-              value={title}
+              value="Venue"
             />
             <Typography
               variant="h5"

@@ -1,4 +1,12 @@
 @import url("http://fonts.cdnfonts.com/css/proxima-nova-2");
+@font-face {
+  font-family: "pmr";
+  src: url("../../assets/fonts/Proxima\ Nova\ Alt\ Regular.otf");
+}
+@font-face {
+  font-family: "pmb";
+  src: url("../../assets/fonts/Proxima\ Nova\ Bold.otf");
+}
 #navbar {
   //Reset
   p,
@@ -49,11 +57,26 @@
         @include dflex;
         @include al-center;
         a {
-          font-style: normal;
+          font-style: "pmb";
           font-weight: 500;
           font-size: 20px;
           margin-right: 32px;
           cursor: pointer;
+          &:active {
+            color: #7d0e23;
+            position: relative;
+            &::after {
+              color: #7d0e23;
+              font-style: "pmb";
+              content: "";
+              display: block;
+              height: 1px;
+              width: 100%;
+              border-bottom: 1px solid #7d0e23;
+              position: absolute;
+              left: 0;
+            }
+          }
         }
       }
     }

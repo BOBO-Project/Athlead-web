@@ -14,7 +14,7 @@
   a,
   span {
     color: #282828;
-    font-family: "pmr", sans-serif;
+    font-family: "pmb", sans-serif;
     margin: 0;
   }
   a {
@@ -68,7 +68,7 @@
           left: 8px;
           top: 8px;
           span {
-            font-family: "pmr";
+            font-family: "pmb";
             font-style: normal;
             font-weight: 900;
             font-size: 22px;
@@ -387,7 +387,7 @@
     margin-bottom: 116px;
     position: relative;
     .partner-title {
-      font-family: "pmr";
+      font-family: "pmb";
       font-style: normal;
       font-weight: 800;
       font-size: 36px;
@@ -581,7 +581,7 @@
               margin-bottom: 10px;
             }
             .plt-2 {
-              font-family: "pmr";
+              font-family: "pmb";
               font-style: normal;
               font-weight: 800;
               font-size: 36px;
@@ -627,7 +627,7 @@
     padding: 0 140px;
     margin-bottom: 100px;
     .blog-title {
-      font-family: "pmr";
+      font-family: "pmb";
       font-style: normal;
       font-weight: 800;
       font-size: 36px;
@@ -737,7 +737,7 @@
     padding: 0 140px;
     margin-bottom: 100px;
     .testi-title {
-      font-family: "pmr";
+      font-family: "pmb";
       font-style: normal;
       font-weight: 800;
       font-size: 36px;
@@ -850,7 +850,7 @@
       .form {
         padding: 48px 60px;
         .form-title {
-          font-family: "pmr";
+          font-family: "pmb";
           font-style: normal;
           font-weight: 800;
           font-size: 36px;
@@ -1080,8 +1080,11 @@
       width: 100vw;
       padding: 0;
       .op-header {
-        font-size: 22px;
-        width: 90%;
+        font-family: "pmb";
+        font-style: normal;
+        font-weight: 800;
+        font-size: 36px;
+        color: #7d0e23;
         max-width: 300px;
         margin-left: 32px;
       }
