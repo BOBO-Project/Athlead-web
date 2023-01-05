@@ -141,7 +141,7 @@ const Partner = () => {
                 </IconButton>
                 {/* </ThemeProvider> */}
               </div>
-              <Form title={title} type={title} />
+              <Form title={title} type={title} closed={() => setModal(false)} />
             </Box>
           </div>
         </Modal>
@@ -166,15 +166,10 @@ const Partner = () => {
                   lineHeight: "140%",
                 }}
               >
-                We will facilitate recreational sports players to find and book
-                sports venues and facilities through the ATHLEAD INDONESIA
-                website. We will make booking sports venues or facilities easier
-                by using the ATHLEAD INDONESIA website service
+                {translate("venue1")}
                 <br />
                 <br />
-                Recreational sports players and activists will find it easier to
-                book sports venues or facilities by using the ATHLEAD INDONESIA
-                website service.
+                {translate("venue2")}
               </Typography>
             </div>
             <div className="button-container">
@@ -206,16 +201,10 @@ const Partner = () => {
                   lineHeight: "140%",
                 }}
               >
-                ATHLEAD INDONESIA will assist you with a photographer service
-                booking feature to capture and share your moment doing all kinds
-                of sports activities. We will collaborate with professional
-                photographers with a great sports photography portfolio.
+                {translate("photographer1")}
                 <br />
                 <br />
-                With these services, ATHLEAD INDONESIA will help recreational
-                sports players and activists try a new sport or increase their
-                ability in a sport by using the services of a professional
-                coach.
+                {translate("photographer2")}
               </Typography>
             </div>
             <div className="button-container">
@@ -247,14 +236,10 @@ const Partner = () => {
                   lineHeight: "140%",
                 }}
               >
-                ATHLEAD INDONESIA will facilitate recreational sports players
-                and activists to find and book sports venues and facilities
-                through the ATHLEAD INDONESIA website.
+                {translate("coach1")}
                 <br />
                 <br />
-                With these services, ATHLEAD INDONESIA will help recreational
-                sports players try a new sport or increase their ability in a
-                sport by using the services of a professional coach.
+                {translate("coach2")}
               </Typography>
             </div>
             <div className="button-container">
@@ -286,13 +271,10 @@ const Partner = () => {
                   lineHeight: "140%",
                 }}
               >
-                ATHLEAD INDONESIA will facilitate recreational sports players
-                and activists to find and book sports venues and facilities
-                through the ATHLEAD INDONESIA website.
+                {translate("academy1")}
                 <br />
                 <br />
-                With these services, ATHLEAD INDONESIA will help recreational
-                sports players seek and join sports academies.
+                {translate("academy2")}
               </Typography>
             </div>
             <div className="button-container">
@@ -328,16 +310,10 @@ const Partner = () => {
                     lineHeight: "100%",
                   }}
                 >
-                  We will facilitate recreational sports players to find and
-                  book sports venues and facilities through the ATHLEAD
-                  INDONESIA website. We will make booking sports venues or
-                  facilities easier by using the ATHLEAD INDONESIA website
-                  service
+                  {translate("venue1")}
                   <br />
                   <br />
-                  Recreational sports players and activists will find it easier
-                  to book sports venues or facilities by using the ATHLEAD
-                  INDONESIA website service.
+                  {translate("venue2")}
                 </Typography>
               </div>
               <div className="button-container">
@@ -369,17 +345,10 @@ const Partner = () => {
                     lineHeight: "100%",
                   }}
                 >
-                  ATHLEAD INDONESIA will assist you with a photographer service
-                  booking feature to capture and share your moment doing all
-                  kinds of sports activities. We will collaborate with
-                  professional photographers with a great sports photography
-                  portfolio.
+                  {translate("photographer1")}
                   <br />
                   <br />
-                  With these services, ATHLEAD INDONESIA will help recreational
-                  sports players and activists try a new sport or increase their
-                  ability in a sport by using the services of a professional
-                  coach.
+                  {translate("photographer2")}
                 </Typography>
               </div>
               <div className="button-container">
@@ -411,14 +380,10 @@ const Partner = () => {
                     lineHeight: "100%",
                   }}
                 >
-                  ATHLEAD INDONESIA will facilitate recreational sports players
-                  and activists to find and book sports venues and facilities
-                  through the ATHLEAD INDONESIA website.
+                  {translate("coach1")}
                   <br />
                   <br />
-                  With these services, ATHLEAD INDONESIA will help recreational
-                  sports players try a new sport or increase their ability in a
-                  sport by using the services of a professional coach.
+                  {translate("coach2")}
                 </Typography>
               </div>
               <div className="button-container">
@@ -440,47 +405,50 @@ const Partner = () => {
               </div>
             </ProductCard>
             <ProductCard src={Laptop} title="Academy">
-              <div className="text-product">
-                <Typography
-                  variant="p"
-                  style={{
-                    fontStyle: "normal",
-                    fontWeight: "400",
-                    fontSize: "12px",
-                    lineHeight: "100%",
-                  }}
-                >
-                  ATHLEAD INDONESIA will facilitate recreational sports players
-                  and activists to find and book sports venues and facilities
-                  through the ATHLEAD INDONESIA website.
-                  <br />
-                  <br />
-                  With these services, ATHLEAD INDONESIA will help recreational
-                  sports players seek and join sports academies.
-                </Typography>
-              </div>
-              <div className="button-container">
-                <Button
-                  variant="contained"
-                  style={{
-                    backgroundColor: "white",
-                    color: "#7D0E23",
-                    width: "182px",
-                    height: "50px",
-                  }}
-                  endIcon={<ArrowRight />}
-                  onClick={() => {
-                    handleOnClick("Academy");
-                  }}
-                >
-                  <span className="button-text">Join as an Academy</span>
-                </Button>
+              <div style={{
+                display:'flex',
+                justifyContent:"space-between",
+                flexDirection:'row'
+              }}>
+                <div className="text-product">
+                  <Typography
+                    variant="p"
+                    style={{
+                      fontStyle: "normal",
+                      fontWeight: "400",
+                      fontSize: "12px",
+                      lineHeight: "100%",
+                    }}
+                  >
+                    {translate("academy1")}
+                    <br />
+                    <br />
+                    {translate("academy2")}
+                  </Typography>
+                </div>
+                <div className="button-container">
+                  <Button
+                    variant="contained"
+                    style={{
+                      backgroundColor: "white",
+                      color: "#7D0E23",
+                      width: "182px",
+                      height: "50px",
+                    }}
+                    endIcon={<ArrowRight />}
+                    onClick={() => {
+                      handleOnClick("Academy");
+                    }}
+                  >
+                    <span className="button-text">Join as an Academy</span>
+                  </Button>
+                </div>
               </div>
             </ProductCard>
           </div>
         </div>
       )}
-      <div className="container-partner">
+      {/* <div className="container-partner">
         <div className="partner-wrapper">
           <p className="partner-title">{translate("31")}</p>
           <p className="partner-subtitle">
@@ -515,8 +483,8 @@ const Partner = () => {
               title={translate("55")}
               content={[translate("56"), translate("57"), translate("58")]}
             />
-          </div>
-          <div className="partner-label">
+          </div> */}
+      {/* <div className="partner-label">
             <div className="partner-label-wrapper">
               <div className="plwiw">
                 <div className="pl-txt">
@@ -532,9 +500,9 @@ const Partner = () => {
                 </button>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
+          </div> */}
+      {/* </div>
+      </div> */}
       {/* </div> */}
     </div>
   );

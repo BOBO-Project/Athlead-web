@@ -137,7 +137,9 @@ const Product = () => {
       <div>
         {!isResponsive ? (
           <div className="container-product-icon">
+            <p>
             <img src={productImage} className="product-image" />
+            </p>
           </div>
         ) : (
           // <Paper elevation={2} className="container-product-icon">
@@ -287,15 +289,10 @@ const Product = () => {
                   lineHeight: "140%",
                 }}
               >
-                We will facilitate recreational sports players to find and book
-                sports venues and facilities through the ATHLEAD INDONESIA
-                website. We will make booking sports venues or facilities easier
-                by using the ATHLEAD INDONESIA website service
+               {translate("venue1")}
                 <br />
                 <br />
-                Recreational sports players and activists will find it easier to
-                book sports venues or facilities by using the ATHLEAD INDONESIA
-                website service.
+                {translate("venue2")}
               </Typography>
             </div>
           </ProductCard>
@@ -310,15 +307,11 @@ const Product = () => {
                   lineHeight: "140%",
                 }}
               >
-                We will facilitate recreational sports players to find and book
-                sports venues and facilities through the ATHLEAD INDONESIA
-                website. We will make booking sports venues or facilities easier
-                by using the ATHLEAD INDONESIA website service
+                {translate("photographer1")}
                 <br />
                 <br />
-                Recreational sports players and activists will find it easier to
-                book sports venues or facilities by using the ATHLEAD INDONESIA
-                website service.
+                {translate("photographer2")}
+
               </Typography>
             </div>
           </ProductCard>
@@ -333,15 +326,11 @@ const Product = () => {
                   lineHeight: "140%",
                 }}
               >
-                We will facilitate recreational sports players to find and book
-                sports venues and facilities through the ATHLEAD INDONESIA
-                website. We will make booking sports venues or facilities easier
-                by using the ATHLEAD INDONESIA website service
+                {translate("coach1")}
                 <br />
                 <br />
-                Recreational sports players and activists will find it easier to
-                book sports venues or facilities by using the ATHLEAD INDONESIA
-                website service.
+                {translate("coach2")}
+
               </Typography>
             </div>
           </ProductCard>
@@ -356,15 +345,12 @@ const Product = () => {
                   lineHeight: "140%",
                 }}
               >
-                We will facilitate recreational sports players to find and book
-                sports venues and facilities through the ATHLEAD INDONESIA
-                website. We will make booking sports venues or facilities easier
-                by using the ATHLEAD INDONESIA website service
+                {translate("academy")}
                 <br />
                 <br />
-                Recreational sports players and activists will find it easier to
+                {/* Recreational sports players and activists will find it easier to
                 book sports venues or facilities by using the ATHLEAD INDONESIA
-                website service.
+                website service. */}
               </Typography>
             </div>
           </ProductCard>

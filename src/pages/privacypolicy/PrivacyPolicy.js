@@ -21,7 +21,7 @@ import BreadcrumbsComp from "components/breadcrumbs-comp/breadcrumbs";
 const PrivacyPolicy = () => {
   const { translate } = useTranslate(english, indo);
   const isResponsive = window.innerWidth <= 768;
-  const [grid, setGrid] = useState(isResponsive ? 12 : 6);
+  const [grid, setGrid] = useState(isResponsive ? 2 : 6);
 
   return (
     <div id="privacyPolicy">
@@ -32,9 +32,9 @@ const PrivacyPolicy = () => {
         className="banner"
       >
         <div className="container-banner">
-          <div>
+          {/* <div>
             <BreadcrumbsComp page="Privacy Policy" />
-          </div>
+          </div> */}
           <div className="container-content">
             <Typography variant="h1" className="title-container">
               {translate("title")}
@@ -74,6 +74,9 @@ const PrivacyPolicy = () => {
             <img src={icon} className="image-dot" />
           </div>
         </Container>
+        {/* {
+
+        } */}
         <div className="content-accordion">
           <Grid
             container
@@ -91,22 +94,53 @@ const PrivacyPolicy = () => {
                   // }}
                   className="accordion-summary"
                 >
-                  01. IMPORTANT INFORMATION AND WHO WE ARE
+                  {translate("title1")}
                 </AccordionSummary>
                 <AccordionDetails className="content-accordion-detail">
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's
-                  standard dummy text ever since the 1500s, when an unknown
-                  printer took a galley of type and Lorem Ipsum is simply dummy
-                  text of the printing and typesetting industry. Lorem Ipsum has
-                  been the industry's standard dummy text ever since the 1500s,
-                  when an unknown printer took a galley of type and
+                  <ol type="a">
+                    <li>
+                      <Typography>{translate("textContent1a")}</Typography>
+                      <br />
+                      <Typography>{translate("textContent1a1")}</Typography>
+                    </li>
+                    <br />
+                    <li>
+                      <Typography>{translate("textContent1b")}</Typography>
+                    </li>
+                    <br />
+                    <li>
+                      <Typography>{translate("textContent1c")}</Typography>
+                      <br />
+                      <Typography>{translate("textContent1c1")}</Typography>
+                    </li>
+                    <br />
+                    <li>
+                      <Typography>{translate("textContent1d")}</Typography>
+                    </li>
+                    <br />
+                    <li>
+                      <Typography>{translate("textContent1e")}</Typography>
+                    </li>
+                  </ol>
+                  {/* <Typography>{translate("textContent1a")}</Typography>
                   <br />
                   <br />
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's
-                  standard dummy text ever since the 1500s, when an unknown
-                  printer took a galley of type and
+                  {translate("textContent1a1")}
+                  <br />
+                  <br />
+                  {translate("textContent1b")}
+                  <br />
+                  <br />
+                  {translate("textContent1c")}
+                  <br />
+                  <br />
+                  {translate("textContent1c1")}
+                  <br />
+                  <br />
+                  {translate("textContent1d")}
+                  <br />
+                  <br />
+                  {translate("textContent1e")} */}
                 </AccordionDetails>
               </Accordion>
             </Grid>
@@ -121,22 +155,48 @@ const PrivacyPolicy = () => {
                   // }}
                   className="accordion-summary"
                 >
-                  02. IMPORTANT INFORMATION AND WHO WE ARE
+                  {translate("title2")}
                 </AccordionSummary>
                 <AccordionDetails className="content-accordion-detail">
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's
-                  standard dummy text ever since the 1500s, when an unknown
-                  printer took a galley of type and Lorem Ipsum is simply dummy
-                  text of the printing and typesetting industry. Lorem Ipsum has
-                  been the industry's standard dummy text ever since the 1500s,
-                  when an unknown printer took a galley of type and
+                  <Typography>{translate("textContent2")}</Typography>
+                  <ol type="a">
+                    <li>
+                      <Typography>{translate("textContent2a")}</Typography>
+                      <br />
+                      <Typography>{translate("textContent2b")}</Typography>
+                    </li>
+                    <br />
+                    <li>
+                      <Typography>{translate("textContent2c")}</Typography>
+                    </li>
+                    <br />
+                    <li>
+                      <Typography>{translate("textContent2d")}</Typography>
+                      <br />
+                      <Typography>{translate("textContent1c1")}</Typography>
+                    </li>
+                    <br />
+                    <li>
+                      <Typography>{translate("textContent2e")}</Typography>
+                    </li>
+                    <br />
+                  </ol>
+                  {/* {translate("textContent3a")}
                   <br />
                   <br />
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's
-                  standard dummy text ever since the 1500s, when an unknown
-                  printer took a galley of type and
+                  {translate("textContent3b")}
+                  <br />
+                  <br />
+                  {translate("textContent2b")}
+                  <br />
+                  <br />
+                  {translate("textContent2c")}
+                  <br />
+                  <br />
+                  {translate("textContent2d")}
+                  <br />
+                  <br />
+                  {translate("textContent2e")} */}
                 </AccordionDetails>
               </Accordion>
             </Grid>
@@ -151,22 +211,18 @@ const PrivacyPolicy = () => {
                   // }}
                   className="accordion-summary"
                 >
-                  03. PERSONAL INFORMATION WE COLLECT
+                  {translate("title3")}
                 </AccordionSummary>
                 <AccordionDetails className="content-accordion-detail">
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's
-                  standard dummy text ever since the 1500s, when an unknown
-                  printer took a galley of type and Lorem Ipsum is simply dummy
-                  text of the printing and typesetting industry. Lorem Ipsum has
-                  been the industry's standard dummy text ever since the 1500s,
-                  when an unknown printer took a galley of type and
-                  <br />
-                  <br />
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's
-                  standard dummy text ever since the 1500s, when an unknown
-                  printer took a galley of type and
+                  <ol type="a">
+                    <li>
+                      <Typography>{translate("textContent3a")}</Typography>
+                    </li>
+                    <br />
+                    <li>
+                      <Typography>{translate("textContent3b")}</Typography>
+                    </li>
+                  </ol>
                 </AccordionDetails>
               </Accordion>
             </Grid>
@@ -181,22 +237,63 @@ const PrivacyPolicy = () => {
                   // }}
                   className="accordion-summary"
                 >
-                  04. PERSONAL INFORMATION WE COLLECT
+                  {translate("title4")}
                 </AccordionSummary>
                 <AccordionDetails className="content-accordion-detail">
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's
-                  standard dummy text ever since the 1500s, when an unknown
-                  printer took a galley of type and Lorem Ipsum is simply dummy
-                  text of the printing and typesetting industry. Lorem Ipsum has
-                  been the industry's standard dummy text ever since the 1500s,
-                  when an unknown printer took a galley of type and
-                  <br />
-                  <br />
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's
-                  standard dummy text ever since the 1500s, when an unknown
-                  printer took a galley of type and
+                <ol type="a">
+                  <li>
+                    <Typography>{translate("textContent4a")}</Typography>
+                    <ul>
+                      <Typography><li>{translate("liA1")}</li></Typography>
+                      <Typography><li>{translate("liA2")}</li></Typography>
+                      <Typography><li>{translate("liA3")}</li></Typography>
+                      <Typography><li>{translate("liA4")}</li></Typography>
+                      <Typography><li>{translate("liA5")}</li></Typography>
+                      <Typography><li>{translate("liA6")}</li></Typography>
+                      <Typography><li>{translate("liA7")}</li></Typography>
+                      <Typography><li>{translate("liA8")}</li></Typography>
+                      <Typography><li>{translate("liA9")}</li></Typography>
+                    </ul>
+                  </li>
+                  <br/>
+                  <li>
+                    <Typography>{translate("textContent4b")}</Typography>
+                    <ul>
+                      <Typography><li>{translate("liB1")}</li></Typography>
+                      <Typography><li>{translate("liB2")}</li></Typography>
+                      <Typography><li>{translate("liB3")}</li></Typography>
+                      <Typography><li>{translate("liB4")}</li></Typography>
+                      <Typography><li>{translate("liB5")}</li></Typography>
+                      <Typography><li>{translate("liB6")}</li></Typography>
+                      <Typography><li>{translate("liB7")}</li></Typography>
+                      <Typography><li>{translate("liB8")}</li></Typography>
+                    </ul>
+                  </li>
+                  <br/>
+                  <li>
+                    <Typography>{translate("textContent4c")}</Typography>
+                    <ul>
+                      <Typography><li>{translate("liC1")}</li></Typography>
+                      <Typography><li>{translate("liC2")}</li></Typography>
+                      <Typography><li>{translate("liC3")}</li></Typography>
+                      <Typography><li>{translate("liC4")}</li></Typography>
+                      <Typography><li>{translate("liC5")}</li></Typography>
+                    </ul>
+                  </li>
+                  <br/>
+                  <li>
+                    <Typography>{translate("textContent4d")}</Typography>
+                    <ul>
+                      <Typography><li>{translate("liD1")}</li></Typography>
+                      <Typography><li>{translate("liD2")}</li></Typography>
+                      <Typography><li>{translate("liD3")}</li></Typography>
+                      <Typography><li>{translate("liD4")}</li></Typography>
+                      <Typography><li>{translate("liD5")}</li></Typography>
+                      <Typography><li>{translate("liD6")}</li></Typography>
+                    </ul>
+                  </li>
+                  <br/>
+                </ol>
                 </AccordionDetails>
               </Accordion>
             </Grid>
@@ -211,22 +308,15 @@ const PrivacyPolicy = () => {
                   // }}
                   className="accordion-summary"
                 >
-                  05. HOW YOUR PERSONAL DATA IS COLLECTED
+                  {translate("title5")}
                 </AccordionSummary>
                 <AccordionDetails className="content-accordion-detail">
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's
-                  standard dummy text ever since the 1500s, when an unknown
-                  printer took a galley of type and Lorem Ipsum is simply dummy
-                  text of the printing and typesetting industry. Lorem Ipsum has
-                  been the industry's standard dummy text ever since the 1500s,
-                  when an unknown printer took a galley of type and
-                  <br />
-                  <br />
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's
-                  standard dummy text ever since the 1500s, when an unknown
-                  printer took a galley of type and
+                  <Typography>{translate("textContent5")}</Typography>
+                  <ul>
+                    <li><Typography>{translate("li5a")}</Typography></li>
+                    <li><Typography>{translate("li5b")}</Typography></li>
+                  </ul>
+                  <Typography>{translate("textContent5a")}</Typography>
                 </AccordionDetails>
               </Accordion>
             </Grid>
@@ -241,22 +331,10 @@ const PrivacyPolicy = () => {
                   // }}
                   className="accordion-summary"
                 >
-                  06. HOW YOUR PERSONAL DATA IS COLLECTED
+                  <Typography>{translate("title6")}</Typography>
                 </AccordionSummary>
                 <AccordionDetails className="content-accordion-detail">
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's
-                  standard dummy text ever since the 1500s, when an unknown
-                  printer took a galley of type and Lorem Ipsum is simply dummy
-                  text of the printing and typesetting industry. Lorem Ipsum has
-                  been the industry's standard dummy text ever since the 1500s,
-                  when an unknown printer took a galley of type and
-                  <br />
-                  <br />
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's
-                  standard dummy text ever since the 1500s, when an unknown
-                  printer took a galley of type and
+                  <Typography>{translate("textContent6")}</Typography>
                 </AccordionDetails>
               </Accordion>
             </Grid>
@@ -271,22 +349,10 @@ const PrivacyPolicy = () => {
                   // }}
                   className="accordion-summary"
                 >
-                  07. HOW WE USE THE INFORMATION WE COLLECT
+                  <Typography>{translate("title7")}</Typography>
                 </AccordionSummary>
                 <AccordionDetails className="content-accordion-detail">
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's
-                  standard dummy text ever since the 1500s, when an unknown
-                  printer took a galley of type and Lorem Ipsum is simply dummy
-                  text of the printing and typesetting industry. Lorem Ipsum has
-                  been the industry's standard dummy text ever since the 1500s,
-                  when an unknown printer took a galley of type and
-                  <br />
-                  <br />
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's
-                  standard dummy text ever since the 1500s, when an unknown
-                  printer took a galley of type and
+                  <Typography>{translate("textContent7")}</Typography>
                 </AccordionDetails>
               </Accordion>
             </Grid>
@@ -301,22 +367,29 @@ const PrivacyPolicy = () => {
                   // }}
                   className="accordion-summary"
                 >
-                  08. HOW WE USE THE INFORMATION WE COLLECT
+                  <Typography>{translate("title8")}</Typography>
                 </AccordionSummary>
                 <AccordionDetails className="content-accordion-detail">
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's
-                  standard dummy text ever since the 1500s, when an unknown
-                  printer took a galley of type and Lorem Ipsum is simply dummy
-                  text of the printing and typesetting industry. Lorem Ipsum has
-                  been the industry's standard dummy text ever since the 1500s,
-                  when an unknown printer took a galley of type and
+                  {translate("textContent8")}
                   <br />
+                  <ul>
+                    <Typography><li>{translate("li81")}</li></Typography>
+                    <Typography><li>{translate("li82")}</li></Typography>
+                    <Typography><li>{translate("li83")}</li></Typography>
+                    <Typography><li>{translate("li84")}</li></Typography>
+                    <Typography><li>{translate("li85")}</li></Typography>
+                    <Typography><li>{translate("li86")}</li></Typography>
+                    <Typography><li>{translate("li87")}</li></Typography>
+                  </ul>
                   <br />
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's
-                  standard dummy text ever since the 1500s, when an unknown
-                  printer took a galley of type and
+                  <Typography>{translate("textContent8a")}</Typography>
+                  <br />
+                  <ul>
+                    <Typography><li>{translate("li8A1")}</li></Typography>
+                    <Typography><li>{translate("li8A2")}</li></Typography>
+                    <Typography><li>{translate("li8A3")}</li></Typography>
+                  </ul>
+                  <br />
                 </AccordionDetails>
               </Accordion>
             </Grid>
@@ -331,172 +404,24 @@ const PrivacyPolicy = () => {
                   // }}
                   className="accordion-summary"
                 >
-                  09. SHARING AND DISCLOSURE OF YOUR PERSONAL DATA
+                  <Typography>{translate("title9")}</Typography>
                 </AccordionSummary>
                 <AccordionDetails className="content-accordion-detail">
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's
-                  standard dummy text ever since the 1500s, when an unknown
-                  printer took a galley of type and Lorem Ipsum is simply dummy
-                  text of the printing and typesetting industry. Lorem Ipsum has
-                  been the industry's standard dummy text ever since the 1500s,
-                  when an unknown printer took a galley of type and
+                  <Typography>{translate("textContent9")} privacypolicy@athlead.id</Typography>
                   <br />
                   <br />
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's
-                  standard dummy text ever since the 1500s, when an unknown
-                  printer took a galley of type and
-                </AccordionDetails>
-              </Accordion>
-            </Grid>
-            <Grid item xs={grid}>
-              <Accordion className="content-accordion-text">
-                <AccordionSummary
-                  expandIcon={<ExpandMore />}
-                  aria-controls="panel1a-content"
-                  id="panel1a-header"
-                  // sx={{
-                  //   height:'84px'
-                  // }}
-                  className="accordion-summary"
-                >
-                  10. SHARING AND DISCLOSURE OF YOUR PERSONAL DATA
-                </AccordionSummary>
-                <AccordionDetails className="content-accordion-detail">
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's
-                  standard dummy text ever since the 1500s, when an unknown
-                  printer took a galley of type and Lorem Ipsum is simply dummy
-                  text of the printing and typesetting industry. Lorem Ipsum has
-                  been the industry's standard dummy text ever since the 1500s,
-                  when an unknown printer took a galley of type and
+                  <Typography>{translate("textContent9a")}</Typography>
                   <br />
+                  <Typography>{translate("textContent9b")} contact@athlead.id</Typography> 
                   <br />
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's
-                  standard dummy text ever since the 1500s, when an unknown
-                  printer took a galley of type and
-                </AccordionDetails>
-              </Accordion>
-            </Grid>
-            <Grid item xs={grid}>
-              <Accordion className="content-accordion-text">
-                <AccordionSummary
-                  expandIcon={<ExpandMore />}
-                  aria-controls="panel1a-content"
-                  id="panel1a-header"
-                  // sx={{
-                  //   height:'84px'
-                  // }}
-                  className="accordion-summary"
-                >
-                  11. PERSONAL INFORMATION WE COLLECT
-                </AccordionSummary>
-                <AccordionDetails className="content-accordion-detail">
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's
-                  standard dummy text ever since the 1500s, when an unknown
-                  printer took a galley of type and Lorem Ipsum is simply dummy
-                  text of the printing and typesetting industry. Lorem Ipsum has
-                  been the industry's standard dummy text ever since the 1500s,
-                  when an unknown printer took a galley of type and
+                  <Typography>{translate("textContent9c")} venue@athlead.id</Typography> 
                   <br />
+                  <Typography>{translate("textContent9d")} coach@athlead.id</Typography> 
                   <br />
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's
-                  standard dummy text ever since the 1500s, when an unknown
-                  printer took a galley of type and
-                </AccordionDetails>
-              </Accordion>
-            </Grid>
-            <Grid item xs={grid}>
-              <Accordion className="content-accordion-text">
-                <AccordionSummary
-                  expandIcon={<ExpandMore />}
-                  aria-controls="panel1a-content"
-                  id="panel1a-header"
-                  // sx={{
-                  //   height:'84px'
-                  // }}
-                  className="accordion-summary"
-                >
-                  12. PERSONAL INFORMATION WE COLLECT
-                </AccordionSummary>
-                <AccordionDetails className="content-accordion-detail">
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's
-                  standard dummy text ever since the 1500s, when an unknown
-                  printer took a galley of type and Lorem Ipsum is simply dummy
-                  text of the printing and typesetting industry. Lorem Ipsum has
-                  been the industry's standard dummy text ever since the 1500s,
-                  when an unknown printer took a galley of type and
+                  <Typography>{translate("textContent9e")} academy@athlead.id</Typography> 
                   <br />
+                  <Typography>{translate("textContent9f")} photographer@athlead.id</Typography> 
                   <br />
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's
-                  standard dummy text ever since the 1500s, when an unknown
-                  printer took a galley of type and
-                </AccordionDetails>
-              </Accordion>
-            </Grid>
-            <Grid item xs={grid}>
-              <Accordion className="content-accordion-text">
-                <AccordionSummary
-                  expandIcon={<ExpandMore />}
-                  aria-controls="panel1a-content"
-                  id="panel1a-header"
-                  // sx={{
-                  //   height:'84px'
-                  // }}
-                  className="accordion-summary"
-                >
-                  13. PERSONAL INFORMATION WE COLLECT
-                </AccordionSummary>
-                <AccordionDetails className="content-accordion-detail">
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's
-                  standard dummy text ever since the 1500s, when an unknown
-                  printer took a galley of type and Lorem Ipsum is simply dummy
-                  text of the printing and typesetting industry. Lorem Ipsum has
-                  been the industry's standard dummy text ever since the 1500s,
-                  when an unknown printer took a galley of type and
-                  <br />
-                  <br />
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's
-                  standard dummy text ever since the 1500s, when an unknown
-                  printer took a galley of type and
-                </AccordionDetails>
-              </Accordion>
-            </Grid>
-            <Grid item xs={grid}>
-              <Accordion className="content-accordion-text">
-                <AccordionSummary
-                  expandIcon={<ExpandMore />}
-                  aria-controls="panel1a-content"
-                  id="panel1a-header"
-                  // sx={{
-                  //   height:'84px'
-                  // }}
-                  className="accordion-summary"
-                >
-                  14. PERSONAL INFORMATION WE COLLECT
-                </AccordionSummary>
-                <AccordionDetails className="content-accordion-detail">
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's
-                  standard dummy text ever since the 1500s, when an unknown
-                  printer took a galley of type and Lorem Ipsum is simply dummy
-                  text of the printing and typesetting industry. Lorem Ipsum has
-                  been the industry's standard dummy text ever since the 1500s,
-                  when an unknown printer took a galley of type and
-                  <br />
-                  <br />
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's
-                  standard dummy text ever since the 1500s, when an unknown
-                  printer took a galley of type and
                 </AccordionDetails>
               </Accordion>
             </Grid>
