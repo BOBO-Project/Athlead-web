@@ -1,26 +1,52 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import useTranslate from "../hooks/useTranslate";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
+import "./index.scss";
+
+//Components
+import { Navbar, Footer } from "../components";
+import FloatingSosmed from "components/floating-sosmed"
+
+//Pages
 import homepage from "./homepage";
 import product from "./product";
+import career from "./career";
+import aboutus from "./aboutus";
+import partnerwithus from "./partnerwithus";
+import privacypolicy from "./privacypolicy";
+import blog from "./blog";
 
-const appPages = [{ ...homepage }, { ...product }];
+import faq from "./faq";
+
+const appPages = [
+  { ...homepage },
+  { ...product },
+  { ...aboutus },
+  { ...career },
+  { ...partnerwithus },
+  { ...privacypolicy },
+  { ...blog },
+  { ...faq },
+];
 
 const RenderPages = () => {
-  const { changeLanguage, language } = useTranslate();
   return (
-    <>
-      <div style={{ marginBottom: "20px" }}>
-        <div>TEST LANGUAGE - {language}</div>
-        <button onClick={changeLanguage}>change</button>
+    <div>
+      <Navbar />
+      <div id="all-pages-wrapper">
+        <Routes>
+          {appPages.map((page, i) => (
+            <Route {...page} key={i} />
+          ))}
+        </Routes>
       </div>
-      <Routes>
-        {appPages.map((page, i) => (
-          <Route {...page} key={i} />
-        ))}
-      </Routes>
-    </>
+      <Footer />
+
+      <FloatingSosmed />
+      <ToastContainer />
+    </div>
   );
 };
 

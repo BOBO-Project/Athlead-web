@@ -1,0 +1,100 @@
+#floating-sosmed {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  .floating-sosmed-icon-wrapper {
+    position: relative;
+    display: flex;
+    height: 200px;
+    align-items: center;
+    flex-direction: column;
+    .floating-sosmed-icon {
+      display: none;
+      position: absolute;
+      bottom: -55px;
+      right: -17px;
+      z-index: -1;
+      width: 32px;
+      height: 32px;
+      object-fit: contain;
+      cursor: pointer;
+    }
+  }
+  .floating-sosmed-toggle-icon-wrapper {
+    .floating-sosmed-toggle-icon {
+      width: 48px;
+      height: 48px;
+      object-fit: contain;
+      cursor: pointer;
+    }
+  }
+
+  &.open {
+    .floating-sosmed-icon-wrapper {
+      .floating-sosmed-icon {
+        display: inline-block;
+        right: -17px;
+        z-index: 1;
+      }
+
+      .fb {
+        bottom: 16px;
+        animation: fb 0.5s;
+      }
+
+      .wa {
+        bottom: calc(16px + 48px);
+        animation: wa 0.5s;
+      }
+
+      .twit {
+        bottom: calc(16px + 48px + 48px);
+        animation: twit 0.5s;
+      }
+
+      .ig {
+        bottom: calc(16px + 48px + 48px + 48px);
+        animation: ig 0.5s;
+      }
+    }
+  }
+}
+
+@keyframes fb {
+  from {
+    bottom: 0;
+  }
+  to {
+    bottom: 16px;
+  }
+}
+
+@keyframes wa {
+  from {
+    bottom: 0;
+  }
+  to {
+    bottom: calc(16px + 48px);
+  }
+}
+
+@keyframes twit {
+  from {
+    bottom: 0;
+  }
+  to {
+    bottom: calc(16px + 48px + 48px);
+  }
+}
+
+@keyframes ig {
+  from {
+    bottom: 0;
+  }
+  to {
+    bottom: calc(16px + 48px + 48px + 48px);
+  }
+}

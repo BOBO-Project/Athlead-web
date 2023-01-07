@@ -1,0 +1,219 @@
+@import url("http://fonts.cdnfonts.com/css/proxima-nova-2");
+@font-face {
+  font-family: "pmr";
+  src: url("../../assets/fonts/Proxima\ Nova\ Alt\ Regular.otf");
+}
+@font-face {
+  font-family: "pmb";
+  src: url("../../assets/fonts/Proxima\ Nova\ Bold.otf");
+}
+#navbar {
+  //Reset
+  p,
+  a,
+  span {
+    color: #282828;
+    font-family: "Proxima Nova", sans-serif;
+    margin: 0;
+  }
+  a {
+    text-decoration: none;
+  }
+  width: 100vw;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  background: #fefefe;
+  //Reuseable
+  @mixin dflex {
+    display: flex;
+  }
+  @mixin jc-between {
+    justify-content: space-between;
+  }
+  @mixin al-center {
+    align-items: center;
+  }
+
+  .navbar-dekstop {
+    @include dflex;
+    @include jc-between;
+    @include al-center;
+    background: #fefefe;
+    box-shadow: 0px 8px 4px rgba(0, 0, 0, 0.05);
+    padding: 14px 140px;
+
+    .tabs-wrapper {
+      @include dflex;
+      @include al-center;
+
+      .athlead-logo {
+        margin-right: 48px;
+        width: 173px;
+        height: 86px;
+      }
+      .tabs {
+        @include dflex;
+        @include al-center;
+        a {
+          font-style: "pmb";
+          font-weight: 500;
+          font-size: 20px;
+          margin-right: 32px;
+          cursor: pointer;
+          &:active {
+            color: #7d0e23;
+            position: relative;
+            &::after {
+              color: #7d0e23;
+              font-style: "pmb";
+              content: "";
+              display: block;
+              height: 1px;
+              width: 100%;
+              border-bottom: 1px solid #7d0e23;
+              position: absolute;
+              left: 0;
+            }
+          }
+        }
+      }
+    }
+    .translation-toggler {
+      border: none;
+      cursor: pointer;
+      background: inherit;
+      &:focus-visible {
+        outline: 0;
+      }
+
+      @include dflex;
+      @include al-center;
+
+      .world-icon {
+        margin-right: 8px;
+      }
+
+      span {
+        font-weight: 400;
+        font-size: 20px;
+        color: #7e7e7e;
+        &.active {
+          color: #7d0e23;
+          position: relative;
+          &::after {
+            content: "";
+            display: block;
+            height: 1px;
+            width: 17px;
+            border-bottom: 1px solid #7d0e23;
+            position: absolute;
+            left: 0;
+          }
+        }
+      }
+    }
+  }
+
+  .navbar-mobile {
+    @include dflex;
+    @include jc-between;
+    @include al-center;
+
+    padding: 13px 23px;
+    background: #fefefe;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+    .tabs-wrapper {
+      @include dflex;
+      @include al-center;
+      .hamburger-logo {
+        width: 20px;
+        height: 20px;
+        margin-right: 16px;
+        cursor: pointer;
+      }
+      .athlead-logo {
+        width: 100px;
+        height: 50px;
+      }
+    }
+
+    .translation-toggler {
+      border: none;
+      cursor: pointer;
+      background: inherit;
+      &:focus-visible {
+        outline: 0;
+      }
+
+      @include dflex;
+      @include al-center;
+
+      .world-icon {
+        margin-right: 8px;
+      }
+
+      span {
+        font-weight: 400;
+        font-size: 16px;
+        color: #7e7e7e;
+        &.active {
+          color: #7d0e23;
+          position: relative;
+          &::after {
+            content: "";
+            display: block;
+            height: 1px;
+            width: 17px;
+            border-bottom: 1px solid #7d0e23;
+            position: absolute;
+            left: 0;
+          }
+        }
+      }
+    }
+  }
+
+  .tabs-flag {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(40, 40, 40, 0.8);
+    .tabs {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 2;
+      min-width: 250px;
+      .header {
+        @include dflex;
+        @include jc-between;
+        @include al-center;
+        padding: 13px 24px;
+        background: #f8b9bf;
+        .athlead-logo {
+          width: 100px;
+          height: 41px;
+        }
+        .cross-icon {
+          cursor: pointer;
+          width: 24px;
+          height: 24px;
+        }
+      }
+      .body {
+        background: #fefefe;
+        height: calc(100vh - 67px);
+        a {
+          display: block;
+          padding: 14px 24px;
+          font-size: 18px;
+          color: #282828;
+          background: #fafafa;
+          border-bottom: 1px solid #f5ede4;
+        }
+      }
+    }
+  }
+}
