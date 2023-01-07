@@ -25,7 +25,7 @@ import Photo from "assets/img/photo.png";
 import Whistle from "assets/img/whistle.png";
 import Laptop from "assets/img/laptop.png";
 import BlogImg from "assets/img/blog-img.png";
-import CeliaAtmojo from "assets/img/celia-atmojo.png";
+import CeliaAtmojo from "assets/img/logo-kasaya1.png";
 import Gunawan from "assets/img/gunawan.png";
 import RunTrack from "assets/img/run-track.png";
 import Volley from "assets/img/volley.png";
@@ -39,12 +39,25 @@ import TestimonyCard from "./TestimonyCard";
 import { Link } from "react-router-dom";
 
 const Homepage = () => {
-  const { translate } = useTranslate(english, indo);
+  const { translate, language } = useTranslate(english, indo);
   const [openTnc, setOpenTnc] = useState(false);
 
   const [email, setEmail] = useState("");
 
   const [isResponsive] = useState(window.innerWidth <= 1021);
+
+  let testimonyHeight = null;
+  if (language === "id-ID") {
+    testimonyHeight = {
+      mobile: "450px",
+      web: "400px",
+    };
+  } else {
+    testimonyHeight = {
+      mobile: "400px",
+      web: "315px",
+    };
+  }
 
   const handleSendEmail = async () => {
     try {
@@ -347,17 +360,19 @@ const Homepage = () => {
           <div className="testi-card-wrapper">
             <TestimonyCard
               src={CeliaAtmojo}
-              name="GUNAWAN SETYA LAKSANA"
-              info={translate("76")}
+              name="Kasaya"
+              info="@kasaya.equestrian"
               title={translate("77")}
               text={translate("78")}
+              width={testimonyHeight}
             />
             <TestimonyCard
               src={Gunawan}
-              name="CECILIA ATMOJO"
-              info={translate("79")}
+              name="SnapSnap Sports"
+              info="@snapsnapid"
               title={translate("80")}
               text={translate("81")}
+              width={testimonyHeight}
             />
           </div>
         ) : (
@@ -365,17 +380,19 @@ const Homepage = () => {
             <div className="testi-card-wrapper">
               <TestimonyCard
                 src={CeliaAtmojo}
-                name="GUNAWAN SETYA LAKSANA"
-                info={translate("76")}
+                name="Kasaya"
+                info="@kasaya.equestrian"
                 title={translate("77")}
                 text={translate("78")}
+                width={testimonyHeight}
               />
               <TestimonyCard
                 src={Gunawan}
-                name="CECILIA ATMOJO"
-                info={translate("79")}
+                name="SnapSnap Sports"
+                info="@snapsnapid"
                 title={translate("80")}
                 text={translate("81")}
+                width={testimonyHeight}
               />
             </div>
           </div>

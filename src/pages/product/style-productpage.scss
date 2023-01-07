@@ -1,3 +1,12 @@
+@font-face {
+  font-family: "pmr";
+  src: url("../../assets/fonts/Proxima\ Nova\ Alt\ Regular.otf");
+}
+@font-face {
+  font-family: "pmb";
+  src: url("../../assets/fonts/Proxima\ Nova\ Bold.otf");
+}
+
 #productPage {
   .product-card-wrapper {
     display: flex;
@@ -8,7 +17,7 @@
     .product-card {
       width: 300px;
       margin-right: 24px;
-      height: 570px;
+      height: 700px;
       background: #ffffff;
       border: 1px solid #eaeaea;
       box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -43,7 +52,7 @@
         justify-content: space-between;
         height: calc(100% - 50px);
         .pc-title {
-          font-family: "Proxima Nova";
+          font-family: "pmb";
           font-style: normal;
           font-weight: 800;
           font-size: 28px;

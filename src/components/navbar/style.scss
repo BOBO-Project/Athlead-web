@@ -52,6 +52,7 @@
         margin-right: 48px;
         width: 173px;
         height: 86px;
+        margin-bottom: 15px
       }
       .tabs {
         @include dflex;
@@ -62,7 +63,17 @@
           font-size: 20px;
           margin-right: 32px;
           cursor: pointer;
+          &:hover{
+            text-decoration:underline;
+            text-decoration-color: #7d0e23;
+            color:#7d0e23;
+          }
           &:active {
+            text-decoration:underline;
+            text-decoration-color: #7d0e23;
+            // text-decoration:underline;
+            // text-decoration-color: #7d0e23;
+            font-family: "pmb";
             color: #7d0e23;
             position: relative;
             &::after {
@@ -72,7 +83,7 @@
               display: block;
               height: 1px;
               width: 100%;
-              border-bottom: 1px solid #7d0e23;
+              // border-bottom: 1px solid #7d0e23;
               position: absolute;
               left: 0;
             }

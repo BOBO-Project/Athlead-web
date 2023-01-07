@@ -1,3 +1,11 @@
+@font-face {
+  font-family: "pmr";
+  src: url("../../assets/fonts/Proxima\ Nova\ Alt\ Regular.otf");
+}
+@font-face {
+  font-family: "pmb";
+  src: url("../../assets/fonts/Proxima\ Nova\ Bold.otf");
+}
 #career {
   .banner {
     width: 100vw;
@@ -47,7 +55,7 @@
       .form {
         padding: 48px 60px;
         .form-title {
-          font-family: "Proxima Nova";
+          font-family: "pmb";
           font-style: normal;
           font-weight: 800;
           font-size: 36px;
@@ -64,7 +72,7 @@
         }
         .form-fields {
           display: flex;
-          align-items: center;
+          // align-items: center;
           .field-wrapper {
             width: 100%;
             margin-right: 32px;
