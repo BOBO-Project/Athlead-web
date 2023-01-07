@@ -5,10 +5,7 @@ import english from "./locales/en-US.json";
 import indo from "./locales/id.json";
 import { Typography } from "@mui/material";
 import "./style-blog.scss";
-import comingsoonPic from "assets/img/coming-soon.png";
-import picMobile from "assets/img/comingsoon-mobile.png";
-import BreadcrumbsComp from "components/breadcrumbs-comp/breadcrumbs";
-
+import comingsoonPic from "assets/img/coming-soon3.png";
 export default function Blog() {
   const { translate } = useTranslate(english, indo);
   const isResponsive = window.innerWidth <= 768;
@@ -39,11 +36,35 @@ export default function Blog() {
         <div className="container-image">
           <p>
             {isResponsive ? (
-              <img src={picMobile} className="image-comingsoon-mobile" />
+              <>
+                <img src={comingsoonPic} className="image-comingsoon-mobile" />
+                <div>
+                  <p className="text1">Stay tuned to our latest articles!</p>
+                  <p className="text2">
+                    We are still on process
+                    <br/> 
+                    preparing something special for you
+                  </p>
+                </div>
+              </>
             ) : (
-              <img src={comingsoonPic} className="image-comingsoon" />
+              <>
+                <img src={comingsoonPic} className="image-comingsoon" />
+                <div>
+                  <p className="text1">Stay tuned to our latest articles!</p>
+                  <p className="text2">
+                    We are still on process preparing something special for you
+                  </p>
+                </div>
+              </>
             )}
           </p>
+          {/* <div>
+            <p className="text1">Stay tuned to our latest articles!</p>
+            <p className="text2">
+              We are still on process preparing something special for you
+            </p>
+          </div> */}
         </div>
       </div>
     </div>

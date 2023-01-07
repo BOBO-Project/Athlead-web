@@ -1,8 +1,13 @@
 import React from 'react'
 
-function TestimonyCard({ src, name, info, title, text }) {
+function TestimonyCard({ src, name, info, title, text, width }) {
+  const isResponsive = window.innerWidth <= 400;
+  let lebar = isResponsive? width?.mobile: width?.web
+
   return (
-    <div className='testimony-card'>
+    <div className='testimony-card' style={{
+      height:lebar
+    }}>
       <div className='testy-cntn'>
         <div className='person-info'>
           <img className='photo' src={src} alt="..." />
@@ -13,7 +18,8 @@ function TestimonyCard({ src, name, info, title, text }) {
         </div>
 
         <div className='testi-text'>
-          <p className='tt-title'>{title}</p>
+          <p className='tt-text'>{title}</p>
+          <br/>
           <p className='tt-text'>{text}</p>
         </div>
       </div>
