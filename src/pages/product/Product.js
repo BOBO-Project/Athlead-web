@@ -3,25 +3,10 @@ import "./style-productpage.scss";
 
 import useTranslate from "../../hooks/useTranslate";
 import banner from "../../assets/img/product-banner.png";
-import title from "../../assets/img/title-product.png";
 
-////Assets Product List
-import logoClimbing from "assets/img/product-logo/76.png";
-import logoGolf from "assets/img/product-logo/77.png";
-import logoSwimming from "assets/img/product-logo/78.png";
-import logoBowling from "assets/img/product-logo/79.png";
-import logoSquash from "assets/img/product-logo/80-1.png";
-import logoBadminton from "assets/img/product-logo/80.png";
-import logoTennis from "assets/img/product-logo/81-1.png";
-import logoFutsal from "assets/img/product-logo/81.png";
-import logoSoccer from "assets/img/product-logo/82-1.png";
-import logoFootball from "assets/img/product-logo/82.png";
-import logoBasketball from "assets/img/product-logo/83-1.png";
-import logoVolley from "assets/img/product-logo/83.png";
-import logoHorse from "assets/img/product-logo/85.png";
 
-import productImage from "assets/img/product-cards.png";
-import productImageMobile from "assets/img/product-card-mobile.png";
+import productImage from "assets/img/product-cards1.png";
+import productImageMobile from "assets/img/product-card-mobile1.png";
 
 ////Assets Product Card
 import Venue from "assets/img/venue.png";
@@ -40,74 +25,12 @@ const Product = () => {
   const { translate, language } = useTranslate(english, indo);
   let productCardWidth = null
   if(language === 'id-ID'){
-    // setProductCardWith({
-    //   mobile:"",
-    //   web:"700px",
-    // })
     productCardWidth = "700px"
   }else{
-    // setProductCardWith({
-    //   mobile:"",
-    //   web:"517px",
-    // })
     productCardWidth = "615px"
   }
-  // const productTop = [
-  //   {
-  //     img: logoClimbing,
-  //     title: "Climbing",
-  //   },
-  //   {
-  //     img: logoGolf,
-  //     title: "Golf",
-  //   },
-  //   {
-  //     img: logoSwimming,
-  //     title: "Swimming",
-  //   },
-  //   {
-  //     img: logoBowling,
-  //     title: "Bowling",
-  //   },
-  //   {
-  //     img: logoSquash,
-  //     title: "Squash",
-  //   },
-  //   {
-  //     img: logoBadminton,
-  //     title: "Badminton",
-  //   },
-  //   {
-  //     img: logoTennis,
-  //     title: "Tennis",
-  //   },
-  // ];
-  // const productBottom = [
-  //   {
-  //     img: logoFutsal,
-  //     title: "Futsal",
-  //   },
-  //   {
-  //     img: logoSoccer,
-  //     title: "Soccer",
-  //   },
-  //   {
-  //     img: logoFootball,
-  //     title: "Football",
-  //   },
-  //   {
-  //     img: logoBasketball,
-  //     title: "Basketball",
-  //   },
-  //   {
-  //     img: logoVolley,
-  //     title: "Volley",
-  //   },
-  //   {
-  //     img: logoHorse,
-  //     title: "Horse Riding",
-  //   },
-  // ];
+  
+
 
   const isResponsive = window.innerWidth <= 400;
   return (

@@ -2,11 +2,11 @@ import React from "react";
 import "./style.scss";
 
 //Assets - svg
-import AthleadIcon from "assets/img/athlead-white.png"
-import { ReactComponent as FB } from "assets/svg/facebook.svg"
-import { ReactComponent as IG } from "assets/svg/instagram.svg"
-import { ReactComponent as WA } from "assets/svg/whatsapp.svg"
-import { ReactComponent as Twitter } from "assets/svg/twitter.svg"
+import AthleadIcon from "assets/img/athlead-white.png";
+import { ReactComponent as FB } from "assets/svg/facebook.svg";
+import { ReactComponent as IG } from "assets/svg/instagram.svg";
+import { ReactComponent as WA } from "assets/svg/whatsapp.svg";
+import { ReactComponent as Twitter } from "assets/svg/twitter.svg";
 
 //Hooks
 import useTranslate from "hooks/useTranslate";
@@ -18,12 +18,12 @@ function Footer() {
   const { translate } = useTranslate(english, indo);
 
   return (
-    <div id='footer'>
-      <div className='footer-wrapper'>
-        <div className='first'>
-          <img src={AthleadIcon} alt="..." className='athld-icn' />
-          <p className='athld-t'>{translate("description")}</p>
-          <div className='sosmed'>
+    <div id="footer">
+      <div className="footer-wrapper">
+        <div className="first">
+          <img src={AthleadIcon} alt="..." className="athld-icn" />
+          <p className="athld-t">{translate("description")}</p>
+          <div className="sosmed">
             <FB />
             <IG />
             <Twitter />
@@ -72,7 +72,12 @@ function Footer() {
         </div>
         <div className="forth">
           <p className="title">{translate("other-title")}</p>
-          <p className="sub-title">{translate("other-content-faq")}</p>
+          <Link
+            to="/faq"
+            style={{ textDecoration: "none", marginBottom: "16px" }}
+          >
+            <p className="sub-title">{translate("other-content-faq")}</p>
+          </Link>
           <Link
             to="/privacypolicy"
             style={{ textDecoration: "none", marginBottom: "16px" }}
@@ -85,7 +90,11 @@ function Footer() {
               marginTop: "16px",
             }}
           >
-            {translate("other-content-chat")}
+            <a href="whatsapp://send?text=Hello Athlead!&phone=+6285173394930" style={{
+              color:'white'
+            }}>
+              {translate("other-content-chat")}
+            </a>
           </p>
         </div>
         <div className="fifth">
@@ -98,7 +107,7 @@ function Footer() {
             Khusus Ibukota Jakarta 12130
           </p>
           <p className="sub-title">{translate("contact-content-phone")}</p>
-          <p className="content">{"(+62) 0811-888-888"}</p>
+          <p className="content">{"(+62) 851-7339-4930"}</p>
           <p className="sub-title">{translate("contact-content-email")}</p>
           <p className="content">Hello@athlead.id</p>
         </div>

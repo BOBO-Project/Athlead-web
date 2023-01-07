@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { ReactComponent as ArrowRight } from "assets/svg/arrow-right.svg";
 
 function ProductCard({ src, title, text, children, lebar }) {
-  const isResponsive = window.innerWidth <= 400;
+  // const isResponsive = window.innerWidth <= 400;
 
   return (
     <div className="product-card" 

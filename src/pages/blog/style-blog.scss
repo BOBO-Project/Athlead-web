@@ -1,3 +1,12 @@
+@font-face {
+  font-family: "pmr";
+  src: url("../../assets/fonts/Proxima\ Nova\ Alt\ Regular.otf");
+}
+@font-face {
+  font-family: "pmb";
+  src: url("../../assets/fonts/Proxima\ Nova\ Bold.otf");
+}
+
 #blogPage {
   .container-banner {
     text-align: center;
@@ -34,17 +43,28 @@
     margin-top: 100px;
     margin-bottom: 100px;
     text-align: center;
+    .text1{
+    font-family: "pmb";
+    font-weight: 800;
+    font-size: 20px;
+  }
+  .text2{
+    font-family: "pmr";
+    font-size: 16px;
+  }
   }
 
   .image-comingsoon {
-    width: 600px;
-    height: 350px;
+    width: 200px;
+    height: 200px;
   }
 
   .image-comingsoon-mobile {
-    width: 50%;
-    height: 50%;
+    width: 100px;
+    height: 100px;
   }
+
+  
 }
 
 @media (max-width: 768px) {
@@ -53,15 +73,19 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    .image-comingsoon {
-      width: 251px;
-      height: 251px;
-    }
+
 
     .title-container {
       font-size: 2rem !important;
     }
     .title-description {
+      font-size: 1rem !important;
+    }
+
+    .text1{
+      font-size: 1rem !important;
+    }
+    .text2{
       font-size: 1rem !important;
     }
   }
