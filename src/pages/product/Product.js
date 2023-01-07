@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./style-productpage.scss";
 
 import useTranslate from "../../hooks/useTranslate";
@@ -37,63 +37,77 @@ import ProductCard from "./ProductCard";
 import BreadcrumbsComp from "components/breadcrumbs-comp/breadcrumbs";
 
 const Product = () => {
-  const { translate } = useTranslate(english, indo);
-  const productTop = [
-    {
-      img: logoClimbing,
-      title: "Climbing",
-    },
-    {
-      img: logoGolf,
-      title: "Golf",
-    },
-    {
-      img: logoSwimming,
-      title: "Swimming",
-    },
-    {
-      img: logoBowling,
-      title: "Bowling",
-    },
-    {
-      img: logoSquash,
-      title: "Squash",
-    },
-    {
-      img: logoBadminton,
-      title: "Badminton",
-    },
-    {
-      img: logoTennis,
-      title: "Tennis",
-    },
-  ];
-  const productBottom = [
-    {
-      img: logoFutsal,
-      title: "Futsal",
-    },
-    {
-      img: logoSoccer,
-      title: "Soccer",
-    },
-    {
-      img: logoFootball,
-      title: "Football",
-    },
-    {
-      img: logoBasketball,
-      title: "Basketball",
-    },
-    {
-      img: logoVolley,
-      title: "Volley",
-    },
-    {
-      img: logoHorse,
-      title: "Horse Riding",
-    },
-  ];
+  const { translate, language } = useTranslate(english, indo);
+  let productCardWidth = null
+  if(language === 'id-ID'){
+    // setProductCardWith({
+    //   mobile:"",
+    //   web:"700px",
+    // })
+    productCardWidth = "700px"
+  }else{
+    // setProductCardWith({
+    //   mobile:"",
+    //   web:"517px",
+    // })
+    productCardWidth = "615px"
+  }
+  // const productTop = [
+  //   {
+  //     img: logoClimbing,
+  //     title: "Climbing",
+  //   },
+  //   {
+  //     img: logoGolf,
+  //     title: "Golf",
+  //   },
+  //   {
+  //     img: logoSwimming,
+  //     title: "Swimming",
+  //   },
+  //   {
+  //     img: logoBowling,
+  //     title: "Bowling",
+  //   },
+  //   {
+  //     img: logoSquash,
+  //     title: "Squash",
+  //   },
+  //   {
+  //     img: logoBadminton,
+  //     title: "Badminton",
+  //   },
+  //   {
+  //     img: logoTennis,
+  //     title: "Tennis",
+  //   },
+  // ];
+  // const productBottom = [
+  //   {
+  //     img: logoFutsal,
+  //     title: "Futsal",
+  //   },
+  //   {
+  //     img: logoSoccer,
+  //     title: "Soccer",
+  //   },
+  //   {
+  //     img: logoFootball,
+  //     title: "Football",
+  //   },
+  //   {
+  //     img: logoBasketball,
+  //     title: "Basketball",
+  //   },
+  //   {
+  //     img: logoVolley,
+  //     title: "Volley",
+  //   },
+  //   {
+  //     img: logoHorse,
+  //     title: "Horse Riding",
+  //   },
+  // ];
 
   const isResponsive = window.innerWidth <= 400;
   return (
@@ -278,7 +292,7 @@ const Product = () => {
             marginTop: "100px",
           }}
         >
-          <ProductCard src={Venue} title="Venue">
+          <ProductCard src={Venue} title="Venue" lebar={productCardWidth}>
             <div className="text-product">
               <Typography
                 variant="p"
@@ -296,7 +310,7 @@ const Product = () => {
               </Typography>
             </div>
           </ProductCard>
-          <ProductCard src={Photo} title="Photographer">
+          <ProductCard src={Photo} title="Photographer" lebar={productCardWidth}>
             <div className="text-product">
               <Typography
                 variant="p"
@@ -315,7 +329,7 @@ const Product = () => {
               </Typography>
             </div>
           </ProductCard>
-          <ProductCard src={Whistle} title="Coach">
+          <ProductCard src={Whistle} title="Coach" lebar={productCardWidth}>
             <div className="text-product">
               <Typography
                 variant="p"
@@ -334,7 +348,7 @@ const Product = () => {
               </Typography>
             </div>
           </ProductCard>
-          <ProductCard src={Laptop} title="Academy">
+          <ProductCard src={Laptop} title="Academy" lebar={productCardWidth}>
             <div className="text-product">
               <Typography
                 variant="p"

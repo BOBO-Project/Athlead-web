@@ -5,7 +5,7 @@ import english from "./locales/en-US.json";
 import indo from "./locales/id.json";
 import { Typography } from "@mui/material";
 import "./style-blog.scss";
-import comingsoonPic from "assets/img/coming-soon.png";
+import comingsoonPic from "assets/img/coming-soon1.png";
 import picMobile from "assets/img/comingsoon-mobile.png";
 import BreadcrumbsComp from "components/breadcrumbs-comp/breadcrumbs";
 
@@ -39,7 +39,7 @@ export default function Blog() {
         <div className="container-image">
           <p>
             {isResponsive ? (
-              <img src={picMobile} className="image-comingsoon-mobile" />
+              <img src={comingsoonPic} className="image-comingsoon-mobile" />
             ) : (
               <img src={comingsoonPic} className="image-comingsoon" />
             )}
