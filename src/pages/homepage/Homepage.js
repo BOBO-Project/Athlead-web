@@ -37,6 +37,7 @@ import PartnerCard from "./PartnerCard";
 import BlogCard from "./BlogCard";
 import TestimonyCard from "./TestimonyCard";
 import { Link } from "react-router-dom";
+import { HashLink as Link1 } from "react-router-hash-link";
 
 const Homepage = () => {
   const { translate, language } = useTranslate(english, indo);
@@ -119,7 +120,9 @@ const Homepage = () => {
           ) : null}
 
           <div className="explore-more">
-            <span>{translate("7")}</span>
+            <Link1 to="#content-homepage" className="link-explore-more">
+              <span>{translate("7")}</span>
+            </Link1>
             <ArrowDown />
           </div>
 
@@ -146,83 +149,56 @@ const Homepage = () => {
         </div>
       </div>
 
-      {/* LABEL 1 */}
-      <div className="label-1">
-        <div className="l1-content">
-          <div className="left">
-            <p>
-              {translate("10")}
-              <span>ATHLEAD</span>
-            </p>
-          </div>
-          <div className="right">
-            <div className="rcontent">
-              <SearchAlt />
-              <p className="title">{translate("11")}</p>
-              <p className="cntn">
-                {translate("12")}
-                <br />
-                {translate("13")}
+      <div id="content-homepage">
+        {/* LABEL 1 */}
+        <div className="label-1">
+          <div className="l1-content">
+            <div className="left">
+              <p>
+                {translate("10")}
+                <span>ATHLEAD</span>
               </p>
             </div>
-            <div className="rcontent">
-              <Scale />
-              <p className="title">{translate("14")}</p>
-              <p className="cntn">
-                {translate("15")} <br />
-                {translate("16")}
-              </p>
-            </div>
-            <div className="rcontent">
-              <ShieldCheck />
-              <p className="title">{translate("17")}</p>
-              <p className="cntn">
-                {translate("18")}
-                <br />
-                {translate("19")}
-              </p>
+            <div className="right">
+              <div className="rcontent">
+                <SearchAlt />
+                <p className="title">{translate("11")}</p>
+                <p className="cntn">
+                  {translate("12")}
+                  <br />
+                  {translate("13")}
+                </p>
+              </div>
+              <div className="rcontent">
+                <Scale />
+                <p className="title">{translate("14")}</p>
+                <p className="cntn">
+                  {translate("15")} <br />
+                  {translate("16")}
+                </p>
+              </div>
+              <div className="rcontent">
+                <ShieldCheck />
+                <p className="title">{translate("17")}</p>
+                <p className="cntn">
+                  {translate("18")}
+                  <br />
+                  {translate("19")}
+                </p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
-      {/* Our Product */}
-      <div className="our-product">
-        <h1 className="op-header">{translate("20")}</h1>
-        <p className="op-sub-header">
-          {translate("21")}
-          <br />
-          {translate("22")}
-        </p>
-        {!isResponsive ? (
-          <div className="product-card-wrapper">
-            <ProductCard
-              src={Venue}
-              title={translate("23")}
-              text={translate("24")}
-              translate={translate}
-            />
-            <ProductCard
-              src={Photo}
-              title={translate("25")}
-              text={translate("26")}
-              translate={translate}
-            />
-            <ProductCard
-              src={Whistle}
-              title={translate("27")}
-              text={translate("28")}
-              translate={translate}
-            />
-            <ProductCard
-              src={Laptop}
-              title={translate("29")}
-              text={translate("30")}
-              translate={translate}
-            />
-          </div>
-        ) : (
-          <div className="pcw-scroll">
+        {/* Our Product */}
+        <div className="our-product">
+          <h1 className="op-header">{translate("20")}</h1>
+          <p className="op-sub-header">
+            {translate("21")}
+            <br />
+            {translate("22")}
+          </p>
+          {!isResponsive ? (
             <div className="product-card-wrapper">
               <ProductCard
                 src={Venue}
@@ -249,134 +225,142 @@ const Homepage = () => {
                 translate={translate}
               />
             </div>
-          </div>
-        )}
-      </div>
-
-      {/* Athlead Partner */}
-      <div className="partner-wrapper">
-        <p className="partner-title">{translate("31")}</p>
-        <p className="partner-subtitle">
-          {translate("32")}
-          <br />
-          {translate("33")}
-        </p>
-        <div className="partner-card-wrapper">
-          <PartnerCard
-            Icon={AddressBook}
-            title={translate("34")}
-            desc={translate("35")}
-            points={[translate("36"), translate("37"), translate("38")]}
-            content={[
-              translate("39"),
-              translate("40"),
-              translate("41"),
-              translate("42"),
-            ]}
-          />
-          <PartnerCard
-            Icon={ShoppingBag}
-            title={translate("43")}
-            desc={translate("44")}
-            points={[translate("45"), translate("46"), translate("47")]}
-            content={[translate("48"), translate("49"), translate("50")]}
-          />
-          <PartnerCard
-            Icon={Signal}
-            desc={translate("51")}
-            points={[translate("52"), translate("53"), translate("54")]}
-            title={translate("55")}
-            content={[translate("56"), translate("57"), translate("58")]}
-          />
+          ) : (
+            <div className="pcw-scroll">
+              <div className="product-card-wrapper">
+                <ProductCard
+                  src={Venue}
+                  title={translate("23")}
+                  text={translate("24")}
+                  translate={translate}
+                />
+                <ProductCard
+                  src={Photo}
+                  title={translate("25")}
+                  text={translate("26")}
+                  translate={translate}
+                />
+                <ProductCard
+                  src={Whistle}
+                  title={translate("27")}
+                  text={translate("28")}
+                  translate={translate}
+                />
+                <ProductCard
+                  src={Laptop}
+                  title={translate("29")}
+                  text={translate("30")}
+                  translate={translate}
+                />
+              </div>
+            </div>
+          )}
         </div>
-        <div className="partner-label">
-          <div className="partner-label-wrapper">
-            <div className="plwiw">
-              <div className="pl-txt">
-                <p className="plt-1">{translate("59")}</p>
-                <p className="plt-2">
-                  {translate("60")}
-                  <span>{translate("61")}</span> {translate("62")}
+
+        {/* Athlead Partner */}
+        <div className="partner-wrapper">
+          <p className="partner-title">{translate("31")}</p>
+          <p className="partner-subtitle">
+            {translate("32")}
+            <br />
+            {translate("33")}
+          </p>
+          <div className="partner-card-wrapper">
+            <PartnerCard
+              Icon={AddressBook}
+              title={translate("34")}
+              desc={translate("35")}
+              points={[translate("36"), translate("37"), translate("38")]}
+              content={[
+                translate("39"),
+                translate("40"),
+                translate("41"),
+                translate("42"),
+              ]}
+            />
+            <PartnerCard
+              Icon={ShoppingBag}
+              title={translate("43")}
+              desc={translate("44")}
+              points={[translate("45"), translate("46"), translate("47")]}
+              content={[translate("48"), translate("49"), translate("50")]}
+            />
+            <PartnerCard
+              Icon={Signal}
+              desc={translate("51")}
+              points={[translate("52"), translate("53"), translate("54")]}
+              title={translate("55")}
+              content={[translate("56"), translate("57"), translate("58")]}
+            />
+          </div>
+          <div className="partner-label">
+            <div className="partner-label-wrapper">
+              <div className="plwiw">
+                <div className="pl-txt">
+                  <p className="plt-1">{translate("59")}</p>
+                  <p className="plt-2">
+                    {translate("60")}
+                    <span>{translate("61")}</span> {translate("62")}
+                  </p>
+                </div>
+                <Link to="/partner">
+                  <button className="pltb-wrapper">
+                    <span>{translate("63")}</span>
+                    <ArrowRight />
+                  </button>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* BLOG */}
+        <div className="blog-wrapper">
+          {!isResponsive ? (
+            <>
+              <p className="blog-title">{translate("64")}</p>
+              <div className="blog-sh-wrapper">
+                <p className="bsh-t1">{translate("65")}</p>
+                <p className="bsh-t2">
+                  {translate("63")}
+                  <ArrowRight />
                 </p>
               </div>
-              <Link to="/partner">
-                <button className="pltb-wrapper">
-                  <span>{translate("63")}</span>
+            </>
+          ) : (
+            <>
+              <div className="blog-sh-wrapper">
+                <p className="blog-title">{translate("64")}</p>
+                <p className="bsh-t2">
+                  {translate("63")}
                   <ArrowRight />
-                </button>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* BLOG */}
-      <div className="blog-wrapper">
-        {!isResponsive ? (
-          <>
-            <p className="blog-title">{translate("64")}</p>
-            <div className="blog-sh-wrapper">
-              <p className="bsh-t1">{translate("65")}</p>
-              <p className="bsh-t2">
-                {translate("63")}
-                <ArrowRight />
-              </p>
-            </div>
-          </>
-        ) : (
-          <>
-            <div className="blog-sh-wrapper">
-              <p className="blog-title">{translate("64")}</p>
-              <p className="bsh-t2">
-                {translate("63")}
-                <ArrowRight />
-              </p>
-            </div>
-            <p className="bsh-t1">{translate("65")}</p>
-          </>
-        )}
-        <div className="blog-partner-label">
-          <div className="partner-label-wrapper">
-            <div className="plwiw">
-              <div className="pl-txt">
-                <p className="plt-2">{translate("88")}</p>
+                </p>
               </div>
-              <Link to="/blog">
-                <button className="pltb-wrapper">
-                  <span>{translate("63")}</span>
-                  <ArrowRight />
-                </button>
-              </Link>
+              <p className="bsh-t1">{translate("65")}</p>
+            </>
+          )}
+          <div className="blog-partner-label">
+            <div className="partner-label-wrapper">
+              <div className="plwiw">
+                <div className="pl-txt">
+                  <p className="plt-2">{translate("88")}</p>
+                </div>
+                <Link to="/blog">
+                  <button className="pltb-wrapper">
+                    <span>{translate("63")}</span>
+                    <ArrowRight />
+                  </button>
+                </Link>
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
-      {/* TESTIMONY */}
-      <div className="testimony-wrapper">
-        <p className="testi-title">{translate("74")}</p>
-        <p className="testi-subtitle">{translate("75")}</p>
-        {!isResponsive ? (
-          <div className="testi-card-wrapper">
-            <TestimonyCard
-              src={CeliaAtmojo}
-              name="Kasaya"
-              info="@kasaya.equestrian"
-              title={translate("77")}
-              text={translate("78")}
-              width={testimonyHeight}
-            />
-            <TestimonyCard
-              src={Gunawan}
-              name="SnapSnap Sports"
-              info="@snapsnapid"
-              title={translate("80")}
-              text={translate("81")}
-              width={testimonyHeight}
-            />
-          </div>
-        ) : (
-          <div className="testi-card-scroll">
+        {/* TESTIMONY */}
+        <div className="testimony-wrapper">
+          <p className="testi-title">{translate("74")}</p>
+          <p className="testi-subtitle">{translate("75")}</p>
+          {!isResponsive ? (
             <div className="testi-card-wrapper">
               <TestimonyCard
                 src={CeliaAtmojo}
@@ -395,49 +379,89 @@ const Homepage = () => {
                 width={testimonyHeight}
               />
             </div>
+          ) : (
+            <div className="testi-card-scroll">
+              <div className="testi-card-wrapper">
+                <TestimonyCard
+                  src={CeliaAtmojo}
+                  name="Kasaya"
+                  info="@kasaya.equestrian"
+                  title={translate("77")}
+                  text={translate("78")}
+                  width={testimonyHeight}
+                />
+                <TestimonyCard
+                  src={Gunawan}
+                  name="SnapSnap Sports"
+                  info="@snapsnapid"
+                  title={translate("80")}
+                  text={translate("81")}
+                  width={testimonyHeight}
+                />
+              </div>
+            </div>
+          )}
+        </div>
+
+        {/* FORM JOIN */}
+        {!isResponsive ? (
+          <div className="form-join">
+            <div className="fj-wrapper">
+              <div className="left">
+                <div className="form">
+                  <p className="form-title">{translate("82")}</p>
+                  <p className="form-subtitle">{translate("83")}</p>
+                  <div className="form-fields">
+                    <div className="field-wrapper">
+                      <p className="input-label">{translate("84")}</p>
+                      <div className="input-wrapper">
+                        <input placeholder="Biko Maryono" />
+                      </div>
+                    </div>
+                    <div className="field-wrapper">
+                      <p className="input-label">{translate("85")}</p>
+                      <div className="input-wrapper">
+                        <input placeholder="Content Writers" />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="form-fields">
+                    <div className="field-wrapper">
+                      <p className="input-label">{translate("86")}</p>
+                      <div className="input-wrapper">
+                        <input placeholder="Biko.Maryono@gmail.com" />
+                      </div>
+                    </div>
+                    <div className="field-wrapper">
+                      <p className="input-label">{translate("87")}</p>
+                      <div className="input-wrapper">
+                        <input placeholder="0811900573" />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="join-com-soon">
+                    <button>
+                      <PaperPlane className="plane-icn" />
+                      <span>{translate("88")}</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div className="right">
+                <img className="join-image" src={RunTrack} alt="..." />
+              </div>
+            </div>
           </div>
-        )}
-      </div>
-
-      {/* FORM JOIN */}
-      {!isResponsive ? (
-        <div className="form-join">
-          <div className="fj-wrapper">
-            <div className="left">
-              <div className="form">
-                <p className="form-title">{translate("82")}</p>
-                <p className="form-subtitle">{translate("83")}</p>
-                <div className="form-fields">
-                  <div className="field-wrapper">
-                    <p className="input-label">{translate("84")}</p>
-                    <div className="input-wrapper">
-                      <input placeholder="Biko Maryono" />
-                    </div>
-                  </div>
-                  <div className="field-wrapper">
-                    <p className="input-label">{translate("85")}</p>
-                    <div className="input-wrapper">
-                      <input placeholder="Biko Maryono" />
-                    </div>
-                  </div>
-                </div>
-
-                <div className="form-fields">
-                  <div className="field-wrapper">
-                    <p className="input-label">{translate("86")}</p>
-                    <div className="input-wrapper">
-                      <input placeholder="Content Writers" />
-                    </div>
-                  </div>
-                  <div className="field-wrapper">
-                    <p className="input-label">{translate("87")}</p>
-                    <div className="input-wrapper">
-                      <input placeholder="Content Writers" />
-                    </div>
-                  </div>
-                </div>
-
-                <div className="join-com-soon">
+        ) : (
+          <div className="form-join">
+            <img className="form-join-rsponsive" src={Volley} alt="..." />
+            <div className="join-outer">
+              <div className="join-inner">
+                <p className="jim-1">{translate("82")}</p>
+                <p className="jim-2">{translate("83")}</p>
+                <div className="fj-btn-wrapper">
                   <button>
                     <PaperPlane className="plane-icn" />
                     <span>{translate("88")}</span>
@@ -445,28 +469,9 @@ const Homepage = () => {
                 </div>
               </div>
             </div>
-            <div className="right">
-              <img className="join-image" src={RunTrack} alt="..." />
-            </div>
           </div>
-        </div>
-      ) : (
-        <div className="form-join">
-          <img className="form-join-rsponsive" src={Volley} alt="..." />
-          <div className="join-outer">
-            <div className="join-inner">
-              <p className="jim-1">{translate("82")}</p>
-              <p className="jim-2">{translate("83")}</p>
-              <div className="fj-btn-wrapper">
-                <button>
-                  <PaperPlane className="plane-icn" />
-                  <span>{translate("88")}</span>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
+        )}
+      </div>
     </div>
   );
 };

@@ -162,7 +162,7 @@
         align-items: center;
         cursor: pointer;
         span {
-          font-family: "pmr";
+          font-family: "pmb";
           font-style: normal;
           font-weight: 800;
           font-size: 16px;
@@ -172,6 +172,12 @@
           letter-spacing: 0.2px;
           color: #7d0e23;
           margin-right: 8px;
+          .link-explore-more{
+            text-decoration: none;
+            &::after{
+              text-decoration: none;
+            }
+          }
         }
         svg {
           width: 24px;
