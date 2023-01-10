@@ -21,7 +21,7 @@ import BreadcrumbsComp from "components/breadcrumbs-comp/breadcrumbs";
 const PrivacyPolicy = () => {
   const { translate } = useTranslate(english, indo);
   const isResponsive = window.innerWidth <= 768;
-  const [grid, setGrid] = useState(isResponsive ? 2 : 6);
+  const [grid, setGrid] = useState(isResponsive ? 18 : 6);
 
   return (
     <div id="privacyPolicy">
@@ -82,6 +82,10 @@ const PrivacyPolicy = () => {
             container
             rowSpacing={1}
             columnSpacing={{ xs: 1, sm: 2, md: 3 }}
+            style={{
+              marginTop:'40px',
+              marginBottom:'40px'
+            }}
           >
             <Grid item xs={grid}>
               <Accordion className="content-accordion-text">
@@ -331,7 +335,7 @@ const PrivacyPolicy = () => {
                   // }}
                   className="accordion-summary"
                 >
-                  <Typography>{translate("title6")}</Typography>
+                  {translate("title6")}
                 </AccordionSummary>
                 <AccordionDetails className="content-accordion-detail">
                   <Typography>{translate("textContent6")}</Typography>
@@ -349,7 +353,7 @@ const PrivacyPolicy = () => {
                   // }}
                   className="accordion-summary"
                 >
-                  <Typography>{translate("title7")}</Typography>
+                  {translate("title7")}
                 </AccordionSummary>
                 <AccordionDetails className="content-accordion-detail">
                   <Typography>{translate("textContent7")}</Typography>
@@ -367,7 +371,7 @@ const PrivacyPolicy = () => {
                   // }}
                   className="accordion-summary"
                 >
-                  <Typography>{translate("title8")}</Typography>
+                  {translate("title8")}
                 </AccordionSummary>
                 <AccordionDetails className="content-accordion-detail">
                   {translate("textContent8")}
@@ -404,7 +408,7 @@ const PrivacyPolicy = () => {
                   // }}
                   className="accordion-summary"
                 >
-                  <Typography>{translate("title9")}</Typography>
+                  {translate("title9")}
                 </AccordionSummary>
                 <AccordionDetails className="content-accordion-detail">
                   <Typography>{translate("textContent9")} privacypolicy@athlead.id</Typography>
