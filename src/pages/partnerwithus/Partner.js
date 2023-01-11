@@ -174,17 +174,18 @@ const Partner = () => {
             </div>
             <div className="button-container">
               <Button
-                variant="contained"
-                style={{
-                  backgroundColor: "white",
-                  color: "#7D0E23",
-                  width: "250px",
-                  height: "56px",
-                }}
+                // variant="contained"
+                // style={{
+                //   backgroundColor: "white",
+                //   color: "#7D0E23",
+                //   // width: "250px",
+                //   height: "56px",
+                // }}
                 endIcon={<ArrowRight />}
                 onClick={() => {
                   handleOnClick("Vendor");
                 }}
+                className="button-click"
               >
                 <span className="button-text">Join as a Venue</span>
               </Button>
@@ -210,16 +211,18 @@ const Partner = () => {
             <div className="button-container">
               <Button
                 variant="contained"
-                style={{
-                  backgroundColor: "white",
-                  color: "#7D0E23",
-                  width: "280px",
-                  height: "56px",
-                }}
+                // style={{
+                //   backgroundColor: "white",
+                //   color: "#7D0E23",
+                //   // width: "280px",
+                //   height: "56px",
+                //   fontSize:"16px"
+                // }}
                 endIcon={<ArrowRight />}
                 onClick={() => {
                   handleOnClick("Photographer");
                 }}
+                className="button-click"
               >
                 <span className="button-text">Join as a Photographer</span>
               </Button>
@@ -245,16 +248,17 @@ const Partner = () => {
             <div className="button-container">
               <Button
                 variant="contained"
-                style={{
-                  backgroundColor: "white",
-                  color: "#7D0E23",
-                  width: "250px",
-                  height: "56px",
-                }}
+                // style={{
+                //   backgroundColor: "white",
+                //   color: "#7D0E23",
+                //   // width: "250px",
+                //   height: "56px",
+                // }}
                 endIcon={<ArrowRight />}
                 onClick={() => {
                   handleOnClick("Coach");
                 }}
+                className="button-click"
               >
                 <span className="button-text">Join as a Coach</span>
               </Button>
@@ -280,16 +284,17 @@ const Partner = () => {
             <div className="button-container">
               <Button
                 variant="contained"
-                style={{
-                  backgroundColor: "white",
-                  color: "#7D0E23",
-                  width: "250px",
-                  height: "56px",
-                }}
+                // style={{
+                //   backgroundColor: "white",
+                //   color: "#7D0E23",
+                //   // width: "250px",
+                //   height: "56px",
+                // }}
                 endIcon={<ArrowRight />}
                 onClick={() => {
                   handleOnClick("Academy");
                 }}
+                className="button-click"
               >
                 <span className="button-text">Join as an Academy</span>
               </Button>
@@ -405,11 +410,7 @@ const Partner = () => {
               </div>
             </ProductCard>
             <ProductCard src={Laptop} title="Academy">
-              <div style={{
-                display:'flex',
-                justifyContent:"space-between",
-                flexDirection:'row'
-              }}>
+              <div>
                 <div className="text-product">
                   <Typography
                     variant="p"
