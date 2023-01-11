@@ -1,7 +1,15 @@
 @import url("http://fonts.cdnfonts.com/css/proxima-nova-2");
+@font-face {
+  font-family: "pmr";
+  src: url("../../assets/fonts/Proxima\ Nova\ Alt\ Regular.otf");
+}
+@font-face {
+  font-family: "pmb";
+  src: url("../../assets/fonts/Proxima\ Nova\ Bold.otf");
+}
 
 #privacyPolicy {
-  font-family: "Proxima Nova";
+  // font-family: "Proxima Nova";
 
   .content-text-privacyPolicy {
     font-size: 20px;
@@ -34,6 +42,7 @@
     background-color: #c95454;
     max-width: 100%;
     height: auto;
+    // margin-top: 30px;
   }
 
   .content-accordion-text {
@@ -42,6 +51,7 @@
 
     .accordion-summary {
       height: 84px;
+      font-family: "pmb";
     }
   }
 

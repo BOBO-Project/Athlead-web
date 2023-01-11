@@ -24,7 +24,8 @@ function FloatingSosmed() {
   return (
     <div id="floating-sosmed" className={open ? "open" : ""}>
       <div className="floating-sosmed-icon-wrapper">
-        <a href="">
+        <a href="https://www.facebook.com/Athlead-Indonesia-102701862716968"
+              target="_blank">
           <img
             onMouseEnter={() => setHovered("fb")}
             onMouseLeave={removeHovered}
@@ -42,7 +43,7 @@ function FloatingSosmed() {
             alt="..."
           />
         </a>
-        <a>
+        <a href="https://twitter.com/athlead_id" target="_blank">
           <img
             onMouseEnter={() => setHovered("twit")}
             onMouseLeave={removeHovered}

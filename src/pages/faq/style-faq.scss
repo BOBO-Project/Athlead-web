@@ -1,5 +1,16 @@
 @import url("https://fonts.cdnfonts.com/css/work-sans");
 @import url("https://fonts.cdnfonts.com/css/nunito-sans");
+@import url("http://fonts.cdnfonts.com/css/proxima-nova-2");
+
+@font-face {
+  font-family: "pmr";
+  src: url("../../assets/fonts/Proxima\ Nova\ Alt\ Regular.otf");
+}
+@font-face {
+  font-family: "pmb";
+  src: url("../../assets/fonts/Proxima\ Nova\ Bold.otf");
+}
+
 #faq {
   @mixin dflex {
     display: flex;
@@ -36,53 +47,79 @@
     .accordion-faq-wrapper {
       display: flex;
       flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: center;
-      margin-bottom: 60px;
-      .accordion {
-        max-width: 600px;
-        .accordion-item {
-          margin: 20px 50px;
-          .accordion-title {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
-            padding: 18px 24px;
-            gap: 10px;
-            cursor: pointer;
-            background: #eaeaea;
-            border-radius: 3px;
-            width: 500px;
-            height: 84px;
-            font-style: normal;
-            font-weight: 800;
-            font-size: 20px;
-            line-height: 140%;
-            color: #535353;
-          }
-          .accordion-content {
-            background: #fefefe;
-            padding: 1rem;
-            border-radius: 1px;
-            width: 516px;
-            height: 50%;
-            font-style: normal;
-            font-weight: 400;
-            font-size: 16px;
-            font-family: "Work Sans";
-            letter-spacing: -0.05em;
-            color: #6c6c6c;
-          }
+      justify-content: space-around;
+      align-items: center;
+      padding: 18px 50px;
+      // gap: 20px;
+      background-color: #c95454;
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 50px;
+      // display: flex;
+      // flex-direction: row;
+      // flex-wrap: wrap;
+      // justify-content: space-between;
+      // margin-bottom: 60px;
+      // .accordion {
+      //   max-width: 600px;
+      //   .accordion-item {
+      //     margin: 20px 50px;
+      //     .accordion-title {
+      //       display: flex;
+      //       flex-direction: row;
+      //       justify-content: space-between;
+      //       align-items: center;
+      //       padding: 18px 24px;
+      //       gap: 10px;
+      //       cursor: pointer;
+      //       background: #eaeaea;
+      //       border-radius: 3px;
+      //       width: 500px;
+      //       height: 84px;
+      //       font-style: normal;
+      //       font-weight: 800;
+      //       font-size: 20px;
+      //       line-height: 140%;
+      //       color: #535353;
+      //     }
+      //     .accordion-content {
+      //       background: #fefefe;
+      //       padding: 1rem;
+      //       border-radius: 1px;
+      //       width: 516px;
+      //       height: 50%;
+      //       font-style: normal;
+      //       font-weight: 400;
+      //       font-size: 16px;
+      //       font-family: "Work Sans";
+      //       letter-spacing: -0.05em;
+      //       color: #6c6c6c;
+      //     }
+      //   }
+      // }
+      .content-accordion-text {
+        width: 100%;
+        background-color: #eaeaea;
+
+        .accordion-summary {
+          height: 84px;
+          font-family: "pmb";
         }
+      }
+
+      .content-accordion-detail {
+        background-color: white;
+        height: 100%;
+        font-family: "pmr" !important;
       }
     }
     .label-1 {
-      padding: 0 140px;
-
+      // padding: 0 140px;
+      width: 1336px;
+      margin-left: 50px;
       .l1-content {
         justify-content: center;
-        width: 100%;
+        // width: 100%;
         background: #7d0e23;
         border-radius: 5px;
         padding: 2px 46px;
@@ -91,7 +128,7 @@
           white-space: nowrap;
           margin-right: 70px;
           p {
-            font-family: "Nunito Sans";
+            font-family: "pmr";
             font-style: normal;
             font-weight: 800;
             font-size: 20px;
@@ -99,6 +136,7 @@
           }
           h3 {
             font-style: normal;
+            font-family: "pmb";
             font-weight: 800;
             font-size: 36px;
             color: #fefefe;
@@ -126,7 +164,7 @@
         .right {
           .field-wrapper {
             .input-label {
-              font-family: "Proxima Nova";
+              font-family: "pmr";
               font-style: normal;
               font-weight: 400;
               font-size: 20px;
@@ -164,18 +202,47 @@
 @media (max-width: 768px) {
   #faq {
     .container-faq {
+      .content-accordion-text {
+        .accordion-summary {
+            font-size: 14px;
+        }
+      }
+
+      .container-text-description {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      .container-description {
+        width: 325px;
+      }
+      .title-description-content {
+        font-size: 1.3rem;
+      }
+    }
+    
+
+    .accordion-summary{
+      font-size: 14px;
+    }
+
+    .content-accordion-detail{
+      font-size: 14px;
+    }
+
       .label-1 {
         padding: 0;
-        width: 90vw;
-        max-width: 325px;
+        width: 86.5vw;
+        margin-left: 7%;
+        max-width: 100%;
         margin-bottom: 55px;
         justify-content: center;
         .l1-content {
           flex-direction: column;
           padding: 32px;
-          margin-left: 50%;
-          width: 325px;
-          height: 388px;
+          // margin-left: 5%;
+          // width: 325px;
+          // height: 388px;
           .left {
             margin: 0;
             p {

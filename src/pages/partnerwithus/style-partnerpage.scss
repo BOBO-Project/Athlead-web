@@ -11,13 +11,14 @@
 #partnerPage {
   .product-card-wrapper {
     display: flex;
+    justify-content: space-around;
     align-items: center;
     margin-bottom: 100px;
-    margin-left: 5%;
-    margin-right: 10%;
+    margin-left: 140px;
+    margin-right: 140px;
     color: #eaeaea;
     .product-card {
-      width: 300px;
+      width: 272px;
       margin-right: 24px;
       height: 750px;
       background: #000000;
@@ -376,8 +377,15 @@
   .button-container {
     margin-top: 300px;
     text-align: center;
-
+    .button-click{
+      width: 269px;
+      height: 56px;
+      font-size: 14.5px;
+      background-color: white;
+      color: #7d0e23;
+    }
     .button-text {
+      // font-family: "pmb";
       font-weight: 800;
     }
   }
@@ -450,7 +458,7 @@
       padding: 50px 0;
       margin-right: 50px;
       .product-card {
-        // width: 230px;
+        width: 230px;
         height: 710px;
       }
     }

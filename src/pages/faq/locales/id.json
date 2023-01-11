@@ -1,54 +1,38 @@
 {
   "header": "Kebijakan Privasi",
   "description": "Kami tahu Anda mungkin memiliki beberapa pertanyaan, berikut adalah jawaban dari pertanyaan yang sering ditanyakan!",
-  "FAQ": [
-    {
-      "title": "Siapakah ATHLEAD INDONESIA?",
-      "content": "ATHLEAD INDONESIA menyediakan kebutuhan olahraga rekreasi yang terintegrasi dalam bentuk website dan mobile app. ATHLEAD INDONESIA akan hadir sebagai marketplace digital yang mudah digunakan untuk melakukan pemesanan online tempat (venue) olahraga, pelatih olahraga, akademi olahraga, fotografer olahraga, dll."
-    },
-    {
-      "title": "Jenis pemesanan apa yang dapat dilakukan di ATHLEAD INDONESIA?",
-      "content": "ATHLEAD INDONESIA menyediakan pemesanan  kebutuhan olahraga rekreasi yang terintegrasi untuk pengguna kami, termasuk  pemesanan tempat (venue), pemesanan layanan pelatih, pemesanan/pendaftaran akademi olahraga, pemesanan layanan  fotografer, dll."
-    },
-    {
-      "title": "Apa itu pemesanan tempat (venue)?",
-      "content": "ATHLEAD INDONESIA akan memberi Anda akses dan informasi untuk memesan fasilitas dan/atau tempat (venue) olahraga. Sistem ATHLEAD INDONESIA memungkinkan pemesanan dan pembayaran online dilakukan 24/7 dengan mudah. Kami menawarkan pemesanan tempat (venue) secara online, menampilkan jadwal tempat (venue), informasi fasilitas, dan masih banyak lagi, sehingga Anda dapat menentukan pilihan Anda sendiri."
-    },
-    {
-      "title": "Apa itu pemesanan layanan pelatih?",
-      "content": "Di ATHLEAD INDONESIA, Anda dapat mencoba segala jenis olahraga yang Anda inginkan, meskipun itu adalah pengalaman yang pertama bagi Anda. Jika Anda membutuhkan pelatih untuk membantu Anda berkembang, jangan khawatir, tentu saja Kami menyediakan pemesanan layanan pelatih untuk membantu Anda dalam melakukan olahraga. Kami menawarkan kepada Anda beberapa pelatih terbaik untuk segala jenis olahraga."
-    },
-    {
-      "title": "Apa itu pemesanan layanan fotografer?",
-      "content": "ATHLEAD INDONESIA akan membantu Anda dengan fitur pemesanan layanan fotografer untuk mengabadikan dan membagikan momen Anda melakukan segala macam kegiatan olahraga. Kami akan berkolaborasi dengan fotografer profesional dengan portofolio fotografi olahraga yang baik."
-    },
-    {
-      "title": "Apa itu pendaftaran akademi olahraga?",
-      "content": "ATHLEAD INDONESIA akan berkolaborasi dengan beberapa akademi olahraga sehingga Anda dapat mendaftar secara online atau mencari akademi olahraga yang ingin Anda ikuti. Kami juga menyediakan semua informasi tentang biaya akademi, program, portofolio, dan masih banyak lagi."
-    },
-    {
-      "title": "What are the requirements to become ATHLEAD INDONESIA's partner?",
-      "content": "You can visit the “partners with us” page, and fill out ATHLEAD INDONESIA form so our team can review your appliance and contact you as soon as possible. Can sports clubs, schools/universities, and government sports facilities be listed on ATHLEAD INDONESIA? ATHLEAD INDONESIA booking systems have been designed to work with sports clubs, schools/universities, government and any other sports facilities to help open up bookings to local communities, fill spare capacity and increase revenue generated. A feature of our booking system means you can always make sure you approve a customer before their booking is confirmed."
-    },
-    {
-      "title": "Apa saja persyaratan untuk menjadi mitra ATHLEAD INDONESIA?",
-      "content": "Anda dapat mengunjungi halaman `mitra dengan kami`, dan mengisi formulir ATHLEAD INDONESIA sehingga tim Kami dapat meninjau fasilitas ataupun jasa Anda dan menghubungi Anda sesegera mungkin."
-    },
-    {
-      "title": "Bagaimana mitra ATHLEAD INDONESIA akan dipromosikan?",
-      "content": "Mitra ATHLEAD INDONESIA akan ditampilkan sebagai daftar mitra di  platform/marketplace ATHLEAD INDONESIA. Mitra juga akan mendapat manfaat dari kampanye pemasaran digital reguler untuk pengguna ATHLEAD INDONESIA. Tim pemasaran digital kami ahli dalam memaksimalkan eksposur mitra untuk meningkatkan partisipasi pengguna dan pemanfaatan fasilitas."
-    },
-    {
-      "title": "Apakah layanan ATHLEAD INDONESIA sesuai dengan GDPR Indonesia?",
-      "content": "ATHLEAD INDONESIA sepenuhnya mematuhi  GDPR Indonesia dan  mengikuti saran serta arahan oleh spesialis keamanan data. Hal tersebut menjadikan kami mitra GDPR sempurna Anda. Semua pembayaran yang diproses sesuai dengan PCI DSS."
-    },
-    {
-      "title": "Kapan layanan ATHLEAD INDONESIA diluncurkan?",
-      "content": "Kami akan segera hadir! Daftarkan diri Anda dan Kami akan memberi tahu Anda apabila layanan ATHLEAD INDONESIA sudah tersedia."
-    },
-    {
-      "title": "Apakah Klub olahraga, fasilitas olahraga Sekolah/Universitas, dan fasilitas olahraga milik Pemerintah dapat bergabung dan terdaftar di ATHLEAD INDONESIA?",
-      "content": "Sistem  pemesanan  ATHLEAD INDONESIA telah dirancang untuk bekerja sama dengan Klub olahraga, Sekolah/Universitas, fasilitas  olahraga milik Pemerintah dan lainnya untuk membantu melakukan pemesanan online kepada masyarakat umum, mengisi kapasitas, dan meningkatkan pendapatan yang dihasilkan. Dengan fitur sistem pemesanan kami, Anda selalu dapat memastikan bahwa Anda menyetujui pesanan pelanggan sebelum pemesanan mereka dikonfirmasi dan disetujui."
-    }
-  ]
+  "title1": "Siapakah ATHLEAD INDONESIA?",
+  "content1": "ATHLEAD INDONESIA menyediakan kebutuhan olahraga rekreasi yang terintegrasi dalam bentuk website dan mobile app. ATHLEAD INDONESIA akan hadir sebagai marketplace digital yang mudah digunakan untuk melakukan pemesanan online tempat (venue) olahraga, pelatih olahraga, akademi olahraga, fotografer olahraga, dll.",
+
+  "title2": "Jenis pemesanan apa yang dapat dilakukan di ATHLEAD INDONESIA?",
+  "content2": "ATHLEAD INDONESIA menyediakan pemesanan  kebutuhan olahraga rekreasi yang terintegrasi untuk pengguna kami, termasuk  pemesanan tempat (venue), pemesanan layanan pelatih, pemesanan/pendaftaran akademi olahraga, pemesanan layanan  fotografer, dll.",
+
+  "title3": "Apa itu pemesanan tempat (venue)?",
+  "content3": "ATHLEAD INDONESIA akan memberi Anda akses dan informasi untuk memesan fasilitas dan/atau tempat (venue) olahraga. Sistem ATHLEAD INDONESIA memungkinkan pemesanan dan pembayaran online dilakukan 24/7 dengan mudah. Kami menawarkan pemesanan tempat (venue) secara online, menampilkan jadwal tempat (venue), informasi fasilitas, dan masih banyak lagi, sehingga Anda dapat menentukan pilihan Anda sendiri.",
+
+  "title4": "Apa itu pemesanan layanan pelatih?",
+  "content4": "Di ATHLEAD INDONESIA, Anda dapat mencoba segala jenis olahraga yang Anda inginkan, meskipun itu adalah pengalaman yang pertama bagi Anda. Jika Anda membutuhkan pelatih untuk membantu Anda berkembang, jangan khawatir, tentu saja Kami menyediakan pemesanan layanan pelatih untuk membantu Anda dalam melakukan olahraga. Kami menawarkan kepada Anda beberapa pelatih terbaik untuk segala jenis olahraga.",
+
+  "title5": "Apa itu pemesanan layanan fotografer?",
+  "content5": "ATHLEAD INDONESIA akan membantu Anda dengan fitur pemesanan layanan fotografer untuk mengabadikan dan membagikan momen Anda melakukan segala macam kegiatan olahraga. Kami akan berkolaborasi dengan fotografer profesional dengan portofolio fotografi olahraga yang baik.",
+
+  "title6": "Apa itu pendaftaran akademi olahraga?",
+  "content6": "ATHLEAD INDONESIA akan berkolaborasi dengan beberapa akademi olahraga sehingga Anda dapat mendaftar secara online atau mencari akademi olahraga yang ingin Anda ikuti. Kami juga menyediakan semua informasi tentang biaya akademi, program, portofolio, dan masih banyak lagi.",
+
+  "title7": "What are the requirements to become ATHLEAD INDONESIA's partner?",
+  "content7": "You can visit the “partners with us” page, and fill out ATHLEAD INDONESIA form so our team can review your appliance and contact you as soon as possible. Can sports clubs, schools/universities, and government sports facilities be listed on ATHLEAD INDONESIA? ATHLEAD INDONESIA booking systems have been designed to work with sports clubs, schools/universities, government and any other sports facilities to help open up bookings to local communities, fill spare capacity and increase revenue generated. A feature of our booking system means you can always make sure you approve a customer before their booking is confirmed.",
+
+  "title8": "Apa saja persyaratan untuk menjadi mitra ATHLEAD INDONESIA?",
+  "content8": "Anda dapat mengunjungi halaman `mitra dengan kami`, dan mengisi formulir ATHLEAD INDONESIA sehingga tim Kami dapat meninjau fasilitas ataupun jasa Anda dan menghubungi Anda sesegera mungkin.",
+
+  "title9": "Bagaimana mitra ATHLEAD INDONESIA akan dipromosikan?",
+  "content9": "Mitra ATHLEAD INDONESIA akan ditampilkan sebagai daftar mitra di  platform/marketplace ATHLEAD INDONESIA. Mitra juga akan mendapat manfaat dari kampanye pemasaran digital reguler untuk pengguna ATHLEAD INDONESIA. Tim pemasaran digital kami ahli dalam memaksimalkan eksposur mitra untuk meningkatkan partisipasi pengguna dan pemanfaatan fasilitas.",
+
+  "title10": "Apakah layanan ATHLEAD INDONESIA sesuai dengan GDPR Indonesia?",
+  "content10": "ATHLEAD INDONESIA sepenuhnya mematuhi  GDPR Indonesia dan  mengikuti saran serta arahan oleh spesialis keamanan data. Hal tersebut menjadikan kami mitra GDPR sempurna Anda. Semua pembayaran yang diproses sesuai dengan PCI DSS.",
+
+  "title11": "Kapan layanan ATHLEAD INDONESIA diluncurkan?",
+  "content11": "Kami akan segera hadir! Daftarkan diri Anda dan Kami akan memberi tahu Anda apabila layanan ATHLEAD INDONESIA sudah tersedia.",
+  "title12": "Apakah Klub olahraga, fasilitas olahraga Sekolah/Universitas, dan fasilitas olahraga milik Pemerintah dapat bergabung dan terdaftar di ATHLEAD INDONESIA?",
+  "content12": "Sistem  pemesanan  ATHLEAD INDONESIA telah dirancang untuk bekerja sama dengan Klub olahraga, Sekolah/Universitas, fasilitas  olahraga milik Pemerintah dan lainnya untuk membantu melakukan pemesanan online kepada masyarakat umum, mengisi kapasitas, dan meningkatkan pendapatan yang dihasilkan. Dengan fitur sistem pemesanan kami, Anda selalu dapat memastikan bahwa Anda menyetujui pesanan pelanggan sebelum pemesanan mereka dikonfirmasi dan disetujui."
 }

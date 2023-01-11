@@ -24,10 +24,24 @@ function Footer() {
           <img src={AthleadIcon} alt="..." className="athld-icn" />
           <p className="athld-t">{translate("description")}</p>
           <div className="sosmed">
-            <FB />
-            <IG />
-            <Twitter />
-            <WA />
+            <a
+              href="https://www.facebook.com/Athlead-Indonesia-102701862716968"
+              target="_blank"
+            >
+              <FB />
+            </a>
+            <a href="https://www.instagram.com/athlead.id/" target="_blank">
+              <IG />
+            </a>
+            <a href="https://twitter.com/athlead_id" target="_blank">
+              <Twitter />
+            </a>
+            <a
+              href="whatsapp://send?text=Hello Athlead!&phone=+6285173394930"
+              target="_blank"
+            >
+              <WA />
+            </a>
           </div>
         </div>
 
@@ -62,13 +76,21 @@ function Footer() {
           </Link>
         </div>
         <div className="third">
-          <p className="title">{translate("product-title")}</p>
-          <p className="sub-title">{translate("product-content-venue")}</p>
-          <p className="sub-title">{translate("product-content-coach")}</p>
-          <p className="sub-title">
-            {translate("product-content-photographer")}
-          </p>
-          <p className="sub-title">{translate("product-content-academy")}</p>
+          <Link to="/product">
+            <p className="title">{translate("product-title")}</p>
+            <p className="sub-title">{translate("product-content-venue")}</p>
+          </Link>
+          <Link to="/product">
+            <p className="sub-title">{translate("product-content-coach")}</p>
+          </Link>
+          <Link to="/product">
+            <p className="sub-title">
+              {translate("product-content-photographer")}
+            </p>
+          </Link>
+          <Link to="/product">
+            <p className="sub-title">{translate("product-content-academy")}</p>
+          </Link>
         </div>
         <div className="forth">
           <p className="title">{translate("other-title")}</p>
@@ -90,9 +112,12 @@ function Footer() {
               marginTop: "16px",
             }}
           >
-            <a href="whatsapp://send?text=Hello Athlead!&phone=+6285173394930" style={{
-              color:'white'
-            }}>
+            <a
+              href="whatsapp://send?text=Hello Athlead!&phone=+6285173394930"
+              style={{
+                color: "white",
+              }}
+            >
               {translate("other-content-chat")}
             </a>
           </p>
@@ -109,7 +134,12 @@ function Footer() {
           <p className="sub-title">{translate("contact-content-phone")}</p>
           <p className="content">{"(+62) 851-7339-4930"}</p>
           <p className="sub-title">{translate("contact-content-email")}</p>
-          <p className="content">Hello@athlead.id</p>
+          <a
+            href="mailto:hello@athlead.id?subject=Feedback&body=Message"
+            target="_blank"
+          >
+            <p className="content">hello@athlead.id</p>
+          </a>
         </div>
       </div>
       <div className="created">

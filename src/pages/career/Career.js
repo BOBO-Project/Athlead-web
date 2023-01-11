@@ -45,7 +45,7 @@ const Career = () => {
                 <div className="field-wrapper">
                   <p className="input-label">Job Position</p>
                   <div className="input-wrapper">
-                    <input placeholder="Biko Maryono" />
+                    <input placeholder="Content Writer" />
                   </div>
                 </div>
               </div>
@@ -54,13 +54,13 @@ const Career = () => {
                 <div className="field-wrapper">
                   <p className="input-label">Email</p>
                   <div className="input-wrapper">
-                    <input placeholder="Content Writers" />
+                    <input placeholder="Biko.Maryono@gmail.com" />
                   </div>
                 </div>
                 <div className="field-wrapper">
                   <p className="input-label">Phone Number</p>
                   <div className="input-wrapper">
-                    <input placeholder="Content Writers" />
+                    <input placeholder="0811900573" />
                   </div>
                 </div>
               </div>

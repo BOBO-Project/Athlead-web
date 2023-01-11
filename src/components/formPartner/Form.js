@@ -131,7 +131,7 @@ const Form = (props) => {
               id="outlined-disabled"
               // defaultValue="Academy Persija Jakarta"
               value={state.academyName}
-              placeholder="ex. Academy Manchester United"
+              placeholder="ex. Akademi Bola Bekasi Jaya"
               name="academyName"
               required
               error={!state.academyName}
@@ -147,7 +147,7 @@ const Form = (props) => {
             <TextField
               id="outlined-disabled"
               // defaultValue="Soccer"
-              placeholder="ex. Soccer"
+              placeholder="ex. Football"
               value={state.sportsDetail}
               name="sportsDetail"
               required
@@ -199,7 +199,7 @@ const Form = (props) => {
             </Typography>
             <TextField
               id="outlined-disabled"
-              placeholder="ex. Soccer"
+              placeholder="ex. Mini Soccer"
               value={state.sportsSpecification}
               name="sportsSpecification"
               required
@@ -251,7 +251,7 @@ const Form = (props) => {
             </Typography>
             <TextField
               id="outlined-disabled"
-              placeholder="ex. Man United Field"
+              placeholder="ex. Lapangan Mini Soccer Tanggerang"
               value={state.venueName}
               required
               error={!state.venueName}
@@ -268,7 +268,7 @@ const Form = (props) => {
             <TextField
               id="outlined-disabled"
               // defaultValue={title}
-              placeholder="ex. Soccer"
+              placeholder="ex. Mini Soccer"
               value={state.sportsDetail}
               required
               error={!state.sportsDetail}
@@ -341,7 +341,7 @@ const Form = (props) => {
           value={state.name}
           onChange={handleChange}
           name="name"
-          placeholder="ex. Bambang Pamungkas"
+          placeholder="ex. Biko Maryono"
           required
           error={!state.name}
           helperText={!state.name ? "Please Filled In" : ""}
@@ -355,7 +355,7 @@ const Form = (props) => {
         <TextField
           id="outlined-disabled"
           // defaultValue="081190087723"
-          placeholder="+1 (206) 321 2712"
+          placeholder="0811900573"
           value={state.phone}
           error={!state.phone}
           helperText={!state.phone ? "Please Filled In" : ""}
@@ -370,7 +370,7 @@ const Form = (props) => {
         </Typography>
         <TextField
           id="outlined-disabled"
-          placeholder="ex. manutd@gmail.com"
+          placeholder="ex. Biko.Maryono@gmail.com"
           value={state.email}
           error={!state.email}
           helperText={!state.email ? "Please Filled In" : ""}
@@ -386,7 +386,7 @@ const Form = (props) => {
         </Typography>
         <TextField
           id="outlined-disabled"
-          placeholder="ex. manutd.com"
+          placeholder="ex. Athlead.com"
           value={state.website}
           error={!state.website}
           helperText={!state.website ? "Please Filled In" : ""}

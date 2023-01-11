@@ -162,7 +162,7 @@
         align-items: center;
         cursor: pointer;
         span {
-          font-family: "pmr";
+          font-family: "pmb";
           font-style: normal;
           font-weight: 800;
           font-size: 16px;
@@ -172,6 +172,12 @@
           letter-spacing: 0.2px;
           color: #7d0e23;
           margin-right: 8px;
+          .link-explore-more{
+            text-decoration: none;
+            &::after{
+              text-decoration: none;
+            }
+          }
         }
         svg {
           width: 24px;
@@ -1044,37 +1050,40 @@
       }
     }
 
-    .label-1 {
-      padding: 0;
-      width: 90vw;
-      max-width: 300px;
-      margin-bottom: 55px;
-      .l1-content {
-        padding: 0;
-        flex-direction: column;
+      .label-1 {
         align-items: center;
-        padding: 32px;
-        .left {
-          margin: 0;
-          margin-bottom: 40px;
-          p {
-            font-size: 22px;
-          }
-        }
-        .right {
-          display: flex;
+        // margin-left: 3.125rem;
+        margin-left: 12%;
+        padding: 0;
+        width: 75vw;
+        max-width: 100%;
+        margin-bottom: 55px;
+        .l1-content {
+          padding: 0;
           flex-direction: column;
           align-items: center;
-
-          .rcontent {
-            margin-bottom: 24px;
-            &:last-child {
-              margin-bottom: 0;
+          padding: 32px;
+          .left {
+            margin: 0;
+            margin-bottom: 40px;
+            p {
+              font-size: 22px;
+            }
+          }
+          .right {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+  
+            .rcontent {
+              margin-bottom: 24px;
+              &:last-child {
+                margin-bottom: 0;
+              }
             }
           }
         }
       }
-    }
 
     .our-product {
       margin-bottom: 55px;
@@ -1136,8 +1145,12 @@
 
     .partner-wrapper {
       width: calc(100vw - 60px);
+      display: flex;
+      flex-direction: column;
       padding: 0;
+      align-items: center;
       margin-bottom: 55px;
+      margin-left: 30px;
       .partner-title {
         font-size: 22px;
         margin-bottom: 8px;
