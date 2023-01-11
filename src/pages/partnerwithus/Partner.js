@@ -410,13 +410,7 @@ const Partner = () => {
               </div>
             </ProductCard>
             <ProductCard src={Laptop} title="Academy">
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "space-between",
-                  flexDirection: "row",
-                }}
-              >
+              <div>
                 <div className="text-product">
                   <Typography
                     variant="p"

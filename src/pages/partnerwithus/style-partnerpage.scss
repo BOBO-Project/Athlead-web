@@ -452,16 +452,16 @@
       overflow-y: auto;
     }
 
-    // .product-card-wrapper {
-    //   width: 1020px;
-    //   margin-bottom: 0;
-    //   padding: 50px 0;
-    //   margin-right: 50px;
-    //   .product-card {
-    //     // width: 230px;
-    //     height: 710px;
-    //   }
-    // }
+    .product-card-wrapper {
+      width: 1020px;
+      margin-bottom: 0;
+      padding: 50px 0;
+      margin-right: 50px;
+      .product-card {
+        width: 230px;
+        height: 710px;
+      }
+    }
 
     .text-product {
       margin-bottom: 5%;

@@ -51,12 +51,12 @@ const Homepage = () => {
   if (language === "id-ID") {
     testimonyHeight = {
       mobile: "450px",
-      web: "400px",
+      web: "455px",
     };
   } else {
     testimonyHeight = {
       mobile: "400px",
-      web: "315px",
+      web: "400px",
     };
   }
 
