@@ -61,7 +61,7 @@ const Homepage = () => {
 
   const handleSendEmail = async () => {
     try {
-      await axios.post("http://localhost:3000/email", { email });
+      await axios.post("https://athlead-be-production.up.railway.app/email", { email });
     } catch (error) {
       console.log(error);
     } finally {
