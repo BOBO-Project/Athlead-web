@@ -1,13 +1,13 @@
-import React from "react";
-import { Routes, Route } from "react-router-dom";
-import { ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import React, { useLayoutEffect } from "react";
+import { Routes, Route, useLocation } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 import "./index.scss";
 
 //Components
 import { Navbar, Footer } from "../components";
-import FloatingSosmed from "components/floating-sosmed"
+import FloatingSosmed from "components/floating-sosmed";
 
 //Pages
 import homepage from "./homepage";
@@ -31,16 +31,26 @@ const appPages = [
   { ...faq },
 ];
 
+const Wrapper = ({ children }) => {
+  const location = useLocation();
+  useLayoutEffect(() => {
+    document.documentElement.scrollTo(0, 0);
+  }, [location.pathname]);
+  return children;
+};
+
 const RenderPages = () => {
   return (
     <div>
       <Navbar />
       <div id="all-pages-wrapper">
-        <Routes>
-          {appPages.map((page, i) => (
-            <Route {...page} key={i} />
-          ))}
-        </Routes>
+        <Wrapper>
+          <Routes>
+            {appPages.map((page, i) => (
+              <Route {...page} key={i} />
+            ))}
+          </Routes>
+        </Wrapper>
       </div>
       <Footer />
 
