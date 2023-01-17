@@ -18,10 +18,9 @@ import indo from "./locales/id.json";
 const Tab = ({ path, display }) => <a href={path}>{display}</a>;
 
 const NDekstop = ({ Tabs, changeLanguage, language }) => {
-  const activeLang = useCallback(
-    (lang) => (lang == language ? "active" : ""),
-    [language]
-  );
+  const activeLang = useCallback((lang) => (lang == language ? "active" : ""), [
+    language,
+  ]);
   return (
     <div id="navbar">
       <div className="navbar-dekstop">
@@ -51,10 +50,9 @@ const NDekstop = ({ Tabs, changeLanguage, language }) => {
 
 const NMobile = ({ Tabs, changeLanguage, language }) => {
   const location = useLocation();
-  const activeLang = useCallback(
-    (lang) => (lang == language ? "active" : ""),
-    [language]
-  );
+  const activeLang = useCallback((lang) => (lang == language ? "active" : ""), [
+    language,
+  ]);
   const [openTabs, setOpenTabs] = useState(false);
 
   useEffect(() => {
@@ -67,7 +65,9 @@ const NMobile = ({ Tabs, changeLanguage, language }) => {
         <div className="tabs-flag">
           <div className="tabs">
             <div className="header">
-              <AthleadLogo className="athlead-logo" />
+              <Link to="/">
+                <AthleadLogo className="athlead-logo" />
+              </Link>
               <CrossIcon
                 onClick={() => setOpenTabs(false)}
                 className="cross-icon"
@@ -88,7 +88,9 @@ const NMobile = ({ Tabs, changeLanguage, language }) => {
             onClick={() => setOpenTabs(true)}
             className="hamburger-logo"
           />
-          <AthleadLogo className="athlead-logo" />
+          <Link to="/">
+            <AthleadLogo className="athlead-logo" />
+          </Link>
         </div>
 
         <button onClick={changeLanguage} className="translation-toggler">
