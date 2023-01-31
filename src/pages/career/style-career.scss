@@ -166,6 +166,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    .banner {
+      height: 188px;
+    }
     .container-banner {
       .title-container {
         font-size: 28px;
@@ -178,6 +181,9 @@
     }
     .form-join {
       width: 100vw;
+      height: 45vh;
+      // background-attachment: fixed;
+      background-size: cover;
       position: relative;
       padding: 0;
       .form-join-rsponsive {
@@ -204,7 +210,7 @@
           max-width: calc(300px - 24px - 24px);
           padding: 24px;
           .jim-1 {
-            font-family: "Proxima Nova";
+            font-family: "pmb";
             font-style: normal;
             font-weight: 800;
             font-size: 22px;
@@ -212,7 +218,7 @@
             margin-bottom: 11px;
           }
           .jim-2 {
-            font-family: "Proxima Nova";
+            font-family: "pmr";
             font-style: normal;
             font-weight: 400;
             font-size: 14px;
@@ -221,6 +227,7 @@
           }
           .fj-btn-wrapper {
             padding: 18px;
+            font-family: "pmb";
             display: flex;
             justify-content: center;
             align-items: center;
